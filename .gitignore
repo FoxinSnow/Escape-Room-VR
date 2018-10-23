@@ -1,3 +1,4 @@
+# OS X
 # General
 .DS_Store
 .AppleDouble
@@ -25,3 +26,11 @@ Icon
 Network Trash Folder
 Temporary Items
 .apdisk
+
+# Unity gitignore
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+Assets/AssetStoreTools*
