@@ -53,6 +53,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Main_Project\Scripts\ClockRun.cs" />
      <Compile Include="Assets\Main_Project\Scripts\ERT_TimeControl.cs" />
      <Compile Include="Assets\Main_Project\Scripts\ETR_Draggable.cs" />
      <Compile Include="Assets\Main_Project\Scripts\ETR_Interactable.cs" />
@@ -65,6 +66,12 @@
      <Compile Include="Assets\Main_Project\Scripts\ETR_SwitchEvent.cs" />
      <Compile Include="Assets\Main_Project\Scripts\ETR_Throwable.cs" />
      <Compile Include="Assets\Main_Project\Scripts\ETR_ThrowableVelocityCalculator.cs" />
+     <Compile Include="Assets\Main_Project\Scripts\FanRun.cs" />
+     <Compile Include="Assets\Main_Project\Scripts\LockDigitOne.cs" />
+     <Compile Include="Assets\Main_Project\Scripts\LockDigitThree.cs" />
+     <Compile Include="Assets\Main_Project\Scripts\LockDigitTwo.cs" />
+     <Compile Include="Assets\Main_Project\Scripts\UserChangeTime.cs" />
+     <Compile Include="Assets\Main_Project\Scripts\UserSwitchFan.cs" />
      <Compile Include="Assets\SteamVR\Extras\SteamVR_GazeTracker.cs" />
      <Compile Include="Assets\SteamVR\Extras\SteamVR_TestThrow.cs" />
      <Compile Include="Assets\SteamVR\Extras\SteamVR_TestTrackedCamera.cs" />
