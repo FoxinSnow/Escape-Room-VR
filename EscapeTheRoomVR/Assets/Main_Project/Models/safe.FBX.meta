@@ -1,0 +1,231 @@
+fileFormatVersion: 2
+guid: 4b835a7d14ea59c4f900d5c033bf0c8b
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: '#'
+    100002: '*'
+    100004: 0
+    100006: 1
+    100008: 2
+    100010: 3
+    100012: 4
+    100014: 5
+    100016: 6
+    100018: 7
+    100020: 8
+    100022: 9
+    100024: Box001
+    100026: cancel
+    100028: ChamferCyl001
+    100030: ChamferCyl002
+    100032: ChamferCyl003
+    100034: ChamferCyl004
+    100036: ChamferCyl005
+    100038: delete
+    100040: door
+    100042: door 1
+    100044: door1
+    100046: enter
+    100048: finger print
+    100050: handle
+    100052: lock
+    100054: panel
+    100056: panel 1
+    100058: //RootNode
+    100060: screen
+    400000: '#'
+    400002: '*'
+    400004: 0
+    400006: 1
+    400008: 2
+    400010: 3
+    400012: 4
+    400014: 5
+    400016: 6
+    400018: 7
+    400020: 8
+    400022: 9
+    400024: Box001
+    400026: cancel
+    400028: ChamferCyl001
+    400030: ChamferCyl002
+    400032: ChamferCyl003
+    400034: ChamferCyl004
+    400036: ChamferCyl005
+    400038: delete
+    400040: door
+    400042: door 1
+    400044: door1
+    400046: enter
+    400048: finger print
+    400050: handle
+    400052: lock
+    400054: panel
+    400056: panel 1
+    400058: //RootNode
+    400060: screen
+    2100000: No Name
+    2300000: '#'
+    2300002: '*'
+    2300004: 0
+    2300006: 1
+    2300008: 2
+    2300010: 3
+    2300012: 4
+    2300014: 5
+    2300016: 6
+    2300018: 7
+    2300020: 8
+    2300022: 9
+    2300024: Box001
+    2300026: cancel
+    2300028: ChamferCyl001
+    2300030: ChamferCyl002
+    2300032: ChamferCyl003
+    2300034: ChamferCyl004
+    2300036: ChamferCyl005
+    2300038: delete
+    2300040: door 1
+    2300042: door1
+    2300044: enter
+    2300046: finger print
+    2300048: handle
+    2300050: panel 1
+    2300052: screen
+    3300000: '#'
+    3300002: '*'
+    3300004: 0
+    3300006: 1
+    3300008: 2
+    3300010: 3
+    3300012: 4
+    3300014: 5
+    3300016: 6
+    3300018: 7
+    3300020: 8
+    3300022: 9
+    3300024: Box001
+    3300026: cancel
+    3300028: ChamferCyl001
+    3300030: ChamferCyl002
+    3300032: ChamferCyl003
+    3300034: ChamferCyl004
+    3300036: ChamferCyl005
+    3300038: delete
+    3300040: door 1
+    3300042: door1
+    3300044: enter
+    3300046: finger print
+    3300048: handle
+    3300050: panel 1
+    3300052: screen
+    4300000: Box001
+    4300002: finger print
+    4300004: '#'
+    4300006: 0
+    4300008: '*'
+    4300010: enter
+    4300012: 9
+    4300014: 8
+    4300016: 7
+    4300018: cancel
+    4300020: 6
+    4300022: 5
+    4300024: 4
+    4300026: delete
+    4300028: 3
+    4300030: 2
+    4300032: 1
+    4300034: screen
+    4300036: panel
+    4300038: ChamferCyl005
+    4300040: ChamferCyl004
+    4300042: ChamferCyl003
+    4300044: ChamferCyl002
+    4300046: handle
+    4300048: ChamferCyl001
+    4300050: door1
+    4300052: door
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
