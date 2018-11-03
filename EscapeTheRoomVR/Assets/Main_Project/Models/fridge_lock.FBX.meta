@@ -9,72 +9,78 @@ ModelImporter:
     100006: Box001
     100008: Box007
     100010: Box012
-    100012: button
-    100014: ChamferBox001
-    100016: ChamferBox002
-    100018: ChamferCyl002
-    100020: ChamferCyl003
-    100022: ChamferCyl004
-    100024: ChamferCyl006
-    100026: closet
-    100028: Cylinder001
-    100030: Cylinder002
-    100032: Cylinder003
-    100034: Cylinder004
-    100036: Cylinder005
-    100038: Cylinder006
-    100040: Cylinder007
-    100042: Cylinder008
-    100044: door
-    100046: door003
-    100048: door004
-    100050: door005
-    100052: edge low
-    100054: edge up001
-    100056: //RootNode
-    100058: lower
-    100060: lower door
-    100062: Pyramid003
-    100064: Pyramid004
-    100066: upper
-    100068: upper door
-    100070: "\u52A0\u5F3A\u578B\u6587\u672C003"
+    100012: Box013
+    100014: Box014
+    100016: Box015
+    100018: button
+    100020: ChamferBox001
+    100022: ChamferBox002
+    100024: ChamferCyl002
+    100026: ChamferCyl003
+    100028: ChamferCyl004
+    100030: ChamferCyl006
+    100032: closet
+    100034: Cylinder001
+    100036: Cylinder002
+    100038: Cylinder003
+    100040: Cylinder004
+    100042: Cylinder005
+    100044: Cylinder006
+    100046: Cylinder007
+    100048: Cylinder008
+    100050: door
+    100052: door003
+    100054: door004
+    100056: door005
+    100058: edge low
+    100060: edge up001
+    100062: //RootNode
+    100064: lower
+    100066: lower door
+    100068: Pyramid003
+    100070: Pyramid004
+    100072: upper
+    100074: upper door
+    100076: "\u52A0\u5F3A\u578B\u6587\u672C003"
     400000: board
     400002: board002
     400004: board003
     400006: Box001
     400008: Box007
     400010: Box012
-    400012: button
-    400014: ChamferBox001
-    400016: ChamferBox002
-    400018: ChamferCyl002
-    400020: ChamferCyl003
-    400022: ChamferCyl004
-    400024: ChamferCyl006
-    400026: closet
-    400028: Cylinder001
-    400030: Cylinder002
-    400032: Cylinder003
-    400034: Cylinder004
-    400036: Cylinder005
-    400038: Cylinder006
-    400040: Cylinder007
-    400042: Cylinder008
-    400044: door
-    400046: door003
-    400048: door004
-    400050: door005
-    400052: edge low
-    400054: edge up001
-    400056: //RootNode
-    400058: lower
-    400060: lower door
-    400062: Pyramid003
-    400064: Pyramid004
-    400066: upper
-    400068: upper door
-    400070: "\u52A0\u5F3A\u578B\u6587\u672C003"
+    400012: Box013
+    400014: Box014
+    400016: Box015
+    400018: button
+    400020: ChamferBox001
+    400022: ChamferBox002
+    400024: ChamferCyl002
+    400026: ChamferCyl003
+    400028: ChamferCyl004
+    400030: ChamferCyl006
+    400032: closet
+    400034: Cylinder001
+    400036: Cylinder002
+    400038: Cylinder003
+    400040: Cylinder004
+    400042: Cylinder005
+    400044: Cylinder006
+    400046: Cylinder007
+    400048: Cylinder008
+    400050: door
+    400052: door003
+    400054: door004
+    400056: door005
+    400058: edge low
+    400060: edge up001
+    400062: //RootNode
+    400064: lower
+    400066: lower door
+    400068: Pyramid003
+    400070: Pyramid004
+    400072: upper
+    400074: upper door
+    400076: "\u52A0\u5F3A\u578B\u6587\u672C003"
     2100000: No Name
     2300000: board
     2300002: board002
@@ -82,90 +88,99 @@ ModelImporter:
     2300006: Box001
     2300008: Box007
     2300010: Box012
-    2300012: ChamferBox001
-    2300014: ChamferBox002
-    2300016: ChamferCyl002
-    2300018: ChamferCyl003
-    2300020: ChamferCyl004
-    2300022: ChamferCyl006
-    2300024: closet
-    2300026: Cylinder001
-    2300028: Cylinder002
-    2300030: Cylinder003
-    2300032: Cylinder004
-    2300034: Cylinder005
-    2300036: Cylinder006
-    2300038: Cylinder007
-    2300040: Cylinder008
-    2300042: door
-    2300044: door003
-    2300046: door004
-    2300048: door005
-    2300050: edge low
-    2300052: edge up001
-    2300054: Pyramid003
-    2300056: Pyramid004
-    2300058: "\u52A0\u5F3A\u578B\u6587\u672C003"
+    2300012: Box013
+    2300014: Box014
+    2300016: Box015
+    2300018: ChamferBox001
+    2300020: ChamferBox002
+    2300022: ChamferCyl002
+    2300024: ChamferCyl003
+    2300026: ChamferCyl004
+    2300028: ChamferCyl006
+    2300030: closet
+    2300032: Cylinder001
+    2300034: Cylinder002
+    2300036: Cylinder003
+    2300038: Cylinder004
+    2300040: Cylinder005
+    2300042: Cylinder006
+    2300044: Cylinder007
+    2300046: Cylinder008
+    2300048: door
+    2300050: door003
+    2300052: door004
+    2300054: door005
+    2300056: edge low
+    2300058: edge up001
+    2300060: Pyramid003
+    2300062: Pyramid004
+    2300064: "\u52A0\u5F3A\u578B\u6587\u672C003"
     3300000: board
     3300002: board002
     3300004: board003
     3300006: Box001
     3300008: Box007
     3300010: Box012
-    3300012: ChamferBox001
-    3300014: ChamferBox002
-    3300016: ChamferCyl002
-    3300018: ChamferCyl003
-    3300020: ChamferCyl004
-    3300022: ChamferCyl006
-    3300024: closet
-    3300026: Cylinder001
-    3300028: Cylinder002
-    3300030: Cylinder003
-    3300032: Cylinder004
-    3300034: Cylinder005
-    3300036: Cylinder006
-    3300038: Cylinder007
-    3300040: Cylinder008
-    3300042: door
-    3300044: door003
-    3300046: door004
-    3300048: door005
-    3300050: edge low
-    3300052: edge up001
-    3300054: Pyramid003
-    3300056: Pyramid004
-    3300058: "\u52A0\u5F3A\u578B\u6587\u672C003"
-    4300000: Box012
-    4300002: board003
-    4300004: closet
-    4300006: Cylinder001
-    4300008: Cylinder003
-    4300010: board
-    4300012: board002
-    4300014: Box001
-    4300016: Box007
-    4300018: Cylinder005
-    4300020: Cylinder007
-    4300022: door
-    4300024: edge low
-    4300026: door005
-    4300028: door004
-    4300030: ChamferCyl002
-    4300032: Pyramid003
-    4300034: Cylinder008
-    4300036: Cylinder006
-    4300038: door003
-    4300040: edge up001
-    4300042: Pyramid004
-    4300044: ChamferCyl003
-    4300046: Cylinder002
-    4300048: Cylinder004
-    4300050: "\u52A0\u5F3A\u578B\u6587\u672C003"
-    4300052: ChamferCyl006
-    4300054: ChamferCyl004
-    4300056: ChamferBox001
-    4300058: ChamferBox002
+    3300012: Box013
+    3300014: Box014
+    3300016: Box015
+    3300018: ChamferBox001
+    3300020: ChamferBox002
+    3300022: ChamferCyl002
+    3300024: ChamferCyl003
+    3300026: ChamferCyl004
+    3300028: ChamferCyl006
+    3300030: closet
+    3300032: Cylinder001
+    3300034: Cylinder002
+    3300036: Cylinder003
+    3300038: Cylinder004
+    3300040: Cylinder005
+    3300042: Cylinder006
+    3300044: Cylinder007
+    3300046: Cylinder008
+    3300048: door
+    3300050: door003
+    3300052: door004
+    3300054: door005
+    3300056: edge low
+    3300058: edge up001
+    3300060: Pyramid003
+    3300062: Pyramid004
+    3300064: "\u52A0\u5F3A\u578B\u6587\u672C003"
+    4300000: door
+    4300002: edge low
+    4300004: door005
+    4300006: door004
+    4300008: ChamferCyl002
+    4300010: Pyramid003
+    4300012: Cylinder008
+    4300014: Cylinder006
+    4300016: door003
+    4300018: edge up001
+    4300020: Pyramid004
+    4300022: ChamferCyl003
+    4300024: Cylinder002
+    4300026: Cylinder004
+    4300028: "\u52A0\u5F3A\u578B\u6587\u672C003"
+    4300030: ChamferCyl006
+    4300032: ChamferCyl004
+    4300034: ChamferBox001
+    4300036: ChamferBox002
+    4300038: board
+    4300040: board002
+    4300042: Box007
+    4300044: Cylinder005
+    4300046: Cylinder007
+    4300048: Box001
+    4300050: Box013
+    4300052: Box015
+    4300054: board003
+    4300056: closet
+    4300058: Cylinder001
+    4300060: Cylinder003
+    4300062: Box012
+    4300064: Box014
   externalObjects: {}
   materials:
     importMaterials: 1
