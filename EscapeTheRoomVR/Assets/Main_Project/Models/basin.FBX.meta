@@ -1,0 +1,180 @@
+fileFormatVersion: 2
+guid: 2b353f6733ef7c24083151e965aec0dd
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: basin
+    100004: Box001
+    100006: Box005
+    100008: Box008
+    100010: Box015
+    100012: Box016
+    100014: Box017
+    100016: Box019
+    100018: ChamferCyl001
+    100020: ChamferCyl002
+    100022: ChamferCyl003
+    100024: ChamferCyl004
+    100026: closet
+    100028: Cylinder001
+    100030: Cylinder002
+    100032: Cylinder003
+    100034: Hedra001
+    100036: shelf
+    100038: tap
+    100040: Torus002
+    100042: upper closet
+    400000: //RootNode
+    400002: basin
+    400004: Box001
+    400006: Box005
+    400008: Box008
+    400010: Box015
+    400012: Box016
+    400014: Box017
+    400016: Box019
+    400018: ChamferCyl001
+    400020: ChamferCyl002
+    400022: ChamferCyl003
+    400024: ChamferCyl004
+    400026: closet
+    400028: Cylinder001
+    400030: Cylinder002
+    400032: Cylinder003
+    400034: Hedra001
+    400036: shelf
+    400038: tap
+    400040: Torus002
+    400042: upper closet
+    2100000: No Name
+    2300000: Box001
+    2300002: Box005
+    2300004: Box008
+    2300006: Box015
+    2300008: Box016
+    2300010: Box017
+    2300012: Box019
+    2300014: ChamferCyl001
+    2300016: ChamferCyl002
+    2300018: ChamferCyl003
+    2300020: ChamferCyl004
+    2300022: Cylinder001
+    2300024: Cylinder002
+    2300026: Cylinder003
+    2300028: Hedra001
+    2300030: Torus002
+    3300000: Box001
+    3300002: Box005
+    3300004: Box008
+    3300006: Box015
+    3300008: Box016
+    3300010: Box017
+    3300012: Box019
+    3300014: ChamferCyl001
+    3300016: ChamferCyl002
+    3300018: ChamferCyl003
+    3300020: ChamferCyl004
+    3300022: Cylinder001
+    3300024: Cylinder002
+    3300026: Cylinder003
+    3300028: Hedra001
+    3300030: Torus002
+    4300000: ChamferCyl002
+    4300002: Cylinder002
+    4300004: ChamferCyl003
+    4300006: Box019
+    4300008: Box017
+    4300010: Hedra001
+    4300012: Torus002
+    4300014: Cylinder001
+    4300016: Box008
+    4300018: ChamferCyl004
+    4300020: Cylinder003
+    4300022: Box005
+    4300024: ChamferCyl001
+    4300026: Box001
+    4300028: Box015
+    4300030: Box016
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
