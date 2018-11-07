@@ -248,10 +248,8 @@
      <Compile Include="Assets\Store Assets\Customizable_Furnture\Source\Scripts\OptionsDisplaySaveVar.cs" />
      <Compile Include="Assets\Store Assets\Customizable_Furnture\Source\Scripts\PlayVideo.cs" />
      <Compile Include="Assets\Store Assets\Customizable_Furnture\Source\Scripts\SimpleSwitchMaterial.cs" />
-     <Compile Include="Assets\Store Assets\OldRadio\Alpinist\CamRotat.cs" />
      <None Include="Assets\SteamVR\Resources\SteamVR_Fade.shader" />
      <None Include="Assets\SteamVR\Resources\SteamVR_ClearAll.shader" />
-     <None Include="Assets\Store Assets\OldRadio\Alpinist\ReadMe.txt" />
      <None Include="Assets\SteamVR\InteractionSystem\Hints\Shaders\ControllerButtonHints.shader" />
      <None Include="Assets\SteamVR\InteractionSystem\Samples\BuggyBuddy\Materials\LightCone.shader" />
      <None Include="Assets\Main_Project\Materials\Shader_Flip_Normal.shader" />
