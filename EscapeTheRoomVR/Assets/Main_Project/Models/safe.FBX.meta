@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 4b835a7d14ea59c4f900d5c033bf0c8b
+guid: 51ca640d66f969f4296ba3ee8f0b4f35
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
@@ -15,23 +15,23 @@ ModelImporter:
     100018: 7
     100020: 8
     100022: 9
-    100024: Box001
+    100024: body
     100026: cancel
-    100028: ChamferCyl001
-    100030: ChamferCyl002
-    100032: ChamferCyl003
-    100034: ChamferCyl004
-    100036: ChamferCyl005
-    100038: delete
-    100040: door
-    100042: door 1
-    100044: door1
-    100046: enter
-    100048: finger print
-    100050: handle
-    100052: lock
-    100054: panel
-    100056: panel 1
+    100028: delete
+    100030: Door
+    100032: door
+    100034: door1
+    100036: enter
+    100038: finger print
+    100040: handle
+    100042: handle_base
+    100044: Lock
+    100046: lock_1
+    100048: lock_2
+    100050: lock_3
+    100052: lock_4
+    100054: Panel
+    100056: panel
     100058: //RootNode
     100060: screen
     400000: '#'
@@ -46,23 +46,23 @@ ModelImporter:
     400018: 7
     400020: 8
     400022: 9
-    400024: Box001
+    400024: body
     400026: cancel
-    400028: ChamferCyl001
-    400030: ChamferCyl002
-    400032: ChamferCyl003
-    400034: ChamferCyl004
-    400036: ChamferCyl005
-    400038: delete
-    400040: door
-    400042: door 1
-    400044: door1
-    400046: enter
-    400048: finger print
-    400050: handle
-    400052: lock
-    400054: panel
-    400056: panel 1
+    400028: delete
+    400030: Door
+    400032: door
+    400034: door1
+    400036: enter
+    400038: finger print
+    400040: handle
+    400042: handle_base
+    400044: Lock
+    400046: lock_1
+    400048: lock_2
+    400050: lock_3
+    400052: lock_4
+    400054: Panel
+    400056: panel
     400058: //RootNode
     400060: screen
     2100000: No Name
@@ -78,20 +78,20 @@ ModelImporter:
     2300018: 7
     2300020: 8
     2300022: 9
-    2300024: Box001
+    2300024: body
     2300026: cancel
-    2300028: ChamferCyl001
-    2300030: ChamferCyl002
-    2300032: ChamferCyl003
-    2300034: ChamferCyl004
-    2300036: ChamferCyl005
-    2300038: delete
-    2300040: door 1
-    2300042: door1
-    2300044: enter
-    2300046: finger print
-    2300048: handle
-    2300050: panel 1
+    2300028: delete
+    2300030: door
+    2300032: door1
+    2300034: enter
+    2300036: finger print
+    2300038: handle
+    2300040: handle_base
+    2300042: lock_1
+    2300044: lock_2
+    2300046: lock_3
+    2300048: lock_4
+    2300050: panel
     2300052: screen
     3300000: '#'
     3300002: '*'
@@ -105,48 +105,48 @@ ModelImporter:
     3300018: 7
     3300020: 8
     3300022: 9
-    3300024: Box001
+    3300024: body
     3300026: cancel
-    3300028: ChamferCyl001
-    3300030: ChamferCyl002
-    3300032: ChamferCyl003
-    3300034: ChamferCyl004
-    3300036: ChamferCyl005
-    3300038: delete
-    3300040: door 1
-    3300042: door1
-    3300044: enter
-    3300046: finger print
-    3300048: handle
-    3300050: panel 1
+    3300028: delete
+    3300030: door
+    3300032: door1
+    3300034: enter
+    3300036: finger print
+    3300038: handle
+    3300040: handle_base
+    3300042: lock_1
+    3300044: lock_2
+    3300046: lock_3
+    3300048: lock_4
+    3300050: panel
     3300052: screen
-    4300000: Box001
-    4300002: finger print
-    4300004: '#'
-    4300006: 0
-    4300008: '*'
-    4300010: enter
-    4300012: 9
-    4300014: 8
-    4300016: 7
-    4300018: cancel
-    4300020: 6
-    4300022: 5
-    4300024: 4
-    4300026: delete
-    4300028: 3
-    4300030: 2
-    4300032: 1
-    4300034: screen
-    4300036: panel
-    4300038: ChamferCyl005
-    4300040: ChamferCyl004
-    4300042: ChamferCyl003
-    4300044: ChamferCyl002
-    4300046: handle
-    4300048: ChamferCyl001
-    4300050: door1
-    4300052: door
+    4300000: body
+    4300002: door
+    4300004: door1
+    4300006: handle_base
+    4300008: handle
+    4300010: panel
+    4300012: screen
+    4300014: 1
+    4300016: 2
+    4300018: 3
+    4300020: delete
+    4300022: 4
+    4300024: 5
+    4300026: 6
+    4300028: cancel
+    4300030: 7
+    4300032: 8
+    4300034: 9
+    4300036: enter
+    4300038: '*'
+    4300040: 0
+    4300042: '#'
+    4300044: finger print
+    4300046: lock_1
+    4300048: lock_2
+    4300050: lock_3
+    4300052: lock_4
   externalObjects: {}
   materials:
     importMaterials: 1
