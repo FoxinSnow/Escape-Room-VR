@@ -62,17 +62,20 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Main_Project\Scripts\ClockRun.cs" />
+    <Compile Include="Assets\Main_Project\Scripts\ETR_ContainerProtection.cs" />
     <Compile Include="Assets\Main_Project\Scripts\ETR_DayNightCycle.cs" />
     <Compile Include="Assets\Main_Project\Scripts\ETR_FanSwitch.cs" />
+    <Compile Include="Assets\Main_Project\Scripts\ETR_ForceKinematic.cs" />
+    <Compile Include="Assets\Main_Project\Scripts\ETR_FridgeLock.cs" />
     <Compile Include="Assets\Main_Project\Scripts\ETR_LightSwitch.cs" />
     <Compile Include="Assets\Main_Project\Scripts\ETR_PressableFeedback.cs" />
     <Compile Include="Assets\Main_Project\Scripts\ETR_TimeControl.cs" />
-    <Compile Include="Assets\Main_Project\Scripts\FanRun.cs" />
+    <Compile Include="Assets\Main_Project\Scripts\-FanRun.cs" />
     <Compile Include="Assets\Main_Project\Scripts\LockDigitOne.cs" />
     <Compile Include="Assets\Main_Project\Scripts\LockDigitThree.cs" />
     <Compile Include="Assets\Main_Project\Scripts\LockDigitTwo.cs" />
     <Compile Include="Assets\Main_Project\Scripts\UserChangeTime.cs" />
-    <Compile Include="Assets\Main_Project\Scripts\UserSwitchFan.cs" />
+    <Compile Include="Assets\Main_Project\Scripts\-UserSwitchFan.cs" />
     <Compile Include="Assets\SteamVR\Extras\SteamVR_GazeTracker.cs" />
     <Compile Include="Assets\SteamVR\Extras\SteamVR_LaserPointer.cs" />
     <Compile Include="Assets\SteamVR\Extras\SteamVR_Teleporter.cs" />

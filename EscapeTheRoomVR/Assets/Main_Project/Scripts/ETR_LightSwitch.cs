@@ -15,7 +15,7 @@ public class ETR_LightSwitch : MonoBehaviour
     public void Start()
     {
         int lightNumber = lightList.Length;
-        
+
     }
 
     protected virtual void OnEnable()

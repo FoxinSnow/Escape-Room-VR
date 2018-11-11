@@ -8,7 +8,7 @@ using UnityEngine;
 
 public class ETR_FanSwitch : MonoBehaviour {
 
-    public GameObject fan;
+    public Transform fanTransform;
     public bool isOn;
     public float currentSpeed, maxSpeed, accelerateSpeed;
     public AudioSource switchSoundEffect;
@@ -61,7 +61,7 @@ public class ETR_FanSwitch : MonoBehaviour {
 
         }
 
-        fan.gameObject.transform.Rotate(0, currentSpeed, 0);
+        fanTransform.Rotate(0, currentSpeed, 0);
     }
 
     protected virtual void InteractableObjectUsed(object sender, InteractableObjectEventArgs e)
