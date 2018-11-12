@@ -67,6 +67,7 @@
     <Compile Include="Assets\Main_Project\Scripts\ETR_FanSwitch.cs" />
     <Compile Include="Assets\Main_Project\Scripts\ETR_ForceKinematic.cs" />
     <Compile Include="Assets\Main_Project\Scripts\ETR_FridgeLock.cs" />
+    <Compile Include="Assets\Main_Project\Scripts\ETR_HiddenObjectTrigger.cs" />
     <Compile Include="Assets\Main_Project\Scripts\ETR_LightSwitch.cs" />
     <Compile Include="Assets\Main_Project\Scripts\ETR_TimeControl.cs" />
     <Compile Include="Assets\Main_Project\Scripts\-FanRun.cs" />

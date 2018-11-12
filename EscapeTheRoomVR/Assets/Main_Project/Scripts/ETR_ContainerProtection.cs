@@ -6,8 +6,9 @@ public class ETR_ContainerProtection : MonoBehaviour {
 
     //enum ContainerType { Drawer, Safe };
 
-    public GameObject[] visionBlockingObject;
-    public GameObject[] containerContent;
+    public GameObject[] protectedArea;
+    public GameObject[] protectedContent;
+    private bool isVisible;
     //public ContainerType containerType;
     //public float toleranceValue;
 
@@ -18,5 +19,6 @@ public class ETR_ContainerProtection : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+        
 	}
 }
