@@ -34,9 +34,9 @@ public class ETR_HiddenObjectTrigger : MonoBehaviour {
                 objectToReveal[i].gameObject.SetActive(true);
             }
 
+            this.gameObject.SetActive(false);
             // Destroy the audio source and trigger since no longer required
-            Destroy(hintSound);
-            Destroy(this);
+            //Destroy(this.gameObject);
 
         }
     }

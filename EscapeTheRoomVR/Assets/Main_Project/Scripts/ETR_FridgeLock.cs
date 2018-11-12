@@ -50,30 +50,6 @@ public class ETR_FridgeLock : MonoBehaviour
 
     private void checkLock()
     {
-        /*
-        for (int i = 0; i < lockObjectTransforms.Length; i++)
-        {
-            int currentRotation = (int)Mathf.Round(lockObjectTransforms[i].localEulerAngles.z);
-            switch (currentRotation)
-            {
-                case -60:
-                    lockObjectTransforms[i].localEulerAngles = new Vector3(0, 0, 300);
-                    Debug.Log("-60 -> 300");
-                    break;
-
-                case -120:
-                    lockObjectTransforms[i].localEulerAngles = new Vector3(0, 0, 240);
-                    Debug.Log("-120 -> 240");
-                    break;
-
-                case -180:
-                    lockObjectTransforms[i].localEulerAngles = new Vector3(0, 0, 180);
-                    Debug.Log("-180 -> 180");
-                    break;
-
-            }
-*/
-
         for (int i = 0; i < lockObjectTransforms.Length; i++){
             int currentRotation = (int)Mathf.Round(lockObjectTransforms[i].localEulerAngles.z);
             if (currentRotation < 0){
@@ -93,40 +69,6 @@ public class ETR_FridgeLock : MonoBehaviour
             fridgeDoorToUnlock.gameObject.SetActive(true);
             fridgeDoorToLock.gameObject.SetActive(false);
         }
-
-
-        /*
-        if ((int)lockObjectTransforms[i].localEulerAngles.z == unlockDegrees[i])
-        {
-            numberUnlocked++;
-            Debug.Log("Matched" + i);
-            Debug.Log("NumUnlocked" + numberUnlocked);
-        }
-        else
-        {
-            numberUnlocked = 0;
-        }
-
-
-    }
-     */
-        /*
-        Debug.Log("1: " + Mathf.Round(lockObjectTransforms[0].localEulerAngles.z));
-        Debug.Log("2: " + Mathf.Round(lockObjectTransforms[1].localEulerAngles.z));
-        Debug.Log("3: " + Mathf.Round(lockObjectTransforms[2].localEulerAngles.z));
-
-        if (Mathf.Round(lockObjectTransforms[0].localEulerAngles.z) == unlockDegrees[0] && Mathf.Round(lockObjectTransforms[1].localEulerAngles.z) == unlockDegrees[1] && Mathf.Round(lockObjectTransforms[2].localEulerAngles.z) == unlockDegrees[2]) {
-
-            Debug.Log("Unlock");
-        }
-        */
-
-        /*
-        if (numberUnlocked == lockObjectTransforms.Length)
-        {
-            Debug.Log("Unlock");
-        }
-        */
 
     }
 
