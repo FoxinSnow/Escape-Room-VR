@@ -7,6 +7,7 @@ public class ETR_FridgeLock : MonoBehaviour
 {
 
     public GameObject fridgeDoorToLock;
+    public GameObject fridgeDoorToUnlock;
     public AudioSource unlockSoundEffect;
     public Transform[] lockObjectTransforms;
     public float[] unlockDegrees;
@@ -17,7 +18,6 @@ public class ETR_FridgeLock : MonoBehaviour
     void Start()
     {
         numberUnlocked = 0;
-        Debug.Log(lockObjectTransforms.Length);
     }
 
     protected virtual void OnEnable()
@@ -33,12 +33,8 @@ public class ETR_FridgeLock : MonoBehaviour
         interactableObject.InteractableObjectUnused -= InteractableObjectUnused;
     }
 
-    protected virtual void Update()
-    { }
-
     protected virtual void InteractableObjectUsed(object sender, InteractableObjectEventArgs e)
     {
-        Debug.Log("Triggered");
         checkLock();
         if (unlockSoundEffect != null)
         {
@@ -49,17 +45,14 @@ public class ETR_FridgeLock : MonoBehaviour
 
     protected virtual void InteractableObjectUnused(object sender, InteractableObjectEventArgs e)
     {
-        Debug.Log("NOT Triggered");
+
     }
 
     private void checkLock()
     {
-
-        
+        /*
         for (int i = 0; i < lockObjectTransforms.Length; i++)
         {
-        
-            
             int currentRotation = (int)Mathf.Round(lockObjectTransforms[i].localEulerAngles.z);
             switch (currentRotation)
             {
@@ -79,24 +72,45 @@ public class ETR_FridgeLock : MonoBehaviour
                     break;
 
             }
+*/
 
-
-            /*
-            if ((int)lockObjectTransforms[i].localEulerAngles.z == unlockDegrees[i])
-            {
-                numberUnlocked++;
-                Debug.Log("Matched" + i);
-                Debug.Log("NumUnlocked" + numberUnlocked);
+        for (int i = 0; i < lockObjectTransforms.Length; i++){
+            int currentRotation = (int)Mathf.Round(lockObjectTransforms[i].localEulerAngles.z);
+            if (currentRotation < 0){
+                int newRotation = currentRotation + 360;
+                lockObjectTransforms[i].localEulerAngles = new Vector3(0, 0, newRotation);
             }
-            else
-            {
+
+            if ((int)Mathf.Round(lockObjectTransforms[i].localEulerAngles.z) == unlockDegrees[i]){
+                numberUnlocked++;
+            }else{
                 numberUnlocked = 0;
             }
-            */
-
         }
-        
 
+        if (numberUnlocked == lockObjectTransforms.Length){
+            Debug.Log("Unlock");
+            fridgeDoorToUnlock.gameObject.SetActive(true);
+            fridgeDoorToLock.gameObject.SetActive(false);
+        }
+
+
+        /*
+        if ((int)lockObjectTransforms[i].localEulerAngles.z == unlockDegrees[i])
+        {
+            numberUnlocked++;
+            Debug.Log("Matched" + i);
+            Debug.Log("NumUnlocked" + numberUnlocked);
+        }
+        else
+        {
+            numberUnlocked = 0;
+        }
+
+
+    }
+     */
+        /*
         Debug.Log("1: " + Mathf.Round(lockObjectTransforms[0].localEulerAngles.z));
         Debug.Log("2: " + Mathf.Round(lockObjectTransforms[1].localEulerAngles.z));
         Debug.Log("3: " + Mathf.Round(lockObjectTransforms[2].localEulerAngles.z));
@@ -105,6 +119,7 @@ public class ETR_FridgeLock : MonoBehaviour
 
             Debug.Log("Unlock");
         }
+        */
 
         /*
         if (numberUnlocked == lockObjectTransforms.Length)
