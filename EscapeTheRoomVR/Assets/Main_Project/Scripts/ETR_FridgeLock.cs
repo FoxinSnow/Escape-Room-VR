@@ -8,7 +8,10 @@ public class ETR_FridgeLock : MonoBehaviour
 
     public GameObject fridgeDoorToLock;
     public GameObject fridgeDoorToUnlock;
+    public GameObject unlockedLock;
     public AudioSource unlockSoundEffect;
+    public AudioClip failedUnlockingClip;
+    public AudioClip unlockingClip;
     public Transform[] lockObjectTransforms;
     public float[] unlockDegrees;
     private VRTK_InteractableObject interactableObject;
@@ -36,11 +39,6 @@ public class ETR_FridgeLock : MonoBehaviour
     protected virtual void InteractableObjectUsed(object sender, InteractableObjectEventArgs e)
     {
         checkLock();
-        if (unlockSoundEffect != null)
-        {
-            unlockSoundEffect.Play();
-        }
-        interactableObject.enabled = false;
     }
 
     protected virtual void InteractableObjectUnused(object sender, InteractableObjectEventArgs e)
@@ -50,6 +48,8 @@ public class ETR_FridgeLock : MonoBehaviour
 
     private void checkLock()
     {
+        numberUnlocked = 0;
+
         for (int i = 0; i < lockObjectTransforms.Length; i++){
             int currentRotation = (int)Mathf.Round(lockObjectTransforms[i].localEulerAngles.z);
             if (currentRotation < 0){
@@ -58,16 +58,32 @@ public class ETR_FridgeLock : MonoBehaviour
             }
 
             if ((int)Mathf.Round(lockObjectTransforms[i].localEulerAngles.z) == unlockDegrees[i]){
+
+                Debug.Log(i + ":" + (int)Mathf.Round(lockObjectTransforms[i].localEulerAngles.z));
+
                 numberUnlocked++;
             }else{
                 numberUnlocked = 0;
             }
+            Debug.Log(numberUnlocked);
         }
 
-        if (numberUnlocked == lockObjectTransforms.Length){
+        if (numberUnlocked == lockObjectTransforms.Length)
+        {
             Debug.Log("Unlock");
+
+            unlockSoundEffect.clip = unlockingClip;
+            unlockSoundEffect.Play();
+
             fridgeDoorToUnlock.gameObject.SetActive(true);
             fridgeDoorToLock.gameObject.SetActive(false);
+            GameObject thisLock = GameObject.Find("*Lock*");
+            thisLock.SetActive(false);
+            unlockedLock.gameObject.SetActive(true);
+        }
+        else {
+            unlockSoundEffect.clip = failedUnlockingClip;
+            unlockSoundEffect.Play();
         }
 
     }

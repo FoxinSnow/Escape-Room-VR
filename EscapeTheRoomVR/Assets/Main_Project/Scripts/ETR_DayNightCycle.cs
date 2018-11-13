@@ -5,19 +5,23 @@ using UnityEngine;
 public class ETR_DayNightCycle : MonoBehaviour {
 
     private bool isNight;
-
-	// Use this for initialization
-	void Start () {
-		
-	}
+    private float currentAngle;
+    // Use this for initialization
+    void Start () {
+        currentAngle = 180 - this.gameObject.transform.eulerAngles.x;
+        Debug.Log(currentAngle);
+        this.gameObject.transform.eulerAngles = new Vector3(270f, 342.640f, -10.71399f);
+    }
 
     // Update is called once per frame
     void Update()
     {
 
         //float currentIntensity = this.gameObject.GetComponent<Light>().intensity;
-        float rotateDegree = 12f * Time.deltaTime;
-        this.gameObject.transform.Rotate(rotateDegree, 0, 0);
+        //float currentAngle = this.gameObject.transform.eulerAngles.x;
+        //Debug.Log(currentAngle);
+        //currentAngle += 2f * Time.deltaTime;
+        //this.gameObject.transform.eulerAngles = new Vector3(currentAngle, 342.640f, -10.71399f);
         /*
         if (currentIntensity >= 1) {
             isNight = false;
