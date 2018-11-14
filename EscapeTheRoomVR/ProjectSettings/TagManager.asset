@@ -5,6 +5,15 @@ TagManager:
   serializedVersion: 2
   tags:
   - TeleportArea
+  - Leg
+  - SnapCube
+  - Arm
+  - SnapCylinder
+  - Saucers
+  - ExcludeTeleport
+  - Torso
+  - Head
+  - Hand
   layers:
   - Default
   - TransparentFX
