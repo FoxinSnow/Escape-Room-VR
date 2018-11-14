@@ -61,6 +61,40 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\PostProcessing\Editor\Attributes\PostProcessingModelEditorAttribute.cs" />
+    <Compile Include="Assets\PostProcessing\Editor\Models\AmbientOcclusionModelEditor.cs" />
+    <Compile Include="Assets\PostProcessing\Editor\Models\AntialiasingModelEditor.cs" />
+    <Compile Include="Assets\PostProcessing\Editor\Models\BloomModelEditor.cs" />
+    <Compile Include="Assets\PostProcessing\Editor\Models\BuiltinDebugViewsEditor.cs" />
+    <Compile Include="Assets\PostProcessing\Editor\Models\ChromaticAberrationEditor.cs" />
+    <Compile Include="Assets\PostProcessing\Editor\Models\ColorGradingModelEditor.cs" />
+    <Compile Include="Assets\PostProcessing\Editor\Models\DefaultPostFxModelEditor.cs" />
+    <Compile Include="Assets\PostProcessing\Editor\Models\DepthOfFieldModelEditor.cs" />
+    <Compile Include="Assets\PostProcessing\Editor\Models\DitheringModelEditor.cs" />
+    <Compile Include="Assets\PostProcessing\Editor\Models\EyeAdaptationModelEditor.cs" />
+    <Compile Include="Assets\PostProcessing\Editor\Models\FogModelEditor.cs" />
+    <Compile Include="Assets\PostProcessing\Editor\Models\GrainModelEditor.cs" />
+    <Compile Include="Assets\PostProcessing\Editor\Models\MotionBlurModelEditor.cs" />
+    <Compile Include="Assets\PostProcessing\Editor\Models\ScreenSpaceReflectionModelEditor.cs" />
+    <Compile Include="Assets\PostProcessing\Editor\Models\UserLutModelEditor.cs" />
+    <Compile Include="Assets\PostProcessing\Editor\Models\VignetteModelEditor.cs" />
+    <Compile Include="Assets\PostProcessing\Editor\Monitors\HistogramMonitor.cs" />
+    <Compile Include="Assets\PostProcessing\Editor\Monitors\ParadeMonitor.cs" />
+    <Compile Include="Assets\PostProcessing\Editor\Monitors\VectorscopeMonitor.cs" />
+    <Compile Include="Assets\PostProcessing\Editor\Monitors\WaveformMonitor.cs" />
+    <Compile Include="Assets\PostProcessing\Editor\PostProcessingBehaviourEditor.cs" />
+    <Compile Include="Assets\PostProcessing\Editor\PostProcessingFactory.cs" />
+    <Compile Include="Assets\PostProcessing\Editor\PostProcessingInspector.cs" />
+    <Compile Include="Assets\PostProcessing\Editor\PostProcessingModelEditor.cs" />
+    <Compile Include="Assets\PostProcessing\Editor\PostProcessingMonitor.cs" />
+    <Compile Include="Assets\PostProcessing\Editor\PropertyDrawers\GetSetDrawer.cs" />
+    <Compile Include="Assets\PostProcessing\Editor\PropertyDrawers\MinDrawer.cs" />
+    <Compile Include="Assets\PostProcessing\Editor\PropertyDrawers\TrackballGroupDrawer.cs" />
+    <Compile Include="Assets\PostProcessing\Editor\Utils\CurveEditor.cs" />
+    <Compile Include="Assets\PostProcessing\Editor\Utils\EditorGUIHelper.cs" />
+    <Compile Include="Assets\PostProcessing\Editor\Utils\EditorResources.cs" />
+    <Compile Include="Assets\PostProcessing\Editor\Utils\FxStyles.cs" />
+    <Compile Include="Assets\PostProcessing\Editor\Utils\ReflectionUtils.cs" />
     <Compile Include="Assets\SteamVR\Editor\SteamVR_Editor.cs" />
     <Compile Include="Assets\SteamVR\Editor\SteamVR_Preferences.cs" />
     <Compile Include="Assets\SteamVR\Editor\SteamVR_RenderModelEditor.cs" />
@@ -70,6 +104,7 @@
     <Compile Include="Assets\Store Assets\Customizable_Furnture\Editor\Customizable_Furniture\EditorCleanUpAll.cs" />
     <Compile Include="Assets\Store Assets\Customizable_Furnture\Editor\Customizable_Furniture\EditorOptionsDisplay.cs" />
     <Compile Include="Assets\Store Assets\Customizable_Furnture\Editor\Customizable_Furniture\EditorSimpleSwitchMaterial.cs" />
+    <Compile Include="Assets\VolumetricLights\Assets\Editor\ImageEffects\TonemappingEditor.cs" />
     <Compile Include="Assets\VRTK\Examples\ExampleResources\SharedResources\Scripts\Editor\VRTKExample_FixSetupEditor.cs" />
     <Compile Include="Assets\VRTK\Source\Editor\Attributes\MinMaxRangeDrawer.cs" />
     <Compile Include="Assets\VRTK\Source\Editor\Attributes\ObsoleteInspectorDrawer.cs" />
