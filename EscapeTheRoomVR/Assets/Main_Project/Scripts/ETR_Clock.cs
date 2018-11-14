@@ -77,7 +77,7 @@ public class ETR_Clock : MonoBehaviour
         //the second can not be changed and no negative situation
         second = (int)Math.Floor(-gameSecondAngle % 360f / 6f);
 
-        sunLight.localRotation = Quaternion.Euler(0f, 0f, gameHourAngle);
+        sunLight.localRotation =  Quaternion.Euler(gameHourAngle, 0f, 0f);
     }
 
     //static method
