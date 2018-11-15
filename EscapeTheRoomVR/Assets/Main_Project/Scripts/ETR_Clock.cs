@@ -26,8 +26,8 @@ public class ETR_Clock : MonoBehaviour
         hour = 8;
         minute = 0;
         second = 0;
-        gameHourAngle = -hour * 30f;
-        gameMinuteAngle = -minute * 0.5f;
+        gameHourAngle = hour * 30f;
+        gameMinuteAngle = minute * 0.5f;
     }
 
     // Update is called once per frame
@@ -40,10 +40,10 @@ public class ETR_Clock : MonoBehaviour
             //if user does not do anything to the clock, it is a normal clock
 
             //every second
-            gameHourAngle -= Time.deltaTime * hoursDegrees;
+            gameHourAngle += Time.deltaTime * hoursDegrees;
             //gameHourAngle = gameHourAngle % 360f;
 
-            gameMinuteAngle -= Time.deltaTime * minutesDegrees;
+            gameMinuteAngle += Time.deltaTime * minutesDegrees;
             //gameHourAngle = gameMinuteAngle % 360f;
 
         }
@@ -52,30 +52,30 @@ public class ETR_Clock : MonoBehaviour
             Debug.Log("hour " + hour + " minute " + minute + " second " + second);
 
             //current hour angle sum
-            gameHourAngle -= angle;
+            gameHourAngle += angle;
             //gameHourAngle = gameHourAngle % 360f;
 
             //current hour angle sum
-            gameMinuteAngle -= 12 * angle;
+            gameMinuteAngle += 12 * angle;
             //gameMinuteAngle = gameMinuteAngle % 360f;
 
             userInput = false; //let the clock continue run
         }
 
-        gameSecondAngle -= Time.deltaTime * secondsDegrees;
+        gameSecondAngle += Time.deltaTime * secondsDegrees;
         secondHand.localRotation = Quaternion.Euler(0f, 0f, gameSecondAngle);
         hourHand.localRotation = Quaternion.Euler(0f, 0f, gameHourAngle);
         minuteHand.localRotation = Quaternion.Euler(0f, 0f, gameMinuteAngle);
 
         //range the time
-        int tmph = (int)Math.Floor(-gameHourAngle % 720f / 30f);
+        int tmph = (int)Math.Floor(gameHourAngle % 720f / 30f);
         hour = tmph >= 0 ? tmph : 24 + tmph;
 
-        int tmpm = (int)Math.Floor(-gameMinuteAngle % 360f / 6f);
+        int tmpm = (int)Math.Floor(gameMinuteAngle % 360f / 6f);
         minute = tmpm >= 0 ? tmpm : 60 + tmpm;
 
         //the second can not be changed and no negative situation
-        second = (int)Math.Floor(-gameSecondAngle % 360f / 6f);
+        second = (int)Math.Floor(gameSecondAngle % 360f / 6f);
 
         sunLight.localRotation =  Quaternion.Euler(gameHourAngle, 0f, 0f);
     }
