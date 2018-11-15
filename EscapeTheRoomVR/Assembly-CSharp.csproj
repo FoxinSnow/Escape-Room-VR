@@ -72,6 +72,7 @@
     <Compile Include="Assets\Main_Project\Scripts\ETR_HiddenObjectTrigger.cs" />
     <Compile Include="Assets\Main_Project\Scripts\ETR_LightSwitch.cs" />
     <Compile Include="Assets\Main_Project\Scripts\ETR_MissingObject.cs" />
+    <Compile Include="Assets\Main_Project\Scripts\ETR_RadioButton.cs" />
     <Compile Include="Assets\Main_Project\Scripts\ETR_RadioControl.cs" />
     <Compile Include="Assets\Main_Project\Scripts\ETR_TimeControl.cs" />
     <Compile Include="Assets\Main_Project\Scripts\-FanRun.cs" />

@@ -22,7 +22,7 @@ public class ETR_MissingObject : MonoBehaviour {
         if (other.gameObject == objectToMatch.gameObject) {
             objectToReveal.SetActive(true);
             other.gameObject.SetActive(false);
-            Destroy(this);
+            Destroy(this.gameObject);
         }
     }
 }
