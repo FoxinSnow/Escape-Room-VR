@@ -122,6 +122,9 @@
     <Compile Include="Assets\VRTK\Source\Editor\VRTK_SDKSetupEditor.cs" />
     <Compile Include="Assets\VRTK\Source\Editor\VRTK_SupportInfoWindow.cs" />
     <Compile Include="Assets\VRTK\Source\Editor\VRTK_UpdatePrompt.cs" />
+    <Reference Include="Assembly-UnityScript-firstpass">
+      <HintPath>D:/Project/EscapeTheRoom/EscapeTheRoomVR/Library/ScriptAssemblies/Assembly-UnityScript-firstpass.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEditor.StandardEvents">
       <HintPath>D:/Project/EscapeTheRoom/EscapeTheRoomVR/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>

@@ -61,9 +61,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\ETR_ClampRotator.cs" />
     <Compile Include="Assets\Main_Project\Scripts\-ClockRun.cs" />
     <Compile Include="Assets\Main_Project\Scripts\CoverOperation.cs" />
+    <Compile Include="Assets\Main_Project\Scripts\ETR_AlcoholBurnerControl.cs" />
+    <Compile Include="Assets\Main_Project\Scripts\ETR_ClampRotator.cs" />
     <Compile Include="Assets\Main_Project\Scripts\ETR_Clock.cs" />
     <Compile Include="Assets\Main_Project\Scripts\ETR_ColliderTest.cs" />
     <Compile Include="Assets\Main_Project\Scripts\ETR_ContainerProtection.cs" />
@@ -654,6 +655,9 @@
     <None Include="Assets\PostProcessing\Resources\Shaders\AmbientOcclusion.cginc" />
     <None Include="Assets\PostProcessing\Editor Resources\Monitors\WaveformCompute.compute" />
     <None Include="Assets\SteamVR\InteractionSystem\Readme_InteractionSystem.txt" />
+    <Reference Include="Assembly-UnityScript-firstpass">
+      <HintPath>D:/Project/EscapeTheRoom/EscapeTheRoomVR/Library/ScriptAssemblies/Assembly-UnityScript-firstpass.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEditor.StandardEvents">
       <HintPath>D:/Project/EscapeTheRoom/EscapeTheRoomVR/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>
