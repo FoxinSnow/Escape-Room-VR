@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using VRTK;
+using VRTK.Controllables.PhysicsBased;
 using UnityEngine;
 
 public class ETR_FridgeLock : MonoBehaviour
@@ -15,12 +16,14 @@ public class ETR_FridgeLock : MonoBehaviour
     public Transform[] lockObjectTransforms;
     public float[] unlockDegrees;
     private VRTK_InteractableObject interactableObject;
+    private VRTK_BasePhysicsControllable fridgeDoor;
 
     private int numberUnlocked;
     // Use this for initialization
     void Start()
     {
         numberUnlocked = 0;
+        fridgeDoor = fridgeDoorToUnlock.GetComponent<VRTK_BasePhysicsControllable>();
     }
 
     protected virtual void OnEnable()
