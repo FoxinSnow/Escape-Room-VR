@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+// Coded by Fei Huang, Yuqi Wang
 public class CoverOperation : MonoBehaviour {
 
 

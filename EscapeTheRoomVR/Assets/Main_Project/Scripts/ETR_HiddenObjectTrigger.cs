@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+// Coded by Yuqi Wang
 public class ETR_HiddenObjectTrigger : MonoBehaviour {
 
     public GameObject[] objectToReveal;

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using VRTK;
 using UnityEngine;
 
+// Coded by Yuqi Wang
 public class ETR_RadioControl : MonoBehaviour {
 
     public Transform popButton, backwardButton, playButton, forwardButton, stopButton;

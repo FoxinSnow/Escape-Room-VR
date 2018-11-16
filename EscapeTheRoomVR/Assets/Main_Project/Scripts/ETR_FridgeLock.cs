@@ -4,6 +4,7 @@ using VRTK;
 using UnityEngine;
 using VRTK.Controllables.PhysicsBased;
 
+// Coded by Yuqi Wang
 public class ETR_FridgeLock : MonoBehaviour
 {
 
@@ -47,7 +48,7 @@ public class ETR_FridgeLock : MonoBehaviour
 
     protected virtual void InteractableObjectUsed(object sender, InteractableObjectEventArgs e)
     {
-        checkLock();
+        CheckLock();
     }
 
     protected virtual void InteractableObjectUnused(object sender, InteractableObjectEventArgs e)
@@ -55,7 +56,7 @@ public class ETR_FridgeLock : MonoBehaviour
 
     }
 
-    private void checkLock()
+    private void CheckLock()
     {
         numberUnlocked = 0;
 

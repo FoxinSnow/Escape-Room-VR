@@ -3,9 +3,7 @@ using System.Collections.Generic;
 using VRTK;
 using UnityEngine;
 
-// Algorithm developed by Fei Huang
-// Modified and implemented for VR by Yuqi Wang
-
+// Coded by Fei Huang(Algorithm), Yuqi Wang(VR Interaction)
 public class ETR_FanSwitch : MonoBehaviour {
 
     public Transform fanTransform;

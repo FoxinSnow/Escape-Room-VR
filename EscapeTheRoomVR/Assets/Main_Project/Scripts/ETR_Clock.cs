@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System;
 using UnityEngine;
 
+// Coded by Fei Huang(Algorithm), Yuqi Wang(VR Interaction)
 public class ETR_Clock : MonoBehaviour
 {
 

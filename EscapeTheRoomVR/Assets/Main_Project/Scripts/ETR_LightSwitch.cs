@@ -4,7 +4,6 @@ using VRTK;
 using UnityEngine;
 
 // Coded by Yuqi Wang
-
 public class ETR_LightSwitch : MonoBehaviour
 {
     //public HoverButton hoverButton;
