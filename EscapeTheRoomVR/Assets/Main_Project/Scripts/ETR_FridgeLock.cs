@@ -1,42 +1,48 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using VRTK;
-using VRTK.Controllables.PhysicsBased;
 using UnityEngine;
+using VRTK.Controllables.PhysicsBased;
 
 public class ETR_FridgeLock : MonoBehaviour
 {
 
-    public GameObject fridgeDoorToLock;
-    public GameObject fridgeDoorToUnlock;
+    public GameObject fridgeDoor;
     public GameObject unlockedLock;
+
     public AudioSource unlockSoundEffect;
     public AudioClip failedUnlockingClip;
     public AudioClip unlockingClip;
+
     public Transform[] lockObjectTransforms;
     public float[] unlockDegrees;
-    private VRTK_InteractableObject interactableObject;
-    private VRTK_BasePhysicsControllable fridgeDoor;
+
+    private VRTK_InteractableObject lockInteraction;
+    private VRTK_PhysicsRotator fridgeDoorInteraction;
+    private VRTK_InteractObjectHighlighter fridgeDoorHighlight;
 
     private int numberUnlocked;
     // Use this for initialization
     void Start()
     {
         numberUnlocked = 0;
-        fridgeDoor = fridgeDoorToUnlock.GetComponent<VRTK_BasePhysicsControllable>();
+        fridgeDoorInteraction = fridgeDoor.GetComponent<VRTK_PhysicsRotator>();
+        fridgeDoorInteraction.isLocked = true;
+        fridgeDoorHighlight = fridgeDoor.GetComponent<VRTK_InteractObjectHighlighter>();
+        fridgeDoorHighlight.touchHighlight = Color.red;
     }
 
     protected virtual void OnEnable()
     {
-        interactableObject = GetComponent<VRTK_InteractableObject>();
-        interactableObject.InteractableObjectUsed += InteractableObjectUsed;
-        interactableObject.InteractableObjectUnused += InteractableObjectUnused;
+        lockInteraction = GetComponent<VRTK_InteractableObject>();
+        lockInteraction.InteractableObjectUsed += InteractableObjectUsed;
+        lockInteraction.InteractableObjectUnused += InteractableObjectUnused;
     }
 
     protected virtual void OnDisable()
     {
-        interactableObject.InteractableObjectUsed -= InteractableObjectUsed;
-        interactableObject.InteractableObjectUnused -= InteractableObjectUnused;
+        lockInteraction.InteractableObjectUsed -= InteractableObjectUsed;
+        lockInteraction.InteractableObjectUnused -= InteractableObjectUnused;
     }
 
     protected virtual void InteractableObjectUsed(object sender, InteractableObjectEventArgs e)
@@ -74,12 +80,10 @@ public class ETR_FridgeLock : MonoBehaviour
         if (numberUnlocked == lockObjectTransforms.Length)
         {
             Debug.Log("Unlock");
-
+            fridgeDoorInteraction.isLocked = false;
+            fridgeDoorHighlight.touchHighlight = Color.yellow;
             unlockSoundEffect.clip = unlockingClip;
             unlockSoundEffect.Play();
-
-            fridgeDoorToUnlock.gameObject.SetActive(true);
-            fridgeDoorToLock.gameObject.SetActive(false);
             GameObject thisLock = GameObject.Find("*Lock*");
             thisLock.SetActive(false);
             unlockedLock.gameObject.SetActive(true);
