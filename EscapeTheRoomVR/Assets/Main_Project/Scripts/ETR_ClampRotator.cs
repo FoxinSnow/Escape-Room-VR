@@ -17,7 +17,7 @@ public class ETR_ClampRotator : MonoBehaviour {
 
     protected virtual void Update()
     {
-        clamp.localPosition = new Vector3(-0.2345288f + (clampInteraction.GetValue() / -1080f) * -0.15f, clamp.localPosition.y, clamp.localPosition.z);
+        clamp.localPosition = new Vector3(-0.2345288f + (clampInteraction.GetValue() / 1080f) * -0.15f, clamp.localPosition.y, clamp.localPosition.z);
     }
 
 }
