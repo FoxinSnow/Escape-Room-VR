@@ -70,6 +70,7 @@
     <Compile Include="Assets\Main_Project\Scripts\ETR_ColliderTest.cs" />
     <Compile Include="Assets\Main_Project\Scripts\ETR_ContainerProtection.cs" />
     <Compile Include="Assets\Main_Project\Scripts\-ETR_DayNightCycle.cs" />
+    <Compile Include="Assets\Main_Project\Scripts\ETR_ExitDoor.cs" />
     <Compile Include="Assets\Main_Project\Scripts\ETR_FanSwitch.cs" />
     <Compile Include="Assets\Main_Project\Scripts\ETR_FridgeLock.cs" />
     <Compile Include="Assets\Main_Project\Scripts\ETR_HiddenObjectTrigger.cs" />
