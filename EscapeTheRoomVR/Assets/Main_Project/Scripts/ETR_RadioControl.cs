@@ -92,6 +92,4 @@ public class ETR_RadioControl : MonoBehaviour {
         // 0.03267755
     }
 
-
-
 }

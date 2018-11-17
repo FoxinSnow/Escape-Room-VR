@@ -65,7 +65,8 @@
     <Compile Include="Assets\Main_Project\Scripts\CoverOperation.cs" />
     <Compile Include="Assets\Main_Project\Scripts\ETR_AlcoholBurnerControl.cs" />
     <Compile Include="Assets\Main_Project\Scripts\ETR_ClampRotator.cs" />
-    <Compile Include="Assets\Main_Project\Scripts\ETR_Clock.cs" />
+    <Compile Include="Assets\Main_Project\Scripts\ETR_ClockControl.cs" />
+    <Compile Include="Assets\Main_Project\Scripts\ETR_ClockHand.cs" />
     <Compile Include="Assets\Main_Project\Scripts\ETR_ColliderTest.cs" />
     <Compile Include="Assets\Main_Project\Scripts\ETR_ContainerProtection.cs" />
     <Compile Include="Assets\Main_Project\Scripts\-ETR_DayNightCycle.cs" />
@@ -73,6 +74,7 @@
     <Compile Include="Assets\Main_Project\Scripts\ETR_FridgeLock.cs" />
     <Compile Include="Assets\Main_Project\Scripts\ETR_HiddenObjectTrigger.cs" />
     <Compile Include="Assets\Main_Project\Scripts\ETR_IceCube.cs" />
+    <Compile Include="Assets\Main_Project\Scripts\ETR_IgnoreCollision.cs" />
     <Compile Include="Assets\Main_Project\Scripts\ETR_LightSwitch.cs" />
     <Compile Include="Assets\Main_Project\Scripts\ETR_LockedDoor.cs" />
     <Compile Include="Assets\Main_Project\Scripts\ETR_MissingObject.cs" />
