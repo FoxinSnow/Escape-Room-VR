@@ -10,7 +10,9 @@ public class ETR_AlcoholBurnerControl : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-        fireEffect.SetActive(false);
+        if (fireEffect != null) {
+            fireEffect.SetActive(false);
+        }
     }
 	
 	// Update is called once per frame
