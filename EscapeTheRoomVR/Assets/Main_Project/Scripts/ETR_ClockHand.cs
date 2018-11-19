@@ -13,16 +13,29 @@ public class ETR_ClockHand : MonoBehaviour {
     private VRTK_ArtificialRotator clockHandRotator;
     private bool isGrabbed;
 
+    private float previousAngle;
+    private float newAngle;
+
 	// Use this for initialization
 	void Start () {
         isGrabbed = false;
         clockHandRotator = this.GetComponent<VRTK_ArtificialRotator>();
+        previousAngle = 0;
+        newAngle = 0;
     }
 
     // Update is called once per frame
     protected virtual void Update() {
         if (isGrabbed) {
-            ETR_ClockControl.TurnClock(true, clockHandRotator.GetValue());
+            newAngle = clockHandRotator.GetValue();
+            Debug.Log("Previous Angle: " + previousAngle);
+            Debug.Log("New Angle:" + newAngle);
+            if (newAngle != previousAngle)
+            {
+                float delta = newAngle - previousAngle;
+                ETR_ClockControl.TurnClock(true, delta * 0.05f);
+                previousAngle = newAngle;
+            }
         }
 	}
 
@@ -49,6 +62,7 @@ public class ETR_ClockHand : MonoBehaviour {
     protected virtual void InteractableObjectUngrabbed(object sender, InteractableObjectEventArgs e)
     {
         isGrabbed = false;
+        previousAngle = clockHandRotator.GetValue();
         //clockUngrabEvent.Invoke();
     }
 }

@@ -19,15 +19,15 @@ public class ETR_ClockControl : MonoBehaviour
         minutesPerSecond = 1 / 60f,
         secondsDegrees = 360f / 60f;
     private float gameHourAngle, gameMinuteAngle, gameSecondAngle; //game time set by producer
-    private int hour, minute, second; //the angle changed by operation
+    public int hour, minute, second; //the angle changed by operation
     private bool isGrabbed;
 
     // Use this for initialization
     void Start()
     {
-        hour = 8;
-        minute = 0;
-        second = 0;
+        //hour = 8;
+        //minute = 0;
+        //second = 0;
         gameHourAngle = hour * 30f;
         gameMinuteAngle = minute * 0.5f;
         isGrabbed = false;
