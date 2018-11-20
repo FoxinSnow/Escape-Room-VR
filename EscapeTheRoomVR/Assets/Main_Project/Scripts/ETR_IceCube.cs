@@ -16,10 +16,12 @@ public class ETR_IceCube : MonoBehaviour {
 	void Start () {
         key.gameObject.SetActive(false);
         timeToMelt = 600;
-	}
+        this.gameObject.GetComponent<Renderer>().material.color = Color.yellow;
+    }
 	
 	// Update is called once per frame
 	void Update () {
+        /*
         if (isAffectedByHeat && isHeating)
         {
             timeToMelt -= 10.0f * Time.deltaTime;
@@ -36,40 +38,72 @@ public class ETR_IceCube : MonoBehaviour {
 
             timeToMelt -= 1.0f * Time.deltaTime;
         }
+        */
 	}
 
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.name == "*Bowl*") {
             isAffectedByHeat = true;
-            Debug.Log("Affected by time");
+            this.gameObject.GetComponent<Renderer>().material.color = Color.magenta;
+            Debug.Log("Affected by heat");
         }
     }
     private void OnCollisionExit(Collision collision)
     {
-        isAffectedByHeat = false;
-        Debug.Log("Not affected by heat");
+        if (collision.gameObject.name == "*Bowl*")
+        {
+            isAffectedByHeat = false;
+            this.gameObject.GetComponent<Renderer>().material.color = Color.yellow;
+            Debug.Log("Not affected by heat");
+        } 
     }
 
     private void OnTriggerEnter(Collider other)
     {
+        if (other.gameObject.name == "HeatingArea")
+        {
+            if (isAffectedByHeat)
+            {
+                this.gameObject.GetComponent<Renderer>().material.color = Color.red;
+                Debug.Log("Start melting");
+            }
+        }
+
         if (other.gameObject.name == "FrozenArea") {
 
             isAffectedByTime = false;
-            Debug.Log("Affected by time");
+            this.gameObject.GetComponent<Renderer>().material.color = Color.green;
+            Debug.Log("Not affected by time");
         }
     }
 
     private void OnTriggerExit(Collider other)
     {
+        if(other.gameObject.name == "HeatingArea") {
+
+            if (isAffectedByHeat)
+            {
+                this.gameObject.GetComponent<Renderer>().material.color = Color.magenta;
+            }
+            else {
+
+                this.gameObject.GetComponent<Renderer>().material.color = Color.yellow;
+            }
+            //isAffectedByTime = false;
+            
+            //Debug.Log("Not melting by heat");
+        }
+
         if (other.gameObject.name == "FrozenArea")
         {
-            isAffectedByTime = false;
-            Debug.Log("Not affected by time");
+            isAffectedByTime = true;
+            this.gameObject.GetComponent<Renderer>().material.color = Color.yellow;
+            Debug.Log("Affected by time");
         }
     }
 
-    public void GetIsHeating(bool isHeating) {
+    public void SetIsHeating(bool isHeating) {
         this.isHeating = isHeating;
     }
 

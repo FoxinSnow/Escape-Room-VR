@@ -6,13 +6,13 @@ using UnityEngine;
 public class ETR_AlcoholBurnerControl : MonoBehaviour {
 
     public GameObject fireEffect;
+    public GameObject heatingArea;
     private VRTK_InteractableObject burnerControl;
+    private bool isOn;
 
     // Use this for initialization
     void Start () {
-        if (fireEffect != null) {
-            fireEffect.SetActive(false);
-        }
+        isOn = false;
     }
 	
 	// Update is called once per frame
@@ -36,13 +36,17 @@ public class ETR_AlcoholBurnerControl : MonoBehaviour {
 
     protected virtual void InteractableObjectUsed(object sender, InteractableObjectEventArgs e)
     {
-        if (fireEffect.activeSelf)
+
+        if (isOn)
         {
-            fireEffect.SetActive(false);
+            heatingArea.SetActive(false);
+            isOn = false;
         }
         else {
-            fireEffect.SetActive(true);
+            heatingArea.SetActive(true);
+            isOn = true;
         }
+
         burnerControl.enabled = false;
     }
 
