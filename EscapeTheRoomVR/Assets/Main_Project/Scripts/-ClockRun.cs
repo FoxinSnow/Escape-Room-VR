@@ -25,8 +25,8 @@ public class ClockRun : MonoBehaviour {
         hour = 8;
         minute = 0;
         second = 0;
-        gameHourAngle = -hour * 30f;
-        gameMinuteAngle = -minute * 0.5f;
+        gameHourAngle = -hour * 30f + (-minute * 0.5f);
+        gameMinuteAngle = -minute * 6f;
     }
 
     // Update is called once per frame

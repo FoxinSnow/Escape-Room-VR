@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.15315965, g: 0.17385463, b: 0.18369634, a: 1}
+  m_IndirectSpecularColor: {r: 0.15315935, g: 0.17385417, b: 0.18369584, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -6055,7 +6055,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &285528222
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15407,7 +15407,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &708907975
 Transform:
   m_ObjectHideFlags: 0
@@ -19490,6 +19490,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dde38fccce07d349bd244c5a5c9475d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  iceCubeEvent:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!1 &930161177 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: eaf3ccbc0a52b4c4fbe70f7e9433b854,
@@ -26858,7 +26863,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1287539108
 Transform:
   m_ObjectHideFlags: 0
@@ -33869,7 +33874,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1676694213
 Transform:
   m_ObjectHideFlags: 0
@@ -41853,7 +41858,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &2086380708
 MonoBehaviour:
   m_ObjectHideFlags: 0
