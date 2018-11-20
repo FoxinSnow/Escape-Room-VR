@@ -21937,7 +21937,7 @@ MonoBehaviour:
   hourHand: {fileID: 926737563}
   minuteHand: {fileID: 926737560}
   secondHand: {fileID: 1126138525}
-  sunLight: {fileID: 725283858}
+  sunLight: {fileID: 318518307}
   hour: 6
   minute: 15
   second: 0

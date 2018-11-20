@@ -75,7 +75,7 @@ public class ClockRun : MonoBehaviour {
         //the second can not be changed and no negative situation
         second = (int)Math.Floor(-gameSecondAngle % 360f / 6f);
 
-        thelight.localRotation = Quaternion.Euler(0f, 0f, gameHourAngle/2);
+        thelight.localRotation = Quaternion.Euler(0f, 0f, -(180f + gameHourAngle/2));
         //game hour angle /2 because 24hours 360degree sun
         //??what is moonlight...
     }
