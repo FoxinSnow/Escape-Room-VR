@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using VRTK;
 using UnityEngine;
 
+// Coded by Yuqi Wang
 public class ETR_AlcoholBurnerControl : MonoBehaviour {
 
     public GameObject fireEffect;
-    public GameObject heatingArea;
+    public UnityEngine.Events.UnityEvent iceCubeEvent;
     private VRTK_InteractableObject burnerControl;
     private bool isOn;
 
@@ -36,17 +37,7 @@ public class ETR_AlcoholBurnerControl : MonoBehaviour {
 
     protected virtual void InteractableObjectUsed(object sender, InteractableObjectEventArgs e)
     {
-
-        if (isOn)
-        {
-            heatingArea.SetActive(false);
-            isOn = false;
-        }
-        else {
-            heatingArea.SetActive(true);
-            isOn = true;
-        }
-
+        iceCubeEvent.Invoke();
         burnerControl.enabled = false;
     }
 

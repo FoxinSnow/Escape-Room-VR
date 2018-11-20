@@ -8,44 +8,49 @@ public class ETR_IceCube : MonoBehaviour {
 
     public GameObject key;
     private bool isAffectedByTime;
+    private bool isInHeatingArea;
     private bool isAffectedByHeat;
-    private bool isHeating;
     private float timeToMelt;
 
 	// Use this for initialization
 	void Start () {
         key.gameObject.SetActive(false);
         timeToMelt = 600;
+        isAffectedByTime = true;
+        isInHeatingArea = false;
+        isAffectedByHeat = false;
         this.gameObject.GetComponent<Renderer>().material.color = Color.yellow;
     }
 	
 	// Update is called once per frame
 	void Update () {
-        /*
-        if (isAffectedByHeat && isHeating)
+        
+        if (isInHeatingArea && isAffectedByHeat)
         {
-            timeToMelt -= 10.0f * Time.deltaTime;
+            //timeToMelt -= 60.0f * Time.deltaTime;
+            //Debug.Log("Ice cube is now melting!!!!!!");
+            MeltIce(60.0f);
+            Debug.Log("Melting progress by heat:" + timeToMelt);
         }
         else if (isAffectedByTime)
         {
-
-        }
-        else if (isAffectedByHeat)
-        {
-
+            //timeToMelt -= 1.0f * Time.deltaTime;
+            MeltIce(1.0f);
+            Debug.Log("Melting progress by time:" + timeToMelt);
+            //Debug.Log("Ice cube is ONLY affected by time!");
         }
         else {
 
-            timeToMelt -= 1.0f * Time.deltaTime;
+            
         }
-        */
+        
 	}
 
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.name == "*Bowl*") {
-            isAffectedByHeat = true;
-            this.gameObject.GetComponent<Renderer>().material.color = Color.magenta;
+            isInHeatingArea = true;
+            this.gameObject.GetComponent<Renderer>().material.color = Color.red;
             Debug.Log("Affected by heat");
         }
     }
@@ -53,7 +58,7 @@ public class ETR_IceCube : MonoBehaviour {
     {
         if (collision.gameObject.name == "*Bowl*")
         {
-            isAffectedByHeat = false;
+            isInHeatingArea = false;
             this.gameObject.GetComponent<Renderer>().material.color = Color.yellow;
             Debug.Log("Not affected by heat");
         } 
@@ -61,40 +66,16 @@ public class ETR_IceCube : MonoBehaviour {
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.name == "HeatingArea")
-        {
-            if (isAffectedByHeat)
-            {
-                this.gameObject.GetComponent<Renderer>().material.color = Color.red;
-                Debug.Log("Start melting");
-            }
-        }
-
         if (other.gameObject.name == "FrozenArea") {
 
             isAffectedByTime = false;
-            this.gameObject.GetComponent<Renderer>().material.color = Color.green;
+            this.gameObject.GetComponent<Renderer>().material.color = Color.blue;
             Debug.Log("Not affected by time");
         }
     }
 
     private void OnTriggerExit(Collider other)
     {
-        if(other.gameObject.name == "HeatingArea") {
-
-            if (isAffectedByHeat)
-            {
-                this.gameObject.GetComponent<Renderer>().material.color = Color.magenta;
-            }
-            else {
-
-                this.gameObject.GetComponent<Renderer>().material.color = Color.yellow;
-            }
-            //isAffectedByTime = false;
-            
-            //Debug.Log("Not melting by heat");
-        }
-
         if (other.gameObject.name == "FrozenArea")
         {
             isAffectedByTime = true;
@@ -103,18 +84,30 @@ public class ETR_IceCube : MonoBehaviour {
         }
     }
 
-    public void SetIsHeating(bool isHeating) {
-        this.isHeating = isHeating;
+    public void ChangeHeatState() {
+        if (isAffectedByHeat)
+        {
+            isAffectedByHeat = false;
+            Debug.Log("Burner is on, can be affected by heat");
+        }
+        else {
+            isAffectedByHeat = true;
+            Debug.Log("Burner is off, cannot be affected by heat");
+        }
     }
 
     public void MeltIce(float time) {
-        float currentStatus = timeToMelt - time;
-        if (currentStatus < 0)
+        //float currentStatus = timeToMelt - time;
+        timeToMelt -= time * Time.deltaTime;
+        if (timeToMelt < 0)
         {
+            //this.gameObject.GetComponent<Renderer>().enabled = false;
+            //this.gameObject.GetComponent<BoxCollider>().enabled = false;
+            key.gameObject.transform.position = this.gameObject.transform.position;
             key.SetActive(true);
-            Destroy(this);
+            Destroy(this.gameObject);  
         }
-        else if (currentStatus > 600) {
+        else if (timeToMelt > 600) {
             timeToMelt = 600.0f;
         }
 

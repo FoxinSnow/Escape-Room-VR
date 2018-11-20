@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+// Coded by Fei Huang
 public class LockDigitOne : MonoBehaviour {
 
     public Transform lock1;

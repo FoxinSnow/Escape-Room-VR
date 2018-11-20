@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+// Coded by Fei Huang
 public class UserChangeTime : MonoBehaviour {
 
     public Transform hour, minute;

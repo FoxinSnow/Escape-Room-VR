@@ -4,11 +4,10 @@ using VRTK;
 using VRTK.Controllables.ArtificialBased;
 using UnityEngine;
 
+// Coded by Yuqi Wang
 public class ETR_ClockHand : MonoBehaviour {
 
-    //public UnityEngine.Events.UnityEvent clockGrabEvent;
-    //public UnityEngine.Events.UnityEvent clockUngrabEvent;
-
+    public UnityEngine.Events.UnityEvent iceCubeEvent;
     private VRTK_InteractableObject clockHandInteraction;
     private VRTK_ArtificialRotator clockHandRotator;
     private bool isGrabbed;

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System;
 using UnityEngine;
 
+// Coded by Fei Huang
 public class ClockRun : MonoBehaviour {
 
     public Transform hours, minutes, seconds, thelight;
