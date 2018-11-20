@@ -25,6 +25,7 @@ public class ETR_ClockHand : MonoBehaviour {
 
     // Update is called once per frame
     protected virtual void Update() {
+        Debug.Log(clockHandRotator.GetValue());
         if (isGrabbed) {
             newAngle = clockHandRotator.GetValue();
             Debug.Log("Previous Angle: " + previousAngle);
@@ -62,6 +63,7 @@ public class ETR_ClockHand : MonoBehaviour {
     {
         isGrabbed = false;
         previousAngle = clockHandRotator.GetValue();
+        //clockHandRotator.angleLimits.minimum = previousAngle;
         //clockUngrabEvent.Invoke();
     }
 }
