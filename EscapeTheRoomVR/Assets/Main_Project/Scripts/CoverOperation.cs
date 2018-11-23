@@ -40,7 +40,7 @@ public class CoverOperation : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        /*
+        
         //tracing the mouse position
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         //Debug.DrawLine(ray.origin, ray.direction, Color.red, 2);
@@ -75,7 +75,7 @@ public class CoverOperation : MonoBehaviour {
                 GetComponent<Renderer>().material.mainTexture = texture;
             }
         }
-        */
+        
     }
 
 }

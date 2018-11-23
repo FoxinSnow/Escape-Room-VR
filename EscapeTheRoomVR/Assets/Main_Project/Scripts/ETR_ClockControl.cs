@@ -77,12 +77,13 @@ public class ETR_ClockControl : MonoBehaviour
                 gameMinuteAngle += angle;
                 //gameMinuteAngle = gameMinuteAngle % 360f;
 
-                if (hour > 4 && hour < 8)
+                if (hour > 3 && hour < 9)  
                 {
+                    // 4AM - 8AM increase from 0 to 1.5
                     //per min 0.375/60 per min angle 0.375/1800
-                    assistLight.intensity += (0.375f /1800f * angle; //angle is hour changed
+                    assistLight.intensity += (0.375f /1800f * angle); //angle is hour changed
                 }
-                else if (((hour > 20 && hour < 23) || (hour == 23 && minute < 59)))
+                else if (hour > 15 && hour < 21)
                 {
                     assistLight.intensity -= (0.375f / 1800f) * angle; //angle is hour changed;
                 }
@@ -97,11 +98,11 @@ public class ETR_ClockControl : MonoBehaviour
                 gameMinuteAngle += 12f * angle;
                 //gameMinuteAngle = gameMinuteAngle % 360f;
 
-                if (hour > 4 && hour < 8){
+                if (hour > 3 && hour < 9){
                     //per hour 0.375 per hour angle = 0.375/30
                     assistLight.intensity += (0.375f / 30f) * angle; //angle is hour changed
                 }
-                else if (((hour > 20 && hour < 23) || (hour == 23 && minute < 59)))
+                else if (hour > 15 && hour < 21)
                 {
                     assistLight.intensity -= (0.375f / 30f) * angle; //angle is hour changed;
                 }
