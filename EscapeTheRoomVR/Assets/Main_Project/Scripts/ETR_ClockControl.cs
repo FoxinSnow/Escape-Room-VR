@@ -8,8 +8,10 @@ public class ETR_ClockControl : MonoBehaviour
 {
 
     public Transform hourHand, minuteHand, secondHand, sunLight;
+    public Light assistLight;
 
     public static bool userInput = false;
+    public static bool mOrH = true; //true is min, false is hour
     private static float angle = 0;
 
     private const float
@@ -31,6 +33,18 @@ public class ETR_ClockControl : MonoBehaviour
         gameHourAngle = hour * 30f + minute * 0.5f;
         gameMinuteAngle = minute * 6f;
         isGrabbed = false;
+        if(hour >= 8 && hour <= 16){
+            assistLight.intensity = 1.5f;
+        }else if(hour <= 4 || hour >= 20){
+            assistLight.intensity = 0f;
+        }else if(hour > 4 && hour < 8){
+            assistLight.intensity = 0f + 0.375f * (hour - 4) + (0.375f / 60f) * minute;
+        }else if((hour > 20 && hour < 23) || (hour == 23 && minute < 59)){
+            assistLight.intensity = 1.5f - (0.375f * (hour - 4) + (0.375f / 60f) * minute);
+        }else{
+            //leave this one avoid bug
+            Debug.Log("This line should not be displayed.");
+        }
     }
 
     // Update is called once per frame
@@ -54,14 +68,44 @@ public class ETR_ClockControl : MonoBehaviour
         {
             Debug.Log("hour " + hour + " minute " + minute + " second " + second);
 
-            //current hour angle sum
-            gameHourAngle += angle;
-            //gameHourAngle = gameHourAngle % 360f;
+            if(mOrH.Equals(true)){ //minute is changed
+                //current hour angle sum
+                gameHourAngle += angle/12f;
+                //gameHourAngle = gameHourAngle % 360f;
 
-            //current hour angle sum
-            gameMinuteAngle += 12 * angle;
-            //gameMinuteAngle = gameMinuteAngle % 360f;
+                //current hour angle sum
+                gameMinuteAngle += angle;
+                //gameMinuteAngle = gameMinuteAngle % 360f;
 
+                if (hour > 4 && hour < 8)
+                {
+                    //per min 0.375/60 per min angle 0.375/1800
+                    assistLight.intensity += (0.375f /1800f * angle; //angle is hour changed
+                }
+                else if (((hour > 20 && hour < 23) || (hour == 23 && minute < 59)))
+                {
+                    assistLight.intensity -= (0.375f / 1800f) * angle; //angle is hour changed;
+                }
+
+            }
+            else{ //hour is changed
+                //current hour angle sum
+                gameHourAngle += angle;
+                //gameHourAngle = gameHourAngle % 360f;
+
+                //current hour angle sum
+                gameMinuteAngle += 12f * angle;
+                //gameMinuteAngle = gameMinuteAngle % 360f;
+
+                if (hour > 4 && hour < 8){
+                    //per hour 0.375 per hour angle = 0.375/30
+                    assistLight.intensity += (0.375f / 30f) * angle; //angle is hour changed
+                }
+                else if (((hour > 20 && hour < 23) || (hour == 23 && minute < 59)))
+                {
+                    assistLight.intensity -= (0.375f / 30f) * angle; //angle is hour changed;
+                }
+            }
             userInput = false; //let the clock continue run
         }
 
@@ -85,15 +129,27 @@ public class ETR_ClockControl : MonoBehaviour
 
     //static method
 
-    //turn = ture if user drag the hour
+    //turn = ture if user drag the minute
     public static void TurnClock(bool turn, float a)
     {
 
         if (turn.Equals(true))
         {
+            mOrH = true;
             userInput = true;
             angle = a;
         }
     }
 
+    //turn = ture if user drag the hour
+    public static void TurnClockHour(bool turn, float a)
+    {
+
+        if (turn.Equals(true))
+        {
+            mOrH = false;
+            userInput = true;
+            angle = a;
+        }
+    }
 }

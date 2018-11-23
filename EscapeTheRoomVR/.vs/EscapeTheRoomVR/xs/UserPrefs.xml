@@ -3,7 +3,9 @@
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Main_Project/Scripts/ETR_ClockControl.cs">
     <Files>
       <File FileName="Assets/Main_Project/Scripts/CoverOperation.cs" Line="18" Column="50" />
-      <File FileName="Assets/Main_Project/Scripts/ETR_ClockControl.cs" Line="79" Column="9" />
+      <File FileName="Assets/Main_Project/Scripts/ETR_ClockHand_Hour.cs" Line="40" Column="65" />
+      <File FileName="Assets/Main_Project/Scripts/ETR_ClockHand.cs" Line="36" Column="61" />
+      <File FileName="Assets/Main_Project/Scripts/ETR_ClockControl.cs" Line="90" Column="14" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
