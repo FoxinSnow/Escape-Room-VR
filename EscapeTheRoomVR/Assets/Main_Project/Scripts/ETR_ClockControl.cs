@@ -77,15 +77,15 @@ public class ETR_ClockControl : MonoBehaviour
                 gameMinuteAngle += angle;
                 //gameMinuteAngle = gameMinuteAngle % 360f;
 
-                if (hour > 3 && hour < 9)  
+                if (hour >= 4 && hour <= 8)  
                 {
                     // 4AM - 8AM increase from 0 to 1.5
                     //per min 0.375/60 per min angle 0.375/1800
-                    assistLight.intensity += (0.375f /1800f * angle); //angle is hour changed
+                    assistLight.intensity = assistLight.intensity > 1.5f ? 1.5f : assistLight.intensity + (0.375f / 1800f * angle); ; //angle is hour changed
                 }
-                else if (hour > 15 && hour < 21)
+                else if (hour >= 16 && hour <= 20)
                 {
-                    assistLight.intensity -= (0.375f / 1800f) * angle; //angle is hour changed;
+                    assistLight.intensity = assistLight.intensity < 0f ? 0f : assistLight.intensity - (0.375f / 1800f) * angle; //angle is hour changed;
                 }
 
             }
@@ -98,13 +98,14 @@ public class ETR_ClockControl : MonoBehaviour
                 gameMinuteAngle += 12f * angle;
                 //gameMinuteAngle = gameMinuteAngle % 360f;
 
-                if (hour > 3 && hour < 9){
+                if (hour >= 4 && hour <= 8){
                     //per hour 0.375 per hour angle = 0.375/30
-                    assistLight.intensity += (0.375f / 30f) * angle; //angle is hour changed
+                    assistLight.intensity = assistLight.intensity > 1.5f ? 1.5f : assistLight.intensity + (0.375f / 30f * angle); ;
+     
                 }
-                else if (hour > 15 && hour < 21)
+                else if (hour >= 16 && hour <= 20)
                 {
-                    assistLight.intensity -= (0.375f / 30f) * angle; //angle is hour changed;
+                    assistLight.intensity = assistLight.intensity < 0f ? 0f : assistLight.intensity - (0.375f / 30f) * angle;
                 }
             }
             userInput = false; //let the clock continue run

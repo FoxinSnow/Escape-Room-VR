@@ -21837,8 +21837,8 @@ MonoBehaviour:
   secondHand: {fileID: 1126138525}
   sunLight: {fileID: 318518307}
   assistLight: {fileID: 1313767116}
-  hour: 6
-  minute: 15
+  hour: 9
+  minute: 30
   second: 0
 --- !u!1 &1042577512
 GameObject:

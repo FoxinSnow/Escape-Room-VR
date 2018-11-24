@@ -37,7 +37,7 @@ public class ETR_ClockHand_Hour : MonoBehaviour
             if (newAngle != previousAngle)
             {
                 float delta = newAngle - previousAngle;
-                ETR_ClockControl.TurnClockHour(true, delta * 0.1f);
+                ETR_ClockControl.TurnClockHour(true, delta * 0.15f);
                 previousAngle = newAngle;
             }
         }
