@@ -61,8 +61,16 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\EffectExamples\Shared\Scripts\DecalDestroyer.cs" />
+    <Compile Include="Assets\EffectExamples\Shared\Scripts\ExtinguishableFire.cs" />
+    <Compile Include="Assets\EffectExamples\Shared\Scripts\GunAim.cs" />
+    <Compile Include="Assets\EffectExamples\Shared\Scripts\GunShoot.cs" />
+    <Compile Include="Assets\EffectExamples\Shared\Scripts\ParticleCollision.cs" />
+    <Compile Include="Assets\EffectExamples\Shared\Scripts\ParticleExamples.cs" />
+    <Compile Include="Assets\EffectExamples\Shared\Scripts\ParticleMenu.cs" />
+    <Compile Include="Assets\EffectExamples\TutorialInfo\Scripts\Readme.cs" />
     <Compile Include="Assets\Main_Project\Scripts\-ClockRun.cs" />
-    <Compile Include="Assets\Main_Project\Scripts\CoverOperation.cs" />
+    <Compile Include="Assets\Main_Project\Scripts\-CoverOperation.cs" />
     <Compile Include="Assets\Main_Project\Scripts\ETR_AlcoholBurnerControl.cs" />
     <Compile Include="Assets\Main_Project\Scripts\ETR_Blackboard.cs" />
     <Compile Include="Assets\Main_Project\Scripts\ETR_BlackboardEraser.cs" />
@@ -597,6 +605,7 @@
     <None Include="Assets\SteamVR\Resources\SteamVR_Fade.shader" />
     <None Include="Assets\PostProcessing\Resources\Shaders\MotionBlur.cginc" />
     <None Include="Assets\PostProcessing\Resources\Shaders\Fog.shader" />
+    <None Include="Assets\EffectExamples\Shared\Shaders\SurfaceShader_VC.shader" />
     <None Include="Assets\PostProcessing\Editor Resources\Monitors\ParadeRender.shader" />
     <None Include="Assets\PostProcessing\Resources\Shaders\LutGen.shader" />
     <None Include="Assets\PostProcessing\Editor Resources\Monitors\HistogramRender.shader" />
@@ -658,9 +667,6 @@
     <None Include="Assets\PostProcessing\Resources\Shaders\AmbientOcclusion.cginc" />
     <None Include="Assets\PostProcessing\Editor Resources\Monitors\WaveformCompute.compute" />
     <None Include="Assets\SteamVR\InteractionSystem\Readme_InteractionSystem.txt" />
-    <Reference Include="Assembly-UnityScript-firstpass">
-      <HintPath>D:/Project/EscapeTheRoom/EscapeTheRoomVR/Library/ScriptAssemblies/Assembly-UnityScript-firstpass.dll</HintPath>
-    </Reference>
     <Reference Include="UnityEditor.StandardEvents">
       <HintPath>D:/Project/EscapeTheRoom/EscapeTheRoomVR/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>

@@ -38,9 +38,15 @@ public class ETR_AlcoholBurnerControl : MonoBehaviour {
     protected virtual void InteractableObjectUsed(object sender, InteractableObjectEventArgs e)
     {
         iceCubeEvent.Invoke();
+        if (fireEffect.activeSelf)
+        {
+            fireEffect.SetActive(false);
+        }
+        else {
+            fireEffect.SetActive(true);
+        }
         burnerControl.enabled = false;
     }
-
 
     protected virtual void InteractableObjectUnused(object sender, InteractableObjectEventArgs e)
     {
