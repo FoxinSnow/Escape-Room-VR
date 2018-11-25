@@ -19,21 +19,17 @@ public class ETR_BlackboardEraser : MonoBehaviour {
 
     void OnCollisionEnter(Collision collision)
     {
-        Debug.Log("...........................");
-        Debug.Log(collision.gameObject.name);
-
         if (collision.gameObject.tag == "BoardCover") {
             onEraserCollisionEnterEvent.Invoke();
-            Debug.Log("Col with bb");
+            //this.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeRotationX;
         }
     }
 
     void OnCollisionExit(Collision collision)
     {
-        if (collision.gameObject.tag == "BoardCover")
         {
             onEraserCollisionExitEvent.Invoke();
-            Debug.Log("Leave bb");
+            //this.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
         }
     }
 
