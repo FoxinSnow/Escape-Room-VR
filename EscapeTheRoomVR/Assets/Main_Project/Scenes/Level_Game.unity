@@ -18566,6 +18566,49 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 100006, guid: 406f5fdf7ea44d7439ff0c5d3a9746fe,
     type: 3}
   m_PrefabInternal: {fileID: 1277113787}
+--- !u!114 &878736095
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 878736094}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3440491298862d47bfb04b09aa73a1f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onChalkCollisionEnterEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1449919358}
+        m_MethodName: IsChalkCollided
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  onChalkCollisionExitEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1449919358}
+        m_MethodName: IsChalkCollided
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!114 &878736098
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27146,6 +27189,11 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.008, y: 1.5, z: 0.79999995}
   m_Center: {x: 0, y: 0, z: 0.39999998}
+--- !u!4 &1277113801 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400006, guid: 406f5fdf7ea44d7439ff0c5d3a9746fe,
+    type: 3}
+  m_PrefabInternal: {fileID: 1277113787}
 --- !u!1 &1277593778 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100042, guid: 97c008caa0d20d149b55a91d615f978d,
@@ -30208,8 +30256,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c958039a1099744795a5fc51cf87eb1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  blackBoardEraser: {fileID: 85746230}
+  blackboardEraser: {fileID: 0}
   eraserDirection: {fileID: 472997543}
+  blackboardChalk: {fileID: 0}
+  chalkDirection: {fileID: 0}
   cover: {fileID: 2800000, guid: 75f705b52ce9e6c4b9f14f8f973d710e, type: 3}
 --- !u!64 &1449919359
 MeshCollider:
@@ -39929,6 +39979,34 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.010000004, y: 0.7000004, z: 0.9300004}
   m_Center: {x: 0, y: 0.000000008344635, z: 0.465}
+--- !u!1 &1700656078
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1700656079}
+  m_Layer: 0
+  m_Name: Chalk_Forward_Direction
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1700656079
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1700656078}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0, y: 0, z: 0.0768}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1277113801}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1700981460 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100046, guid: b9abf70e355ebfd40ba0e17bfd89a637,

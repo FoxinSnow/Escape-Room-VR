@@ -27,7 +27,7 @@ public class ETR_BlackboardEraser : MonoBehaviour {
 
     void OnCollisionExit(Collision collision)
     {
-        {
+        if (collision.gameObject.tag == "BoardCover"){
             onEraserCollisionExitEvent.Invoke();
             //this.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
         }
