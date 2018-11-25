@@ -30,13 +30,13 @@ public class ETR_IceCube : MonoBehaviour {
             //timeToMelt -= 60.0f * Time.deltaTime;
             //Debug.Log("Ice cube is now melting!!!!!!");
             MeltIce(60.0f);
-            Debug.Log("Melting progress by heat:" + timeToMelt);
+            //Debug.Log("Melting progress by heat:" + timeToMelt);
         }
         else if (isAffectedByTime)
         {
             //timeToMelt -= 1.0f * Time.deltaTime;
             MeltIce(1.0f);
-            Debug.Log("Melting progress by time:" + timeToMelt);
+            //Debug.Log("Melting progress by time:" + timeToMelt);
             //Debug.Log("Ice cube is ONLY affected by time!");
         }
         else {

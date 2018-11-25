@@ -65,6 +65,7 @@
     <Compile Include="Assets\Main_Project\Scripts\CoverOperation.cs" />
     <Compile Include="Assets\Main_Project\Scripts\ETR_AlcoholBurnerControl.cs" />
     <Compile Include="Assets\Main_Project\Scripts\ETR_Blackboard.cs" />
+    <Compile Include="Assets\Main_Project\Scripts\ETR_BlackboardEraser.cs" />
     <Compile Include="Assets\Main_Project\Scripts\ETR_ClampRotator.cs" />
     <Compile Include="Assets\Main_Project\Scripts\ETR_ClockControl.cs" />
     <Compile Include="Assets\Main_Project\Scripts\ETR_ClockHand.cs" />

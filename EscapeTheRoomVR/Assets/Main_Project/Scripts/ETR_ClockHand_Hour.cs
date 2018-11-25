@@ -28,7 +28,7 @@ public class ETR_ClockHand_Hour : MonoBehaviour
     // Update is called once per frame
     protected virtual void Update()
     {
-        Debug.Log(clockHandRotator.GetValue());
+        //Debug.Log(clockHandRotator.GetValue());
         if (isGrabbed)
         {
             newAngle = clockHandRotator.GetValue();
