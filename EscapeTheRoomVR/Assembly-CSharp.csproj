@@ -69,6 +69,7 @@
     <Compile Include="Assets\EffectExamples\Shared\Scripts\ParticleExamples.cs" />
     <Compile Include="Assets\EffectExamples\Shared\Scripts\ParticleMenu.cs" />
     <Compile Include="Assets\EffectExamples\TutorialInfo\Scripts\Readme.cs" />
+    <Compile Include="Assets\ETR_AmbienceSoundManager.cs" />
     <Compile Include="Assets\Main_Project\Scripts\-ClockRun.cs" />
     <Compile Include="Assets\Main_Project\Scripts\-CoverOperation.cs" />
     <Compile Include="Assets\Main_Project\Scripts\ETR_AlcoholBurnerControl.cs" />

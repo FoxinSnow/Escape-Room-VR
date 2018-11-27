@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ETR_BlackboardEraser : MonoBehaviour {
 
+    public Collider wipeCollider;
     public UnityEngine.Events.UnityEvent onEraserCollisionEnterEvent;
     public UnityEngine.Events.UnityEvent onEraserCollisionExitEvent;
 
@@ -19,7 +20,12 @@ public class ETR_BlackboardEraser : MonoBehaviour {
 
     void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.tag == "BoardCover") {
+
+        Collider contactCollider = collision.contacts[0].thisCollider;
+
+        Debug.Log(contactCollider);
+
+        if (collision.gameObject.tag == "BoardCover" && contactCollider == wipeCollider) {
             onEraserCollisionEnterEvent.Invoke();
             //this.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeRotationX;
         }

@@ -17,6 +17,7 @@ TagManager:
   - BoardCover
   - Important
   - Test
+  - Boundary
   layers:
   - Default
   - TransparentFX
