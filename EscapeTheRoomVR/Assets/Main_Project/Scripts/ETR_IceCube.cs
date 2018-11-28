@@ -8,10 +8,11 @@ public class ETR_IceCube : MonoBehaviour
 {
 
     public GameObject key;
-    private bool isAffectedByTime;
-    private bool isInHeatingArea;
-    private bool isAffectedByHeat;
+    private static bool isAffectedByTime;
+    private static bool isInHeatingArea;
+    private static bool isAffectedByHeat;
     private static float timeToMelt;
+    private Animator meltingAnimator;
 
     // Use this for initialization
     void Start()
@@ -22,6 +23,7 @@ public class ETR_IceCube : MonoBehaviour
         isInHeatingArea = false;
         isAffectedByHeat = false;
         this.gameObject.GetComponent<Renderer>().material.color = Color.yellow;
+        meltingAnimator = this.GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -47,6 +49,7 @@ public class ETR_IceCube : MonoBehaviour
         }
 
         CheckStatus();
+        meltingAnimator.Play("Melting");
 
     }
 
@@ -120,17 +123,19 @@ public class ETR_IceCube : MonoBehaviour
         }
     }
 
-    public static void MeltIce(float time, bool isDirectlyAffected)
+    public static void MeltIce(float time, bool isAffectedByChangingTime)
     {
-        if (isDirectlyAffected)
-        {
-            timeToMelt -= time;
+        if (isAffectedByTime) {
+            if (isAffectedByChangingTime)
+            {
+                timeToMelt -= time;
+            }
+            else
+            {
+                timeToMelt -= time * Time.deltaTime;
+            }
         }
-        else {
-            timeToMelt -= time * Time.deltaTime;
-        }
-        //float currentStatus = timeToMelt - time;
-        
+
         Debug.Log(timeToMelt);
     }
 

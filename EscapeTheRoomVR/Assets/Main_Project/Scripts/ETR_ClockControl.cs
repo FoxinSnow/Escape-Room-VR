@@ -22,7 +22,6 @@ public class ETR_ClockControl : MonoBehaviour
         secondsDegrees = 360f / 60f;
     private float gameHourAngle, gameMinuteAngle, gameSecondAngle; //game time set by producer
     public int hour, minute, second; //the angle changed by operation
-    private int previousHour, previousMinute, previousSecond;
 
     // Use this for initialization
     void Start()
@@ -59,18 +58,9 @@ public class ETR_ClockControl : MonoBehaviour
             gameMinuteAngle += Time.deltaTime * minutesDegrees;
             //gameHourAngle = gameMinuteAngle % 360f;
 
-            previousHour = hour;
-            previousMinute = minute;
-            previousSecond = second;
         }
         else
         {
-            //Debug.Log("Previous Hour " + previousHour + "Previous Minute " + previousMinute + "Previous Second " + previousSecond);
-
-            //Debug.Log("hour " + hour + " minute " + minute + " second " + second);
-
-            EvaluateSecondElapse();
-
             if (mOrH.Equals(true)){ //minute is changed
                 //current hour angle sum
                 gameHourAngle += angle/12f;
@@ -111,7 +101,7 @@ public class ETR_ClockControl : MonoBehaviour
                     assistLight.intensity = assistLight.intensity < 0f ? 0f : assistLight.intensity - (0.375f / 30f) * angle;
            
                 }
-
+                Debug.Log("Passed second:" + angle * 120f);
                 ETR_IceCube.MeltIce(angle * 120f, true);
             }
             userInput = false; //let the clock continue run
@@ -160,11 +150,5 @@ public class ETR_ClockControl : MonoBehaviour
             angle = a;
 
         }
-    }
-
-    public void EvaluateSecondElapse() {
-        float secondElaspe = (hour - previousHour) * 3600f + (minute - previousMinute) * 60f + (second - previousSecond) * 1f;
-        //Debug.Log("Second elaps:" + secondElaspe);
-        ETR_IceCube.MeltIce(secondElaspe, true);
     }
 }
