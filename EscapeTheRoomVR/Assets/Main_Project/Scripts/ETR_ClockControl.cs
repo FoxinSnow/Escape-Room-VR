@@ -109,7 +109,10 @@ public class ETR_ClockControl : MonoBehaviour
                 else if (hour >= 16 && hour <= 20)
                 {
                     assistLight.intensity = assistLight.intensity < 0f ? 0f : assistLight.intensity - (0.375f / 30f) * angle;
+           
                 }
+
+                ETR_IceCube.MeltIce(angle * 120f, true);
             }
             userInput = false; //let the clock continue run
         }
@@ -155,6 +158,7 @@ public class ETR_ClockControl : MonoBehaviour
             mOrH = false;
             userInput = true;
             angle = a;
+
         }
     }
 
