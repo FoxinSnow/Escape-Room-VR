@@ -1,0 +1,234 @@
+fileFormatVersion: 2
+guid: cf07cb80c029c9048ba01427507ea231
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: Box001
+    100002: Box002
+    100004: Box003
+    100006: Box004
+    100008: Frame
+    100010: frame_back_1
+    100012: frame_back_2
+    100014: frame_back_3
+    100016: frame_back_4
+    100018: frame_front_1
+    100020: frame_front_2
+    100022: frame_front_3
+    100024: frame_front_4
+    100026: glass_back
+    100028: glass_front
+    100030: lock_back
+    100032: lock_front
+    100034: trail_left
+    100036: Trail_low
+    100038: trail_low_trail_low00
+    100040: trail_low_trail_low01
+    100042: trail_low_trail_low02
+    100044: trail_low_trail_low03
+    100046: trail_right
+    100048: Trail_up
+    100050: trail_up00
+    100052: trail_up01
+    100054: trail_up02
+    100056: trail_up03
+    100058: //RootNode
+    100060: Window
+    100062: Window_back
+    100064: Window_front
+    400000: Box001
+    400002: Box002
+    400004: Box003
+    400006: Box004
+    400008: Frame
+    400010: frame_back_1
+    400012: frame_back_2
+    400014: frame_back_3
+    400016: frame_back_4
+    400018: frame_front_1
+    400020: frame_front_2
+    400022: frame_front_3
+    400024: frame_front_4
+    400026: glass_back
+    400028: glass_front
+    400030: lock_back
+    400032: lock_front
+    400034: trail_left
+    400036: Trail_low
+    400038: trail_low_trail_low00
+    400040: trail_low_trail_low01
+    400042: trail_low_trail_low02
+    400044: trail_low_trail_low03
+    400046: trail_right
+    400048: Trail_up
+    400050: trail_up00
+    400052: trail_up01
+    400054: trail_up02
+    400056: trail_up03
+    400058: //RootNode
+    400060: Window
+    400062: Window_back
+    400064: Window_front
+    2100000: No Name
+    2300000: Box001
+    2300002: Box002
+    2300004: Box003
+    2300006: Box004
+    2300008: frame_back_1
+    2300010: frame_back_2
+    2300012: frame_back_3
+    2300014: frame_back_4
+    2300016: frame_front_1
+    2300018: frame_front_2
+    2300020: frame_front_3
+    2300022: frame_front_4
+    2300024: glass_back
+    2300026: glass_front
+    2300028: lock_back
+    2300030: lock_front
+    2300032: trail_left
+    2300034: trail_low_trail_low00
+    2300036: trail_low_trail_low01
+    2300038: trail_low_trail_low02
+    2300040: trail_low_trail_low03
+    2300042: trail_right
+    2300044: trail_up00
+    2300046: trail_up01
+    2300048: trail_up02
+    2300050: trail_up03
+    3300000: Box001
+    3300002: Box002
+    3300004: Box003
+    3300006: Box004
+    3300008: frame_back_1
+    3300010: frame_back_2
+    3300012: frame_back_3
+    3300014: frame_back_4
+    3300016: frame_front_1
+    3300018: frame_front_2
+    3300020: frame_front_3
+    3300022: frame_front_4
+    3300024: glass_back
+    3300026: glass_front
+    3300028: lock_back
+    3300030: lock_front
+    3300032: trail_left
+    3300034: trail_low_trail_low00
+    3300036: trail_low_trail_low01
+    3300038: trail_low_trail_low02
+    3300040: trail_low_trail_low03
+    3300042: trail_right
+    3300044: trail_up00
+    3300046: trail_up01
+    3300048: trail_up02
+    3300050: trail_up03
+    4300000: Box001
+    4300002: Box002
+    4300004: Box003
+    4300006: Box004
+    4300008: trail_right
+    4300010: trail_left
+    4300012: trail_low_trail_low00
+    4300014: trail_low_trail_low01
+    4300016: trail_low_trail_low02
+    4300018: trail_low_trail_low03
+    4300020: trail_up00
+    4300022: trail_up01
+    4300024: trail_up02
+    4300026: trail_up03
+    4300028: glass_back
+    4300030: frame_back_2
+    4300032: frame_back_4
+    4300034: frame_back_3
+    4300036: lock_back
+    4300038: frame_back_1
+    4300040: lock_front
+    4300042: glass_front
+    4300044: frame_front_1
+    4300046: frame_front_2
+    4300048: frame_front_3
+    4300050: frame_front_4
+    7400000: Take 001
+    9500000: //RootNode
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 0.01
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
