@@ -8,7 +8,6 @@ using UnityEngine;
 public class ETR_ClockHand_Hour : MonoBehaviour
 {
 
-    public UnityEngine.Events.UnityEvent iceCubeEvent;
     private VRTK_InteractableObject clockHandInteraction;
     private VRTK_ArtificialRotator clockHandRotator;
     private bool isGrabbed;

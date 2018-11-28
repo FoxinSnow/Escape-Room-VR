@@ -12,7 +12,8 @@ public class ETR_IceCube : MonoBehaviour
     private static bool isInHeatingArea;
     private static bool isAffectedByHeat;
     private static float timeToMelt;
-    private Animator meltingAnimator;
+    private MegaPointCache meltingAnimation;
+    
 
     // Use this for initialization
     void Start()
@@ -23,7 +24,7 @@ public class ETR_IceCube : MonoBehaviour
         isInHeatingArea = false;
         isAffectedByHeat = false;
         this.gameObject.GetComponent<Renderer>().material.color = Color.yellow;
-        meltingAnimator = this.GetComponent<Animator>();
+        meltingAnimation = this.GetComponent<MegaPointCache>();
     }
 
     // Update is called once per frame
@@ -49,7 +50,6 @@ public class ETR_IceCube : MonoBehaviour
         }
 
         CheckStatus();
-        meltingAnimator.Play("Melting");
 
     }
 
@@ -120,6 +120,10 @@ public class ETR_IceCube : MonoBehaviour
         else if (timeToMelt > 600)
         {
             timeToMelt = 600.0f;
+        }
+        else {
+
+            meltingAnimation.time = 600 - timeToMelt;
         }
     }
 
