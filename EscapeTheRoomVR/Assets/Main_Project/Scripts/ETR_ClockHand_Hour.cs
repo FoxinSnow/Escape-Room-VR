@@ -32,8 +32,8 @@ public class ETR_ClockHand_Hour : MonoBehaviour
         if (isGrabbed)
         {
             newAngle = clockHandRotator.GetValue();
-            Debug.Log("Previous Angle: " + previousAngle);
-            Debug.Log("New Angle:" + newAngle);
+            //Debug.Log("Previous Angle: " + previousAngle);
+            //Debug.Log("New Angle:" + newAngle);
             if (newAngle != previousAngle)
             {
                 float delta = newAngle - previousAngle;
@@ -59,7 +59,6 @@ public class ETR_ClockHand_Hour : MonoBehaviour
     protected virtual void InteractableObjectGrabbed(object sender, InteractableObjectEventArgs e)
     {
         isGrabbed = true;
-        //clockGrabEvent.Invoke();
     }
 
 
@@ -67,8 +66,6 @@ public class ETR_ClockHand_Hour : MonoBehaviour
     {
         isGrabbed = false;
         previousAngle = clockHandRotator.GetValue();
-        //clockHandRotator.angleLimits.minimum = previousAngle;
-        //clockUngrabEvent.Invoke();
     }
 }
 
