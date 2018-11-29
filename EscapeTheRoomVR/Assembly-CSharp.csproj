@@ -96,7 +96,6 @@
     <Compile Include="Assets\Main_Project\Scripts\-LockDigitOne.cs" />
     <Compile Include="Assets\Main_Project\Scripts\-LockDigitThree.cs" />
     <Compile Include="Assets\Main_Project\Scripts\-LockDigitTwo.cs" />
-    <Compile Include="Assets\Main_Project\Scripts\MeshMelt.cs" />
     <Compile Include="Assets\Main_Project\Scripts\SafeScreen.cs" />
     <Compile Include="Assets\Main_Project\Scripts\-UserChangeTime.cs" />
     <Compile Include="Assets\Main_Project\Scripts\-UserSwitchFan.cs" />

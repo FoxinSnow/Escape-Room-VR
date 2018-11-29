@@ -37,17 +37,20 @@ public class ETR_IceCube : MonoBehaviour
 
         if (!isGrabbed && velocity.magnitude == 0)
         {
-            this.gameObject.transform.rotation = Quaternion.Euler(0, this.gameObject.transform.rotation.y, 0);
+            //Debug.Log("Y rotaton" + this.gameObject.transform.eulerAngles.x);
+            //Debug.Log("Y rotaton" + this.gameObject.transform.eulerAngles.y);
+            //Debug.Log("Y rotaton" + this.gameObject.transform.eulerAngles.z);
+            this.gameObject.transform.rotation = Quaternion.Euler(0, this.gameObject.transform.eulerAngles.y, 0);
         }
 
         // 
         if (isInHeatingArea && isAffectedByHeat)
         {
-            MeltIce(20.0f, false);
+            MeltIce(30.0f, false);
         }
         else if (isAffectedByTime)
         {
-            MeltIce(40.0f, false);
+            MeltIce(1.0f, false);
         }
         else
         {
