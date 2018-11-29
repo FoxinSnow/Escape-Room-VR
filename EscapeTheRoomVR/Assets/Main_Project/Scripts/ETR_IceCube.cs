@@ -12,7 +12,7 @@ public class ETR_IceCube : MonoBehaviour
     private static bool isInHeatingArea;
     private static bool isAffectedByHeat;
     private static float timeToMelt;
-    private Animator meltingAnimator;
+    private Animation meltingAnimation;
     
     // Use this for initialization
     void Start()
@@ -22,13 +22,14 @@ public class ETR_IceCube : MonoBehaviour
         isAffectedByTime = true;
         isInHeatingArea = false;
         isAffectedByHeat = false;
-        meltingAnimator = this.GetComponent<Animator>();
+        meltingAnimation = this.GetComponent<Animation>();
+        meltingAnimation["Take 001"].speed = 0;
     }
 
     // Update is called once per frame
     void Update()
     {
-        meltingAnimator.Play("Melting");
+        Debug.Log(meltingAnimation["Take 001"].length);
 
         if (isInHeatingArea && isAffectedByHeat)
         {
@@ -110,10 +111,8 @@ public class ETR_IceCube : MonoBehaviour
             timeToMelt = 600.0f;
         }
         else {
-
-
-
-            //meltingAnimation.time = 600 - timeToMelt;
+            meltingAnimation["Take 001"].normalizedTime =(600 - timeToMelt)/600;
+            meltingAnimation.Play();
         }
     }
 
@@ -129,7 +128,7 @@ public class ETR_IceCube : MonoBehaviour
                 timeToMelt -= time * Time.deltaTime;
             }
         }
-        Debug.Log("Melting Ice: Seconds remaining:" + timeToMelt);
+        //Debug.Log("Melting Ice: Seconds remaining:" + timeToMelt);
     }
 
 }
