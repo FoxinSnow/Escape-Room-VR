@@ -7,7 +7,6 @@ using UnityEngine;
 public class ETR_AlcoholBurnerControl : MonoBehaviour {
 
     public GameObject fireEffect;
-    public UnityEngine.Events.UnityEvent iceCubeEvent;
     private VRTK_InteractableObject burnerControl;
     private bool isOn;
 
@@ -37,7 +36,7 @@ public class ETR_AlcoholBurnerControl : MonoBehaviour {
 
     protected virtual void InteractableObjectUsed(object sender, InteractableObjectEventArgs e)
     {
-        iceCubeEvent.Invoke();
+        ETR_IceCube.ChangeHeatState();
         if (fireEffect.activeSelf)
         {
             fireEffect.SetActive(false);
