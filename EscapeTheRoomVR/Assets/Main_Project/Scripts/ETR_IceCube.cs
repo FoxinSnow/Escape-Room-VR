@@ -47,7 +47,7 @@ public class ETR_IceCube : MonoBehaviour
         }
         else if (isAffectedByTime)
         {
-            MeltIce(20.0f, false);
+            MeltIce(40.0f, false);
         }
         else
         {
@@ -110,10 +110,9 @@ public class ETR_IceCube : MonoBehaviour
     private void CheckStatus() {
         if (timeToMelt < 150)
         {
-            //this.gameObject.GetComponent<Renderer>().enabled = false;
-            //this.gameObject.GetComponent<BoxCollider>().enabled = false;
-            key.gameObject.transform.position = this.gameObject.transform.position;
-            //key.gameObject.transform.rotation = this.gameObject.transform.rotation;
+            this.gameObject.SetActive(false);
+            key.gameObject.transform.position = this.gameObject.transform.position;   
+            key.gameObject.transform.rotation = this.gameObject.transform.Find("key").gameObject.transform.rotation;
             key.SetActive(true);
             Destroy(this.gameObject);
         }
