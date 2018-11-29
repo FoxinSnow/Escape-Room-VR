@@ -47,7 +47,7 @@ public class ETR_IceCube : MonoBehaviour
         }
         else if (isAffectedByTime)
         {
-            MeltIce(1.0f, false);
+            MeltIce(20.0f, false);
         }
         else
         {
@@ -108,11 +108,12 @@ public class ETR_IceCube : MonoBehaviour
     }
 
     private void CheckStatus() {
-        if (timeToMelt < 0)
+        if (timeToMelt < 150)
         {
             //this.gameObject.GetComponent<Renderer>().enabled = false;
             //this.gameObject.GetComponent<BoxCollider>().enabled = false;
             key.gameObject.transform.position = this.gameObject.transform.position;
+            //key.gameObject.transform.rotation = this.gameObject.transform.rotation;
             key.SetActive(true);
             Destroy(this.gameObject);
         }
@@ -121,7 +122,7 @@ public class ETR_IceCube : MonoBehaviour
             timeToMelt = 600.0f;
         }
         else {
-            meltingAnimation["Take 001"].normalizedTime =(600 - timeToMelt)/600;
+            meltingAnimation["Take 001"].time = (int)(600 - timeToMelt);
             meltingAnimation.Play();
         }
     }
@@ -138,7 +139,7 @@ public class ETR_IceCube : MonoBehaviour
                 timeToMelt -= time * Time.deltaTime;
             }
         }
-        //Debug.Log("Melting Ice: Seconds remaining:" + timeToMelt);
+        Debug.Log("Melting Ice: Seconds remaining:" + timeToMelt);
     }
 
 
