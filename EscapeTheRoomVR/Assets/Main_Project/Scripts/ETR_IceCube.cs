@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using VRTK;
 using UnityEngine;
 
 
@@ -12,8 +13,10 @@ public class ETR_IceCube : MonoBehaviour
     private static bool isInHeatingArea;
     private static bool isAffectedByHeat;
     private static float timeToMelt;
+    private static bool isGrabbed;
     private Animation meltingAnimation;
-    
+    private VRTK_InteractableObject iceCubeInteraction;
+
     // Use this for initialization
     void Start()
     {
@@ -29,11 +32,18 @@ public class ETR_IceCube : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(meltingAnimation["Take 001"].length);
+        // Experiemental
+        Vector2 velocity = this.GetComponent<Rigidbody>().velocity;
 
+        if (!isGrabbed && velocity.magnitude == 0)
+        {
+            this.gameObject.transform.rotation = Quaternion.Euler(0, this.gameObject.transform.rotation.y, 0);
+        }
+
+        // 
         if (isInHeatingArea && isAffectedByHeat)
         {
-            MeltIce(60.0f, false);
+            MeltIce(20.0f, false);
         }
         else if (isAffectedByTime)
         {
@@ -130,5 +140,31 @@ public class ETR_IceCube : MonoBehaviour
         }
         //Debug.Log("Melting Ice: Seconds remaining:" + timeToMelt);
     }
+
+
+    protected virtual void OnEnable()
+    {
+        iceCubeInteraction = this.GetComponent<VRTK_InteractableObject>();
+        iceCubeInteraction.InteractableObjectGrabbed += InteractableObjectGrabbed;
+        iceCubeInteraction.InteractableObjectUngrabbed += InteractableObjectUngrabbed;
+    }
+
+    protected virtual void OnDisable()
+    {
+        iceCubeInteraction.InteractableObjectGrabbed -= InteractableObjectGrabbed;
+        iceCubeInteraction.InteractableObjectUngrabbed -= InteractableObjectUngrabbed;
+    }
+
+    protected virtual void InteractableObjectGrabbed(object sender, InteractableObjectEventArgs e)
+    {
+        isGrabbed = true;
+    }
+
+
+    protected virtual void InteractableObjectUngrabbed(object sender, InteractableObjectEventArgs e)
+    {
+        isGrabbed = false;
+    }
+
 
 }

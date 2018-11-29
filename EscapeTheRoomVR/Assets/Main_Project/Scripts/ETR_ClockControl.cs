@@ -101,7 +101,7 @@ public class ETR_ClockControl : MonoBehaviour
                     assistLight.intensity = assistLight.intensity < 0f ? 0f : assistLight.intensity - (0.375f / 30f) * angle;
            
                 }
-                Debug.Log("Passed second:" + angle * 120f);
+                //Debug.Log("Passed second:" + angle * 120f);
                 ETR_IceCube.MeltIce(angle * 120f, true);
             }
             userInput = false; //let the clock continue run
