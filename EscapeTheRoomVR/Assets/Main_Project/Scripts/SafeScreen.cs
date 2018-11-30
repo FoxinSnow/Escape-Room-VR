@@ -8,8 +8,6 @@ public class SafeScreen : MonoBehaviour {
     //C = 10, E = 11, O = 12, R = 13, T = 14, x = 15, * = 16, # = 17;
     public Texture tex0, tex1, tex2, tex3, tex4, tex5, tex6, tex7,
         tex8, tex9, tex10, tex11, tex12, tex13, tex14, tex15, tex16, tex17;
-    public Transform fingerPrint;
-    public Texture fpTexture;
     private Transform[] scrs = new Transform[7]; //screens
     private Texture[] texs = new Texture[18]; //textures
     private int currentScr = 0; //0 ~ 6, mark the next screen should use
@@ -18,8 +16,7 @@ public class SafeScreen : MonoBehaviour {
         {-1, -1, -1, -1, -1, -1, -1}; //7 is the max length, only check first 4 digit
     private float second = 0;//time to test whether to sleep
     private bool wOrS = false; //false = sleep, true = wake
-    private int passC = 0; //not checked = 0, wrong = -1, correct = 1
-    private int fingerC = 0; //not checked = 0. wrong = -1. correct = 1, however, no wrong fingerprint in the game
+    private int passC = 0; //not checked = 0, wrong = -1, correct = 1, when -1 begin sleep check
     private bool unlock = false; //false cannot open, true can open
 
     // Use this for initialization
@@ -91,7 +88,9 @@ public class SafeScreen : MonoBehaviour {
         scrs[4].GetComponent<Renderer>().material.mainTexture = texs[11];//e
         scrs[5].GetComponent<Renderer>().material.mainTexture = texs[10];//c
         scrs[6].GetComponent<Renderer>().material.mainTexture = texs[14];//t
-        passC = 1; //ready for finger print
+        passC = 1;//password is correct
+        unlock = true;
+        passC = -1; //after correct, the sleep check begin
     }
 
     private void passwordWrong(){
@@ -289,25 +288,8 @@ public class SafeScreen : MonoBehaviour {
         }
     }
 
-    //1
-    public void setFingerC(int n){
-        fingerC = n;
-    }
-
-    //3
     public bool getUnLock(){
         return unlock;
-    }
-
-    //2
-    public void checkFingerPrint()
-    {
-        if (passC == 1 && fingerC == 1)
-        {
-            fingerPrint.GetComponent<Renderer>().material.mainTexture = fpTexture;
-            passC = -1;//let screen sleep
-            unlock = true;
-        }
     }
 
     private void allX(){
