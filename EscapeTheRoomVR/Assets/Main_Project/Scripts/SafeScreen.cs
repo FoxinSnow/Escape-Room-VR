@@ -17,8 +17,10 @@ public class SafeScreen : MonoBehaviour {
     private int[] input = new int[7]
         {-1, -1, -1, -1, -1, -1, -1}; //7 is the max length, only check first 4 digit
     private float second = 0;//time to test whether to sleep
-    private static bool wOrS = false; //false = sleep, true = wake
-    private static bool passC = false; //use for test whether fingerprint can be used
+    private bool wOrS = false; //false = sleep, true = wake
+    private int passC = 0; //not checked = 0, wrong = -1, correct = 1
+    private int fingerC = 0; //not checked = 0. wrong = -1. correct = 1, however, no wrong fingerprint in the game
+    private bool unlock = false; //false cannot open, true can open
 
     // Use this for initialization
     void Start () {
@@ -28,9 +30,8 @@ public class SafeScreen : MonoBehaviour {
         texs[4] = tex4; texs[5] = tex5; texs[6] = tex6; texs[7] = tex7;
         texs[8] = tex8; texs[9] = tex9; texs[10] = tex10; texs[11] = tex11;
         texs[12] = tex12; texs[13] = tex13; texs[14] = tex14; texs[15] = tex15;
-        //wait for add 16 and 17
-        //.
-        //.
+        texs[16] = tex16; texs[17] = tex17;
+
         password[0] = 1;
         password[1] = 1;
         password[2] = 1;
@@ -39,7 +40,7 @@ public class SafeScreen : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-
+        sleepCheck();
     }
 
     //display numbers, n = 0 ~ 9, or 16, 17
@@ -54,11 +55,14 @@ public class SafeScreen : MonoBehaviour {
     private void deleteNum(){
         scrs[currentScr - 1].GetComponent<Renderer>().material.mainTexture = texs[15];
         input[currentScr - 1] = -1;
+        currentScr--;
+        //Debug.Log("Delete " + currentScr);
     }
 
     private void cancel(){
         //reset changed variables
         resetInput();
+        passC = 0;
         sleep();
     }
 
@@ -87,7 +91,7 @@ public class SafeScreen : MonoBehaviour {
         scrs[4].GetComponent<Renderer>().material.mainTexture = texs[11];//e
         scrs[5].GetComponent<Renderer>().material.mainTexture = texs[10];//c
         scrs[6].GetComponent<Renderer>().material.mainTexture = texs[14];//t
-        passC = true; //ready for finger print
+        passC = 1; //ready for finger print
     }
 
     private void passwordWrong(){
@@ -95,19 +99,25 @@ public class SafeScreen : MonoBehaviour {
         allX();
         //reset to wait new input
         resetInput();
+        passC = -1;
+        //call ifWrongSleepCheck() in update
+    }
+
+    private void sleepCheck(){
         //after 2 second slepp the screen
-        second += Time.deltaTime;
-        Debug.Log(second);
-        if (second > 2.0f){
-            sleep();
+        if (passC == -1)
+        {
+            second += Time.deltaTime;
+            //Debug.Log(second);
+            if (second > 2.0f)
+            {
+                sleep();
+                passC = 0;
+            }
         }
     }
 
-    private void getFingerPrint(){
-        if(passC.Equals(true)){
-            fingerPrint.GetComponent<Renderer>().material.mainTexture = fpTexture;
-        }
-    }
+  
 
     private void wakeUp(){
         allX();
@@ -127,7 +137,6 @@ public class SafeScreen : MonoBehaviour {
         }
         //reset the current scr
         currentScr = 0;
-        passC = false;
     }
 
     //n = 0 ~ 17
@@ -135,29 +144,169 @@ public class SafeScreen : MonoBehaviour {
     public void pressButton(int n){
         //if not wake up, wake up first
         if(wOrS.Equals(false)){
-            wakeUp();
+            if (n != 10 && n != 11 && n !=12) { //delete enter and cancel can not wake up
+                wakeUp();
+            }
         }
         //0 1 2 3 4 5 6 7 8 9
         //delete = 10; cancel = 11; enter = 12;
         //* = 16, # = 17; 16 17 to be same with texture index 
         switch (n){
-            case 0: break;
-            case 1: break;
-            case 2: break;
-            case 3: break;
-            case 4: break;
-            case 5: break;
-            case 6: break;
-            case 7: break;
-            case 8: break;
-            case 9: break;
-            case 10: break;
+            case 0:
+                if (currentScr > 6)
+                {
+                    break;
+                }
+                else{
+                    inputNum(0);
+                    break;
+                }
+            case 1:
+                if (currentScr > 6)
+                {
+                    break;
+                }
+                else
+                {
+                    inputNum(1);
+                    break;
+                }
+            case 2:
+                if (currentScr > 6)
+                {
+                    break;
+                }
+                else
+                {
+                    inputNum(2);
+                    break;
+                }
+            case 3:
+                if (currentScr > 6)
+                {
+                    break;
+                }
+                else
+                {
+                    inputNum(3);
+                    break;
+                }
+            case 4:
+                if (currentScr > 6)
+                {
+                    break;
+                }
+                else
+                {
+                    inputNum(4);
+                    break;
+                }
+            case 5:
+                if (currentScr > 6)
+                {
+                    break;
+                }
+                else
+                {
+                    inputNum(5);
+                    break;
+                }
+            case 6:
+                if (currentScr > 6)
+                {
+                    break;
+                }
+                else
+                {
+                    inputNum(6);
+                    break;
+                }
+            case 7:
+                if (currentScr > 6)
+                {
+                    break;
+                }
+                else
+                {
+                    inputNum(7);
+                    break;
+                }
+            case 8:
+                if (currentScr > 6)
+                {
+                    break;
+                }
+                else
+                {
+                    inputNum(8);
+                    break;
+                }
+            case 9:
+                if (currentScr > 6)
+                {
+                    break;
+                }
+                else
+                {
+                    inputNum(9);
+                    break;
+                }
+            case 10:
+                if(currentScr == 0)
+                {
+                    break;
+                }
+                else{
+                    deleteNum();
+                    break;
+                }
             case 11:
                 cancel();
                 break;
-            case 12: break;
-            case 16: break;
-            case 17: break;
+            case 12:
+                checkPassword();
+                break;
+            case 16:
+                if (currentScr > 6)
+                {
+                    break;
+                }
+                else
+                {
+                    inputNum(16);
+                    break;
+                }
+            case 17:
+                if (currentScr > 6)
+                {
+                    break;
+                }
+                else
+                {
+                    inputNum(17);
+                    break;
+                }
+        }
+    }
+
+    //1
+    public void setFingerC(int n){
+        fingerC = n;
+    }
+
+    //3
+    public bool getUnLock(){
+        return unlock;
+    }
+
+    //2
+    public void checkFingerPrint()
+    {
+        if (passC == 1 && fingerC == 1)
+        {
+            fingerPrint.GetComponent<Renderer>().material.mainTexture = fpTexture;
+            passC = -1;//let screen sleep
+            unlock = true;
         }
     }
 
