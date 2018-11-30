@@ -294,7 +294,6 @@ public class SafeScreen : MonoBehaviour {
         if (unlock.Equals(true))
         {
             safeDoorToUnlock.GetComponent<VRTK_PhysicsRotator>().enabled = true;
-            safeDoorToUnlock.GetComponent<VRTK_PhysicsRotator>().isLocked = false;
             safeDoorToUnlock.GetComponent<VRTK_InteractObjectHighlighter>().enabled = true;
         }
     }

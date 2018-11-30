@@ -1279,7 +1279,7 @@ MonoBehaviour:
   restingAngle: 0
   forceRestingAngleThreshold: 0
   angleTarget: 0
-  isLocked: 1
+  isLocked: 0
   stepValueRange:
     minimum: -120
     maximum: 0
@@ -9612,7 +9612,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d7457db3a6166c49b2de40b09aee5ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fridgeDoor: {fileID: 1038100203}
+  fridgeDoorToUnlock: {fileID: 0}
   unlockedLock: {fileID: 435164869}
   unlockSoundEffect: {fileID: 1150426642}
   failedUnlockingClip: {fileID: 8300000, guid: 6e3bad84d7a6edd4782be8a239db4400, type: 3}
@@ -24463,7 +24463,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1038100203}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: afbb29cbe7e86b842b09702b4ae1b57b, type: 3}
   m_Name: 
@@ -24484,7 +24484,7 @@ MonoBehaviour:
   restingAngle: 0
   forceRestingAngleThreshold: 0
   angleTarget: 0
-  isLocked: 1
+  isLocked: 0
   stepValueRange:
     minimum: -120
     maximum: 0
@@ -24507,13 +24507,13 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1038100203}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: abc4b5dd2be1cea4aaea2850b910d3f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   nearTouchHighlight: {r: 0, g: 0, b: 0, a: 0}
-  touchHighlight: {r: 1, g: 0, b: 0, a: 1}
+  touchHighlight: {r: 1, g: 1, b: 0, a: 1}
   grabHighlight: {r: 0, g: 0, b: 0, a: 0}
   useHighlight: {r: 0, g: 0, b: 0, a: 0}
   objectToMonitor: {fileID: 0}

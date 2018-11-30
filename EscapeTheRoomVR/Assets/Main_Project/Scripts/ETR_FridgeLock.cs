@@ -8,7 +8,7 @@ using VRTK.Controllables.PhysicsBased;
 public class ETR_FridgeLock : MonoBehaviour
 {
 
-    public GameObject fridgeDoor;
+    public GameObject fridgeDoorToUnlock;
     public GameObject unlockedLock;
 
     public AudioSource unlockSoundEffect;
@@ -19,18 +19,12 @@ public class ETR_FridgeLock : MonoBehaviour
     public float[] unlockDegrees;
 
     private VRTK_InteractableObject lockInteraction;
-    private VRTK_PhysicsRotator fridgeDoorInteraction;
-    private VRTK_InteractObjectHighlighter fridgeDoorHighlight;
 
     private int numberUnlocked;
     // Use this for initialization
     void Start()
     {
         numberUnlocked = 0;
-        fridgeDoorInteraction = fridgeDoor.GetComponent<VRTK_PhysicsRotator>();
-        fridgeDoorInteraction.isLocked = true;
-        fridgeDoorHighlight = fridgeDoor.GetComponent<VRTK_InteractObjectHighlighter>();
-        fridgeDoorHighlight.touchHighlight = Color.red;
     }
 
     protected virtual void OnEnable()
@@ -80,9 +74,8 @@ public class ETR_FridgeLock : MonoBehaviour
 
         if (numberUnlocked == lockObjectTransforms.Length)
         {
-            Debug.Log("Unlock");
-            fridgeDoorInteraction.isLocked = false;
-            fridgeDoorHighlight.touchHighlight = Color.yellow;
+            fridgeDoorToUnlock.GetComponent<VRTK_PhysicsRotator>().enabled = true;
+            fridgeDoorToUnlock.GetComponent<VRTK_InteractObjectHighlighter>().enabled = true;
             unlockSoundEffect.clip = unlockingClip;
             unlockSoundEffect.Play();
             GameObject thisLock = GameObject.Find("*Lock*");
