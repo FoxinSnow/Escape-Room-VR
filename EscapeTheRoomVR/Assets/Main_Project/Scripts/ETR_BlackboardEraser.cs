@@ -27,7 +27,7 @@ public class ETR_BlackboardEraser : MonoBehaviour {
 
         if (collision.gameObject.tag == "BoardCover" && contactCollider == wipeCollider) {
             onEraserCollisionEnterEvent.Invoke();
-            //this.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeRotationX;
+            this.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeRotation;
         }
     }
 
@@ -35,7 +35,7 @@ public class ETR_BlackboardEraser : MonoBehaviour {
     {
         if (collision.gameObject.tag == "BoardCover"){
             onEraserCollisionExitEvent.Invoke();
-            //this.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
+            this.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
         }
     }
 
