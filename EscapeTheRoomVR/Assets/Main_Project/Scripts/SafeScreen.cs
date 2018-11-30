@@ -1,9 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using VRTK;
+using VRTK.Controllables.PhysicsBased;
 using UnityEngine;
 
 public class SafeScreen : MonoBehaviour {
 
+    public GameObject safeDoorToUnlock;
     public Transform scr0, scr1, scr2, scr3, scr4, scr5, scr6;
     //C = 10, E = 11, O = 12, R = 13, T = 14, x = 15, * = 16, # = 17;
     public Texture tex0, tex1, tex2, tex3, tex4, tex5, tex6, tex7,
@@ -91,6 +94,7 @@ public class SafeScreen : MonoBehaviour {
         passC = 1;//password is correct
         unlock = true;
         passC = -1; //after correct, the sleep check begin
+        getUnLock();
     }
 
     private void passwordWrong(){
@@ -115,8 +119,6 @@ public class SafeScreen : MonoBehaviour {
             }
         }
     }
-
-  
 
     private void wakeUp(){
         allX();
@@ -288,8 +290,13 @@ public class SafeScreen : MonoBehaviour {
         }
     }
 
-    public bool getUnLock(){
-        return unlock;
+    private void getUnLock(){
+        if (unlock.Equals(true))
+        {
+            safeDoorToUnlock.GetComponent<VRTK_PhysicsRotator>().enabled = true;
+            safeDoorToUnlock.GetComponent<VRTK_PhysicsRotator>().isLocked = false;
+            safeDoorToUnlock.GetComponent<VRTK_InteractObjectHighlighter>().enabled = true;
+        }
     }
 
     private void allX(){

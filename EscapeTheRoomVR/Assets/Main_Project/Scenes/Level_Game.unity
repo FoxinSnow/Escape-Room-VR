@@ -1302,7 +1302,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 71742364}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c08517e04830d6d44a13c5ea5f574181, type: 3}
   m_Name: 
@@ -13185,6 +13185,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4374646884a347088a520191da796a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  safeDoorToUnlock: {fileID: 71742364}
   scr0: {fileID: 803577172}
   scr1: {fileID: 1050075336}
   scr2: {fileID: 228325452}
