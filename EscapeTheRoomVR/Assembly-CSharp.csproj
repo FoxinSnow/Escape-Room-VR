@@ -79,7 +79,6 @@
     <Compile Include="Assets\Main_Project\Scripts\ETR_BlackboardEraser.cs" />
     <Compile Include="Assets\Main_Project\Scripts\ETR_ClampRotator.cs" />
     <Compile Include="Assets\Main_Project\Scripts\ETR_ClockControl.cs" />
-    <Compile Include="Assets\Main_Project\Scripts\ETR_ClockHand.cs" />
     <Compile Include="Assets\Main_Project\Scripts\ETR_ClockHand_Hour.cs" />
     <Compile Include="Assets\Main_Project\Scripts\ETR_ContainerProtection.cs" />
     <Compile Include="Assets\Main_Project\Scripts\ETR_ExclusiveCollision.cs" />
@@ -94,11 +93,11 @@
     <Compile Include="Assets\Main_Project\Scripts\ETR_RadioButton.cs" />
     <Compile Include="Assets\Main_Project\Scripts\ETR_RadioControl.cs" />
     <Compile Include="Assets\Main_Project\Scripts\ETR_SafeButton.cs" />
+    <Compile Include="Assets\Main_Project\Scripts\ETR_SafeScreen.cs" />
     <Compile Include="Assets\Main_Project\Scripts\-FanRun.cs" />
     <Compile Include="Assets\Main_Project\Scripts\-LockDigitOne.cs" />
     <Compile Include="Assets\Main_Project\Scripts\-LockDigitThree.cs" />
     <Compile Include="Assets\Main_Project\Scripts\-LockDigitTwo.cs" />
-    <Compile Include="Assets\Main_Project\Scripts\SafeScreen.cs" />
     <Compile Include="Assets\Main_Project\Scripts\-UserChangeTime.cs" />
     <Compile Include="Assets\Main_Project\Scripts\-UserSwitchFan.cs" />
     <Compile Include="Assets\Mega-Fiers\MegaCache\Scripts\MegaCacheImage.cs" />

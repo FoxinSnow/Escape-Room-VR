@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using VRTK;
 using UnityEngine;
 
+// Coded by Yuqi Wang
 public class ETR_SafeButton : MonoBehaviour {
 
     public UnityEngine.Events.UnityEvent buttonEvent;

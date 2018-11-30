@@ -4,7 +4,8 @@ using VRTK;
 using VRTK.Controllables.PhysicsBased;
 using UnityEngine;
 
-public class SafeScreen : MonoBehaviour {
+// Coded by Fei Huang
+public class ETR_SafeScreen : MonoBehaviour {
 
     public GameObject safeDoorToUnlock;
     public Transform scr0, scr1, scr2, scr3, scr4, scr5, scr6;
@@ -40,11 +41,11 @@ public class SafeScreen : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        sleepCheck();
+        SleepCheck();
     }
 
     //display numbers, n = 0 ~ 9, or 16, 17
-    private void inputNum(int n){
+    private void InputNum(int n){
         //current screen will display the input number
         scrs[currentScr].GetComponent<Renderer>().material.mainTexture = texs[n];
         input[currentScr] = n; //the input number will be stored for check
@@ -52,37 +53,37 @@ public class SafeScreen : MonoBehaviour {
     }
 
     //delete the last number
-    private void deleteNum(){
+    private void DeleteNum(){
         scrs[currentScr - 1].GetComponent<Renderer>().material.mainTexture = texs[15];
         input[currentScr - 1] = -1;
         currentScr--;
         //Debug.Log("Delete " + currentScr);
     }
 
-    private void cancel(){
+    private void Cancel(){
         //reset changed variables
-        resetInput();
+        ResetInput();
         passC = 0;
-        sleep();
+        Sleep();
     }
 
     //check whether password is correct
-    private void checkPassword(){
+    private void CheckPassword(){
         if (input[4] != -1){  //if there is more than 4 digit, wrong
-            passwordWrong();
+            PasswordWrong();
             return;
         } else { //else if there is only 4 digit
             for (int i = 0; i < 4; i++) {
                 if (password[i] != input[i]){ //if any one is not correct, wrong
-                    passwordWrong();
+                    PasswordWrong();
                     return;
                 }
             }
-            passwordCorrect();
+            PasswordCorrect();
         }
     }
 
-    private void passwordCorrect(){
+    private void PasswordCorrect(){
         Debug.Log("CORRECT");
         scrs[0].GetComponent<Renderer>().material.mainTexture = texs[10];//c
         scrs[1].GetComponent<Renderer>().material.mainTexture = texs[12];//o
@@ -94,19 +95,19 @@ public class SafeScreen : MonoBehaviour {
         passC = 1;//password is correct
         unlock = true;
         passC = -1; //after correct, the sleep check begin
-        getUnLock();
+        UnlockTheSafe();
     }
 
-    private void passwordWrong(){
+    private void PasswordWrong(){
         Debug.Log("WRONG");
-        allX();
+        AllX();
         //reset to wait new input
-        resetInput();
+        ResetInput();
         passC = -1;
         //call ifWrongSleepCheck() in update
     }
 
-    private void sleepCheck(){
+    private void SleepCheck(){
         //after 2 second slepp the screen
         if (passC == -1)
         {
@@ -114,23 +115,23 @@ public class SafeScreen : MonoBehaviour {
             //Debug.Log(second);
             if (second > 2.0f)
             {
-                sleep();
+                Sleep();
                 passC = 0;
             }
         }
     }
 
-    private void wakeUp(){
-        allX();
+    private void WakeUp(){
+        AllX();
         wOrS = true;
     }
 
-    private void sleep(){
-        allEmpty();
+    private void Sleep(){
+        AllEmpty();
         wOrS = false;
     }
 
-    private void resetInput(){
+    private void ResetInput(){
         //reset the input array
         for (int i = 0; i < 6; i++)
         {
@@ -142,11 +143,11 @@ public class SafeScreen : MonoBehaviour {
 
     //n = 0 ~ 17
     //main function
-    public void pressButton(int n){
+    public void PressButton(int n){
         //if not wake up, wake up first
         if(wOrS.Equals(false)){
             if (n != 10 && n != 11 && n !=12) { //delete enter and cancel can not wake up
-                wakeUp();
+                WakeUp();
             }
         }
         //0 1 2 3 4 5 6 7 8 9
@@ -159,7 +160,7 @@ public class SafeScreen : MonoBehaviour {
                     break;
                 }
                 else{
-                    inputNum(0);
+                    InputNum(0);
                     break;
                 }
             case 1:
@@ -169,7 +170,7 @@ public class SafeScreen : MonoBehaviour {
                 }
                 else
                 {
-                    inputNum(1);
+                    InputNum(1);
                     break;
                 }
             case 2:
@@ -179,7 +180,7 @@ public class SafeScreen : MonoBehaviour {
                 }
                 else
                 {
-                    inputNum(2);
+                    InputNum(2);
                     break;
                 }
             case 3:
@@ -189,7 +190,7 @@ public class SafeScreen : MonoBehaviour {
                 }
                 else
                 {
-                    inputNum(3);
+                    InputNum(3);
                     break;
                 }
             case 4:
@@ -199,7 +200,7 @@ public class SafeScreen : MonoBehaviour {
                 }
                 else
                 {
-                    inputNum(4);
+                    InputNum(4);
                     break;
                 }
             case 5:
@@ -209,7 +210,7 @@ public class SafeScreen : MonoBehaviour {
                 }
                 else
                 {
-                    inputNum(5);
+                    InputNum(5);
                     break;
                 }
             case 6:
@@ -219,7 +220,7 @@ public class SafeScreen : MonoBehaviour {
                 }
                 else
                 {
-                    inputNum(6);
+                    InputNum(6);
                     break;
                 }
             case 7:
@@ -229,7 +230,7 @@ public class SafeScreen : MonoBehaviour {
                 }
                 else
                 {
-                    inputNum(7);
+                    InputNum(7);
                     break;
                 }
             case 8:
@@ -239,7 +240,7 @@ public class SafeScreen : MonoBehaviour {
                 }
                 else
                 {
-                    inputNum(8);
+                    InputNum(8);
                     break;
                 }
             case 9:
@@ -249,7 +250,7 @@ public class SafeScreen : MonoBehaviour {
                 }
                 else
                 {
-                    inputNum(9);
+                    InputNum(9);
                     break;
                 }
             case 10:
@@ -258,14 +259,14 @@ public class SafeScreen : MonoBehaviour {
                     break;
                 }
                 else{
-                    deleteNum();
+                    DeleteNum();
                     break;
                 }
             case 11:
-                cancel();
+                Cancel();
                 break;
             case 12:
-                checkPassword();
+                CheckPassword();
                 break;
             case 16:
                 if (currentScr > 6)
@@ -274,7 +275,7 @@ public class SafeScreen : MonoBehaviour {
                 }
                 else
                 {
-                    inputNum(16);
+                    InputNum(16);
                     break;
                 }
             case 17:
@@ -284,13 +285,13 @@ public class SafeScreen : MonoBehaviour {
                 }
                 else
                 {
-                    inputNum(17);
+                    InputNum(17);
                     break;
                 }
         }
     }
 
-    private void getUnLock(){
+    private void UnlockTheSafe(){
         if (unlock.Equals(true))
         {
             safeDoorToUnlock.GetComponent<VRTK_PhysicsRotator>().enabled = true;
@@ -298,7 +299,7 @@ public class SafeScreen : MonoBehaviour {
         }
     }
 
-    private void allX(){
+    private void AllX(){
         scrs[0].GetComponent<Renderer>().material.mainTexture = texs[15];
         scrs[1].GetComponent<Renderer>().material.mainTexture = texs[15];
         scrs[2].GetComponent<Renderer>().material.mainTexture = texs[15];
@@ -308,7 +309,7 @@ public class SafeScreen : MonoBehaviour {
         scrs[6].GetComponent<Renderer>().material.mainTexture = texs[15];
     }
 
-    private void allEmpty(){
+    private void AllEmpty(){
         scrs[0].GetComponent<Renderer>().material.mainTexture = null;
         scrs[1].GetComponent<Renderer>().material.mainTexture = null;
         scrs[2].GetComponent<Renderer>().material.mainTexture = null;

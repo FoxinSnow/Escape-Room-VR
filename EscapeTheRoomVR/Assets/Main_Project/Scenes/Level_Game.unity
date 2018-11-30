@@ -150,7 +150,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 516165871}
-        m_MethodName: pressButton
+        m_MethodName: PressButton
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1026,7 +1026,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 516165871}
-        m_MethodName: pressButton
+        m_MethodName: PressButton
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4833,7 +4833,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 516165871}
-        m_MethodName: pressButton
+        m_MethodName: PressButton
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5276,6 +5276,11 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 228325451}
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &237577967 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100000, guid: 1ed90cc431fe0514f81845b8811ad2cd,
+    type: 3}
+  m_PrefabInternal: {fileID: 315777178}
 --- !u!1001 &242535937
 Prefab:
   m_ObjectHideFlags: 0
@@ -6983,7 +6988,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 516165871}
-        m_MethodName: pressButton
+        m_MethodName: PressButton
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -7212,8 +7217,8 @@ MonoBehaviour:
   unhighlightOnDisable: 1
   thickness: 0.3
   customOutlineModels:
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 237577967}
+  - {fileID: 1834479739}
   customOutlineModelPaths: []
   enableSubmeshHighlight: 0
 --- !u!114 &315777183
@@ -9197,7 +9202,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 516165871}
-        m_MethodName: pressButton
+        m_MethodName: PressButton
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -9612,7 +9617,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d7457db3a6166c49b2de40b09aee5ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fridgeDoorToUnlock: {fileID: 0}
+  fridgeDoorToUnlock: {fileID: 1038100203}
   unlockedLock: {fileID: 435164869}
   unlockSoundEffect: {fileID: 1150426642}
   failedUnlockingClip: {fileID: 8300000, guid: 6e3bad84d7a6edd4782be8a239db4400, type: 3}
@@ -11702,7 +11707,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 516165871}
-        m_MethodName: pressButton
+        m_MethodName: PressButton
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -14767,7 +14772,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 516165871}
-        m_MethodName: pressButton
+        m_MethodName: PressButton
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -16178,7 +16183,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 516165871}
-        m_MethodName: pressButton
+        m_MethodName: PressButton
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -17801,6 +17806,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 400066, guid: 5a2738292cd866d42b2c0117416b80f8, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5a2738292cd866d42b2c0117416b80f8, type: 3}
   m_IsPrefabAsset: 0
@@ -18712,7 +18721,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 516165871}
-        m_MethodName: pressButton
+        m_MethodName: PressButton
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -22108,7 +22117,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 516165871}
-        m_MethodName: pressButton
+        m_MethodName: PressButton
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -24470,7 +24479,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   operateAxis: 2
   ignoreCollisionsWith:
-  - {fileID: 0}
+  - {fileID: 1155603786}
   - {fileID: 0}
   excludeColliderCheckOn:
   - {fileID: 722981424}
@@ -24540,21 +24549,6 @@ MonoBehaviour:
   - {fileID: 592880731}
   customOutlineModelPaths: []
   enableSubmeshHighlight: 0
---- !u!54 &1038100208
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1038100203}
-  serializedVersion: 2
-  m_Mass: 10
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!1 &1042263864 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100004, guid: 6524831dc5ca22e4a9e3176cf2b9bd56,
@@ -27089,7 +27083,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   operateAxis: 2
   ignoreCollisionsWith:
-  - {fileID: 0}
+  - {fileID: 1038100203}
   - {fileID: 0}
   excludeColliderCheckOn:
   - {fileID: 722981431}
@@ -27159,21 +27153,6 @@ MonoBehaviour:
   objectToHighlight: {fileID: 0}
   objectHighlighter: {fileID: 0}
   objectToAffect: {fileID: 0}
---- !u!54 &1155603790
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1155603786}
-  serializedVersion: 2
-  m_Mass: 10
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!1 &1158143657
 GameObject:
   m_ObjectHideFlags: 0
@@ -32243,7 +32222,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 516165871}
-        m_MethodName: pressButton
+        m_MethodName: PressButton
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -34756,6 +34735,14 @@ Prefab:
       propertyPath: m_Name
       value: Packaging
       objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 16fd2b9fce37d67438831ac2189b3b83, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.019
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 16fd2b9fce37d67438831ac2189b3b83, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.0203
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 16fd2b9fce37d67438831ac2189b3b83, type: 3}
   m_IsPrefabAsset: 0
@@ -34772,11 +34759,6 @@ GameObject:
 --- !u!1 &1527891131 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: 16fd2b9fce37d67438831ac2189b3b83,
-    type: 3}
-  m_PrefabInternal: {fileID: 1527891128}
---- !u!1 &1527891132 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 100004, guid: 16fd2b9fce37d67438831ac2189b3b83,
     type: 3}
   m_PrefabInternal: {fileID: 1527891128}
 --- !u!65 &1527891133
@@ -34825,20 +34807,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.11023994, y: 0.16162251, z: 0.011581207}
-  m_Center: {x: -0.001272147, y: -0.0013728837, z: 0.010394278}
---- !u!65 &1527891137
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1527891132}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.11777304, y: 0.15346137, z: 0.031270307}
-  m_Center: {x: 0.00019756707, y: 0.000053415697, z: 0.012692405}
+  m_Size: {x: 0.11023994, y: 0.16162251, z: 0.0047007077}
+  m_Center: {x: -0.001272147, y: -0.0013728837, z: 0.00065511354}
 --- !u!114 &1527891139
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -35336,7 +35306,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 516165871}
-        m_MethodName: pressButton
+        m_MethodName: PressButton
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -46521,6 +46491,11 @@ MeshCollider:
   m_CookingOptions: 14
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300000, guid: b9abf70e355ebfd40ba0e17bfd89a637, type: 3}
+--- !u!1 &1834479739 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100002, guid: 1ed90cc431fe0514f81845b8811ad2cd,
+    type: 3}
+  m_PrefabInternal: {fileID: 315777178}
 --- !u!1 &1838000968 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100004, guid: 25646c93c7c29414fb977cfdf0caf53d,
@@ -46624,7 +46599,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 516165871}
-        m_MethodName: pressButton
+        m_MethodName: PressButton
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -49141,7 +49116,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 516165871}
-        m_MethodName: pressButton
+        m_MethodName: PressButton
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -49611,7 +49586,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 516165871}
-        m_MethodName: pressButton
+        m_MethodName: PressButton
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
