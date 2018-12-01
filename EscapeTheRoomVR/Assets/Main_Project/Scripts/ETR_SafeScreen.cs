@@ -16,7 +16,7 @@ public class ETR_SafeScreen : MonoBehaviour {
     private Transform[] scrs = new Transform[7]; //screens
     private Texture[] texs = new Texture[18]; //textures
     private int currentScr = 0; //0 ~ 6, mark the next screen should use
-    private int[] password = new int[4];
+    private int[] password = new int[7];
     private int[] input = new int[7]
         {-1, -1, -1, -1, -1, -1, -1}; //7 is the max length, only check first 4 digit
     private float second = 0;//time to test whether to sleep
@@ -34,10 +34,13 @@ public class ETR_SafeScreen : MonoBehaviour {
         texs[12] = tex12; texs[13] = tex13; texs[14] = tex14; texs[15] = tex15;
         texs[16] = tex16; texs[17] = tex17;
 
-        password[0] = 1;
-        password[1] = 1;
-        password[2] = 1;
-        password[3] = 1;
+        password[0] = 5;
+        password[1] = 5;
+        password[2] = 5;
+        password[3] = 2;
+        password[4] = 3;
+        password[5] = 4;
+        password[6] = 5;
 	}
 	
 	// Update is called once per frame
@@ -70,18 +73,18 @@ public class ETR_SafeScreen : MonoBehaviour {
 
     //check whether password is correct
     private void CheckPassword(){
-        if (input[4] != -1){  //if there is more than 4 digit, wrong
-            PasswordWrong();
-            return;
-        } else { //else if there is only 4 digit
-            for (int i = 0; i < 4; i++) {
+        //if (input[4] != -1){  //if there is more than 4 digit, wrong
+        //    PasswordWrong();
+        //    return;
+        //} else { //else if there is only 4 digit
+            for (int i = 0; i < 7; i++) {
                 if (password[i] != input[i]){ //if any one is not correct, wrong
                     PasswordWrong();
                     return;
                 }
             }
             PasswordCorrect();
-        }
+        //}
     }
 
     private void PasswordCorrect(){
