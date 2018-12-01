@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.15315965, g: 0.17385463, b: 0.18369634, a: 1}
+  m_IndirectSpecularColor: {r: 0.15315935, g: 0.17385417, b: 0.18369584, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -12686,7 +12686,7 @@ GameObject:
   - component: {fileID: 484296759}
   - component: {fileID: 484296758}
   m_Layer: 0
-  m_Name: screen6
+  m_Name: screen5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13669,8 +13669,8 @@ MonoBehaviour:
   scr2: {fileID: 228325452}
   scr3: {fileID: 2146763754}
   scr4: {fileID: 849635551}
-  scr5: {fileID: 604174217}
-  scr6: {fileID: 484296757}
+  scr5: {fileID: 484296757}
+  scr6: {fileID: 604174217}
   tex0: {fileID: 2800000, guid: 523a3e4be4b58074998925dfc2cd3c88, type: 3}
   tex1: {fileID: 2800000, guid: a8064b679733da94d84e36e5c9ed78da, type: 3}
   tex2: {fileID: 2800000, guid: 7ddea8d18b82e2e46819ca84b1fa3259, type: 3}
@@ -15391,7 +15391,7 @@ GameObject:
   - component: {fileID: 604174219}
   - component: {fileID: 604174218}
   m_Layer: 0
-  m_Name: screen5
+  m_Name: screen6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
