@@ -16,8 +16,8 @@ TagManager:
   - Hand
   - BoardCover
   - Important
-  - Test
   - Boundary
+  - TeleportHeightAdjustment
   layers:
   - Default
   - TransparentFX

@@ -362,6 +362,50 @@ MeshCollider:
   m_CookingOptions: 14
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300000, guid: eaf3ccbc0a52b4c4fbe70f7e9433b854, type: 3}
+--- !u!1 &23931343
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 23931345}
+  - component: {fileID: 23931344}
+  m_Layer: 0
+  m_Name: TeleporterAdjustmentPolicy
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &23931344
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 23931343}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ed2aa1a29b92ca4f84a26a5f6e9218b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  operation: 1
+  checkType: 1
+  identifiers:
+  - TeleportHeightAdjustment
+--- !u!4 &23931345
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 23931343}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 708907975}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &25734975 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100014, guid: fe4baf580d914f948a7056a62c91ec42,
@@ -913,7 +957,7 @@ GameObject:
   - component: {fileID: 47221869}
   m_Layer: 0
   m_Name: Stair_Teleport
-  m_TagString: TeleportArea
+  m_TagString: TeleportHeightAdjustment
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5961,7 +6005,7 @@ Transform:
   - {fileID: 2066074337}
   - {fileID: 219155888}
   m_Father: {fileID: 708907975}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &252858132 stripped
 GameObject:
@@ -6179,7 +6223,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 708907975}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &262407625
 MonoBehaviour:
@@ -16649,7 +16693,7 @@ GameObject:
   - component: {fileID: 666378782}
   m_Layer: 0
   m_Name: Bed_Collider_Pillow
-  m_TagString: TeleportArea
+  m_TagString: TeleportHeightAdjustment
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17536,6 +17580,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 976391668}
+  - {fileID: 23931345}
   - {fileID: 262407624}
   - {fileID: 2056900959}
   - {fileID: 248894253}
@@ -21635,11 +21680,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400004, guid: 6524831dc5ca22e4a9e3176cf2b9bd56, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.741
+      value: -3.512
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 6524831dc5ca22e4a9e3176cf2b9bd56, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.056
+      value: 1.685
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 6524831dc5ca22e4a9e3176cf2b9bd56, type: 3}
       propertyPath: m_LocalPosition.z
@@ -23148,6 +23193,7 @@ MonoBehaviour:
   checkType: 1
   identifiers:
   - TeleportArea
+  - TeleportHeightAdjustment
 --- !u!4 &976391668
 Transform:
   m_ObjectHideFlags: 0
@@ -26131,7 +26177,7 @@ GameObject:
   - component: {fileID: 1072681035}
   m_Layer: 0
   m_Name: Bed_Collider_Step2
-  m_TagString: Untagged
+  m_TagString: TeleportHeightAdjustment
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -26143,8 +26189,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1072681032}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: -0.048, z: 0}
+  m_LocalScale: {x: 1, y: 2.529697, z: 1.2188}
   m_Children: []
   m_Father: {fileID: 1431604456}
   m_RootOrder: 1
@@ -26262,7 +26308,7 @@ GameObject:
   - component: {fileID: 1089798647}
   m_Layer: 0
   m_Name: Stair_Teleport
-  m_TagString: TeleportArea
+  m_TagString: TeleportHeightAdjustment
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -27868,11 +27914,11 @@ GameObject:
   - component: {fileID: 1179545720}
   m_Layer: 0
   m_Name: Bed_Collider_Step1
-  m_TagString: Untagged
+  m_TagString: TeleportHeightAdjustment
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1179545718
 Transform:
   m_ObjectHideFlags: 0
@@ -33400,7 +33446,7 @@ GameObject:
   - component: {fileID: 1463480634}
   m_Layer: 0
   m_Name: Stair_Teleport
-  m_TagString: TeleportArea
+  m_TagString: TeleportHeightAdjustment
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -33527,7 +33573,7 @@ Transform:
   - {fileID: 451598423}
   - {fileID: 834474822}
   m_Father: {fileID: 708907975}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1467942510
 GameObject:
@@ -37471,7 +37517,7 @@ GameObject:
   - component: {fileID: 1622233443}
   m_Layer: 0
   m_Name: Stair_Teleport
-  m_TagString: TeleportArea
+  m_TagString: TeleportHeightAdjustment
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -44605,7 +44651,7 @@ GameObject:
   - component: {fileID: 1744892501}
   m_Layer: 0
   m_Name: Stair_Teleport
-  m_TagString: TeleportArea
+  m_TagString: TeleportHeightAdjustment
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -45611,7 +45657,7 @@ GameObject:
   - component: {fileID: 1782767471}
   m_Layer: 0
   m_Name: Stair_Teleport
-  m_TagString: TeleportArea
+  m_TagString: TeleportHeightAdjustment
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -46085,7 +46131,7 @@ GameObject:
   - component: {fileID: 1794199598}
   m_Layer: 0
   m_Name: Stair_Teleport
-  m_TagString: TeleportArea
+  m_TagString: TeleportHeightAdjustment
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -55653,7 +55699,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 708907975}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2056900960
 MonoBehaviour:
@@ -55661,16 +55707,16 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2056900958}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 377ced3493c4e1842a5b1c23f56519db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   blinkToColor: {r: 0, g: 0, b: 0, a: 1}
-  blinkTransitionSpeed: 0.6
+  blinkTransitionSpeed: 0
   distanceBlinkDelay: 0
   headsetPositionCompensation: 1
-  targetListPolicy: {fileID: 0}
+  targetListPolicy: {fileID: 23931344}
   navMeshData: {fileID: 0}
   navMeshLimitDistance: 0
   snapToNearestFloor: 1

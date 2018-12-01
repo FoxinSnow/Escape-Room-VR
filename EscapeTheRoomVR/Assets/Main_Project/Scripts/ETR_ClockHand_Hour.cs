@@ -32,10 +32,18 @@ public class ETR_ClockHand_Hour : MonoBehaviour
             newAngle = clockHandRotator.GetValue();
             if (newAngle != previousAngle)
             {
-                float delta = newAngle - previousAngle;
-                ETR_ClockControl.TurnClockHour(true, delta * 0.15f);
-                ETR_AlarmControl.TurnClockHour(true, delta * 0.15f);
-                previousAngle = newAngle;
+                if (newAngle - previousAngle < 0)
+                {
+                    Debug.Log("BLOCKED!");
+                    clockHandRotator.SetValue(previousAngle);
+                }
+                else {
+                    float delta = newAngle - previousAngle;
+                    ETR_ClockControl.TurnClockHour(true, delta * 0.15f);
+                    ETR_AlarmControl.TurnClockHour(true, delta * 0.15f);
+                    previousAngle = newAngle;
+                }
+                
             }
         }
     }
