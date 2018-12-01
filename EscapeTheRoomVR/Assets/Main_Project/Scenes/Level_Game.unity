@@ -28383,8 +28383,7 @@ MonoBehaviour:
     type: 2}
   customCursor: {fileID: 1992590638579992, guid: da6c46fadc74b154ca5df638cdb2d592,
     type: 2}
-  validLocationObject: {fileID: 1652574584400748, guid: 12370ddcc6985ba4abe57fc5b64502f8,
-    type: 2}
+  validLocationObject: {fileID: 0}
   invalidLocationObject: {fileID: 1413768137026182, guid: af1c322da33b9ec40b0f5a418ed90ef4,
     type: 2}
 --- !u!114 &1223753009
@@ -36181,8 +36180,7 @@ MonoBehaviour:
     type: 2}
   customCursor: {fileID: 1992590638579992, guid: da6c46fadc74b154ca5df638cdb2d592,
     type: 2}
-  validLocationObject: {fileID: 1652574584400748, guid: 12370ddcc6985ba4abe57fc5b64502f8,
-    type: 2}
+  validLocationObject: {fileID: 0}
   invalidLocationObject: {fileID: 1413768137026182, guid: af1c322da33b9ec40b0f5a418ed90ef4,
     type: 2}
 --- !u!114 &1560982615
@@ -43091,7 +43089,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 189822, guid: 4d293c8e162f3874b982baadd71153d2,
     type: 2}
   m_PrefabInternal: {fileID: 989975647}
---- !u!114 &1693261803
+--- !u!114 &1693261802
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
