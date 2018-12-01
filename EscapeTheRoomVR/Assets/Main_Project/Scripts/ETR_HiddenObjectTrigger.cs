@@ -1,44 +1,94 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using VRTK;
 using UnityEngine;
 
 // Coded by Yuqi Wang
 public class ETR_HiddenObjectTrigger : MonoBehaviour {
 
-    public GameObject[] objectToReveal;
     public AudioSource hintSound;
+    private bool canPlayHintSound;
+    private float hintSoundPlayDelay;
+    private bool hasBeenUsed;
+    private VRTK_InteractableObject interactableObject;
 
 	// Use this for initialization
 	void Start () {
-		
-	}
+        canPlayHintSound = true;
+        hintSoundPlayDelay = 0;
+        hasBeenUsed = false;
+    }
 	
 	// Update is called once per frame
 	void Update () {
-		
+        if (hintSoundPlayDelay > 0)
+        {
+            hintSoundPlayDelay -= Time.deltaTime;
+        }
+        else if (hintSoundPlayDelay <= 0) {
+            hintSoundPlayDelay = 0;
+        }
 	}
 
     private void OnCollisionEnter(Collision collision)
     {
-
         if (collision.gameObject.tag == "Player"){
 
             // Play a sound as the hint
-            if (hintSound != null)
+            if (canPlayHintSound && hintSound != null)
             {
-                hintSound.Play();
+                if (!hintSound.isPlaying && hintSoundPlayDelay == 0) {
+                    hintSound.Play();
+                    hintSoundPlayDelay = 5;
+                }     
             }
-
-            // Reveal all hidden objects
-            for (int i = 0; i < objectToReveal.Length; i++)
-            {
-                objectToReveal[i].gameObject.SetActive(true);
-            }
-
-            this.gameObject.SetActive(false);
-            // Destroy the audio source and trigger since no longer required
-            //Destroy(this.gameObject);
-
         }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.name == "FloorPieceArea") {
+            Debug.Log("Can play hint sound");
+            canPlayHintSound = true;
+        }
+
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.name == "FloorPieceArea")
+        {
+            Debug.Log("Cant play hint sound!");
+            canPlayHintSound = false;
+            Destroy(other.gameObject);
+        }
+    }
+
+    protected virtual void OnEnable()
+    {
+        interactableObject = GetComponent<VRTK_InteractableObject>();
+        interactableObject.InteractableObjectGrabbed += InteractableObjectGrabbed;
+        interactableObject.InteractableObjectUngrabbed += InteractableObjectUngrabbed;
+    }
+
+    protected virtual void OnDisable()
+    {
+        interactableObject.InteractableObjectGrabbed -= InteractableObjectGrabbed;
+        interactableObject.InteractableObjectUngrabbed -= InteractableObjectUngrabbed;
+    }
+
+
+    protected virtual void InteractableObjectGrabbed(object sender, InteractableObjectEventArgs e)
+    {
+        if (!hasBeenUsed) {
+            Debug.Log("Oooops");
+            this.gameObject.GetComponent<Rigidbody>().isKinematic = false;
+            this.gameObject.GetComponent<Rigidbody>().useGravity = true;
+            hasBeenUsed = true;
+        }    
+    }
+
+    protected virtual void InteractableObjectUngrabbed(object sender, InteractableObjectEventArgs e)
+    {
     }
 }

@@ -8,6 +8,7 @@ using UnityEngine;
 public class ETR_SafeScreen : MonoBehaviour {
 
     public GameObject safeDoorToUnlock;
+    public GameObject safeProtectedArea;
     public Transform scr0, scr1, scr2, scr3, scr4, scr5, scr6;
     //C = 10, E = 11, O = 12, R = 13, T = 14, x = 15, * = 16, # = 17;
     public Texture tex0, tex1, tex2, tex3, tex4, tex5, tex6, tex7,
@@ -296,6 +297,7 @@ public class ETR_SafeScreen : MonoBehaviour {
         {
             safeDoorToUnlock.GetComponent<VRTK_PhysicsRotator>().enabled = true;
             safeDoorToUnlock.GetComponent<VRTK_InteractObjectHighlighter>().enabled = true;
+            Destroy(safeProtectedArea.gameObject);
         }
     }
 

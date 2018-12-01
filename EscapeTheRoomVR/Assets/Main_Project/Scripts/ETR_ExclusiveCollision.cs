@@ -19,6 +19,7 @@ public class ETR_ExclusiveCollision : MonoBehaviour {
 
     private void OnCollisionEnter(Collision collision)
     {
+        Debug.Log(collision.gameObject.name);
         if (collision.gameObject.tag != gameObjectTag) {
             Physics.IgnoreCollision(collision.collider, this.gameObject.GetComponent<Collider>());
         }

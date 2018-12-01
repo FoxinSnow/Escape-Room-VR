@@ -30,8 +30,6 @@ public class ETR_ClockHand_Hour : MonoBehaviour
         if (isGrabbed)
         {
             newAngle = clockHandRotator.GetValue();
-            Debug.Log("Previous Angle: " + previousAngle);
-            Debug.Log("New Angle:" + newAngle);
             if (newAngle != previousAngle)
             {
                 float delta = newAngle - previousAngle;
