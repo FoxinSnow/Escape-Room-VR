@@ -5,14 +5,10 @@ using UnityEngine;
 // Coded by Fei Huang(Algorithm), Yuqi Wang(VR Interaction)
 public class ETR_Blackboard : MonoBehaviour {
 
-    private bool isEraserCollided, isChalkCollided;
     public Transform blackboardEraser, eraserDirection;
-    public Transform blackboardChalk, chalkDirection;
-
-    private Texture2D texture;
-
     public Texture2D cover;
-
+    private bool isEraserCollided;
+    private Texture2D texture;
     private int w, h;
 
     // Use this for initialization
@@ -20,7 +16,6 @@ public class ETR_Blackboard : MonoBehaviour {
     {
         // Initialisation
         isEraserCollided = false;
-        isChalkCollided = false;
         w = cover.width;
         h = cover.height;
         texture = new Texture2D(w, h);
@@ -69,45 +64,12 @@ public class ETR_Blackboard : MonoBehaviour {
             }
         }
 
-        if (isChalkCollided) {
-
-            /*
-            Ray ray = new Ray(blackboardChalk.position, chalkDirection.position);
-
-            RaycastHit hitInfo;
-
-            if (Physics.Raycast(ray, out hitInfo))
-            {
-                if (hitInfo.collider.tag == "BoardCover")
-                {
-                    Debug.Log(hitInfo.textureCoord * w);
-
-                    int x = (int)(hitInfo.textureCoord.x * w);
-                    int y = (int)(hitInfo.textureCoord.y * h);
-
-                    Color[] c = texture.GetPixels(x - 4, y - 4, 96, 96);
-                    for (int i = 0; i < c.Length; i++)
-                    {
-                        c[i].a = 0.0f;
-                    }
-                    texture.SetPixels(x - 4, y - 4, 96, 96, c);
-                    texture.Apply();
-                    GetComponent<Renderer>().material.mainTexture = texture;
-                }
-            }
-            */
-        }
 
     }
 
     public void IsEraserCollided(bool isCollided)
     {
         isEraserCollided = isCollided;
-    }
-
-    public void IsChalkCollided(bool isCollided)
-    {
-        isChalkCollided = isCollided;
     }
 
 }
