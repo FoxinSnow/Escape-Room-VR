@@ -81,9 +81,7 @@ public class ETR_HiddenObjectTrigger : MonoBehaviour {
     protected virtual void InteractableObjectGrabbed(object sender, InteractableObjectEventArgs e)
     {
         if (!hasBeenUsed) {
-            Debug.Log("Oooops");
-            this.gameObject.GetComponent<Rigidbody>().isKinematic = false;
-            this.gameObject.GetComponent<Rigidbody>().useGravity = true;
+            GetComponent<Rigidbody>().useGravity = true;
             hasBeenUsed = true;
         }    
     }

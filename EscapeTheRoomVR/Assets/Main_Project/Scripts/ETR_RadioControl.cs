@@ -41,8 +41,13 @@ public class ETR_RadioControl : MonoBehaviour {
         if (isOn) {
             if (audioSource.isPlaying)
             {
-                audioSource.Stop();
+                // Reset buttons
+                audioSource.Pause();
+                //audioSource.Stop();
+                audioSource.pitch = 1.0f;
+                forwardButton.localPosition = new Vector3(0.03267755f, forwardButton.localPosition.y, forwardButton.localPosition.z);
                 playButton.localPosition = new Vector3(0.03267755f, playButton.localPosition.y, playButton.localPosition.z);
+                backwardButton.localPosition = new Vector3(0.03267755f, backwardButton.localPosition.y, backwardButton.localPosition.z);
             }
         }
        
@@ -86,10 +91,6 @@ public class ETR_RadioControl : MonoBehaviour {
         else {
             isOn = true;
         }
-    }
-
-    public void Radio_ResetButtons() {
-        // 0.03267755
     }
 
 }

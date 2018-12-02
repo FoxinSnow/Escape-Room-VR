@@ -9,11 +9,13 @@ public class ETR_FridgeLock : MonoBehaviour
 {
 
     public GameObject fridgeDoorToUnlock;
+    public GameObject lockedLock;
     public GameObject unlockedLock;
 
     public AudioSource unlockSoundEffect;
     public AudioClip failedUnlockingClip;
     public AudioClip unlockingClip;
+    public AudioSource lockDropSoundEffect;
 
     public Transform[] lockObjectTransforms;
     public float[] unlockDegrees;
@@ -78,8 +80,8 @@ public class ETR_FridgeLock : MonoBehaviour
             fridgeDoorToUnlock.GetComponent<VRTK_InteractObjectHighlighter>().enabled = true;
             unlockSoundEffect.clip = unlockingClip;
             unlockSoundEffect.Play();
-            GameObject thisLock = GameObject.Find("*Lock*");
-            thisLock.SetActive(false);
+            lockDropSoundEffect.Play();
+            lockedLock.gameObject.SetActive(false);  
             unlockedLock.gameObject.SetActive(true);
         }
         else {

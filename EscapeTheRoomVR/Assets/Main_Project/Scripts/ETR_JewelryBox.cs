@@ -4,6 +4,7 @@ using VRTK;
 using VRTK.Controllables.ArtificialBased;
 using UnityEngine;
 
+// Coded by Yuqi Wang
 public class ETR_JewelryBox : MonoBehaviour {
 
     public GameObject jewelryBoxToUnlock;

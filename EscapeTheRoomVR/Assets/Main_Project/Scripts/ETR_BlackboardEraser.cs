@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+// Coded by Yuqi Wang
 public class ETR_BlackboardEraser : MonoBehaviour {
 
     public Collider wipeCollider;
@@ -20,14 +21,9 @@ public class ETR_BlackboardEraser : MonoBehaviour {
 
     void OnCollisionEnter(Collision collision)
     {
-
         Collider contactCollider = collision.contacts[0].thisCollider;
-
-        Debug.Log(contactCollider);
-
         if (collision.gameObject.tag == "BoardCover" && contactCollider == wipeCollider) {
             onEraserCollisionEnterEvent.Invoke();
-            //this.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeRotation;
         }
     }
 
@@ -35,7 +31,6 @@ public class ETR_BlackboardEraser : MonoBehaviour {
     {
         if (collision.gameObject.tag == "BoardCover"){
             onEraserCollisionExitEvent.Invoke();
-            //this.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
         }
     }
 
