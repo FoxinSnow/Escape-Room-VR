@@ -60,13 +60,13 @@ public class ETR_Blackboard : MonoBehaviour {
                     //boarder check
                     if (x < range/2 + 1 || x > 2048 - range/2 - 1
                         || y < range/2 + 1 || y > 2048 - range/2 - 1) 
-                        //on the boarder, remove one by one
+                        //on the boarder
                     {
-                        Color c = texture.GetPixel(x, y);
-                        c.a = 0.0f;
-                        texture.SetPixel(x, y, c);
-                        texture.Apply();
-                        GetComponent<Renderer>().material.mainTexture = texture;
+                        //Color c = texture.GetPixel(x, y);
+                        //c.a = 0.0f;
+                        //texture.SetPixel(x, y, c);
+                        //texture.Apply();
+                        //GetComponent<Renderer>().material.mainTexture = texture;
                     }
                     else //in the middle, remove in a range
                     {
