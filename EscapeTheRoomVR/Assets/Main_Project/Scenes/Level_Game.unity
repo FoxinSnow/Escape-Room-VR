@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.01931475, g: 0.014618712, b: 0.010035803, a: 1}
+  m_IndirectSpecularColor: {r: 0.0040944386, g: 0.0036899976, b: 0.0018430655, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1811,6 +1811,23 @@ MonoBehaviour:
   velocityLimit: Infinity
   angularVelocityLimit: Infinity
   maxDistanceDelta: 10
+--- !u!1 &74972236 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100004, guid: 56730a1cb3fc3ac4c99cf5b74af656e0,
+    type: 3}
+  m_PrefabInternal: {fileID: 2017983076}
+--- !u!65 &74972240
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 74972236}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.15426645, y: 0.19999999, z: 0.036000002}
+  m_Center: {x: 0.000945691, y: 0.000000011712313, z: 0.017999997}
 --- !u!1 &75515778
 GameObject:
   m_ObjectHideFlags: 0
@@ -7878,7 +7895,7 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 318518305}
-  m_LocalRotation: {x: 0.07189176, y: 0.15636149, z: 0.10493598, w: -0.9794749}
+  m_LocalRotation: {x: 0.11465358, y: 0.15965791, z: 0.11095461, w: -0.9741935}
   m_LocalPosition: {x: -0.8399998, y: 2.67, z: 2.990001}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -7886,7 +7903,7 @@ Transform:
   - {fileID: 172250830}
   m_Father: {fileID: 0}
   m_RootOrder: 23
-  m_LocalEulerAnglesHint: {x: -10, y: 342.8, z: -10.713989}
+  m_LocalEulerAnglesHint: {x: -15, y: 342.8, z: -10.713989}
 --- !u!1 &321892121
 GameObject:
   m_ObjectHideFlags: 0
@@ -15737,7 +15754,7 @@ Prefab:
       objectReference: {fileID: 2100000, guid: dc47fd06ab4649b4eac1711fdb79f59c, type: 2}
     - target: {fileID: 100000, guid: abd6c6baf47dcd948818efdd057a48ff, type: 3}
       propertyPath: m_Name
-      value: parcel_box (1)
+      value: Parcel_Box
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: abd6c6baf47dcd948818efdd057a48ff, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -20828,7 +20845,7 @@ Prefab:
       objectReference: {fileID: 2100000, guid: dc47fd06ab4649b4eac1711fdb79f59c, type: 2}
     - target: {fileID: 100000, guid: abd6c6baf47dcd948818efdd057a48ff, type: 3}
       propertyPath: m_Name
-      value: parcel_box (2)
+      value: Parcel_Box
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: abd6c6baf47dcd948818efdd057a48ff, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -23453,7 +23470,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hourHand: {fileID: 244324351}
   minuteHand: {fileID: 2042481977}
-  hour: 6
+  hour: 9
   minute: 15
 --- !u!1 &937449406
 GameObject:
@@ -37122,6 +37139,10 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: dc47fd06ab4649b4eac1711fdb79f59c, type: 2}
+    - target: {fileID: 100000, guid: abd6c6baf47dcd948818efdd057a48ff, type: 3}
+      propertyPath: m_Name
+      value: Parcel_Box
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: abd6c6baf47dcd948818efdd057a48ff, type: 3}
   m_IsPrefabAsset: 0
@@ -38125,6 +38146,23 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.0139999995, y: 0.020000009, z: 0.008}
   m_Center: {x: 0.000000059604645, y: -0.00000017881393, z: 0.004}
+--- !u!1 &1542365644 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100004, guid: 56730a1cb3fc3ac4c99cf5b74af656e0,
+    type: 3}
+  m_PrefabInternal: {fileID: 935400248}
+--- !u!65 &1542365648
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1542365644}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.15426645, y: 0.19999996, z: 0.036000032}
+  m_Center: {x: 0.0009456906, y: -0.000000107812255, z: 0.017999997}
 --- !u!1001 &1555456629
 Prefab:
   m_ObjectHideFlags: 0
@@ -39477,6 +39515,23 @@ Transform:
   m_Father: {fileID: 1737148147}
   m_RootOrder: 128
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1594432082 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100004, guid: 56730a1cb3fc3ac4c99cf5b74af656e0,
+    type: 3}
+  m_PrefabInternal: {fileID: 201722994}
+--- !u!65 &1594432086
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1594432082}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.15426645, y: 0.19999999, z: 0.036}
+  m_Center: {x: 0.000945691, y: 0.000000011175871, z: 0.018}
 --- !u!1001 &1597687301
 Prefab:
   m_ObjectHideFlags: 0
@@ -52449,7 +52504,7 @@ Prefab:
       objectReference: {fileID: 2100000, guid: dc47fd06ab4649b4eac1711fdb79f59c, type: 2}
     - target: {fileID: 100000, guid: abd6c6baf47dcd948818efdd057a48ff, type: 3}
       propertyPath: m_Name
-      value: parcel_box (3)
+      value: Parcel_Box
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: abd6c6baf47dcd948818efdd057a48ff, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
