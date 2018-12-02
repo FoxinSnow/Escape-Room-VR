@@ -9,9 +9,8 @@ public class ETR_FanSwitch : MonoBehaviour {
     public Transform fanTransform;
     public bool isOn;
     public float currentSpeed, maxSpeed, accelerateSpeed;
-    public AudioSource switchSoundEffect;
-    public AudioSource fanSoundEffect;
     private VRTK_InteractableObject interactableObject;
+    public UnityEngine.Events.UnityEvent switchEvent;
 
     public void Start()
     {
@@ -64,21 +63,15 @@ public class ETR_FanSwitch : MonoBehaviour {
 
     protected virtual void InteractableObjectUsed(object sender, InteractableObjectEventArgs e)
     {
-        Debug.Log("Triggered");
+        switchEvent.Invoke();
         SwitchFan();
-        if (switchSoundEffect != null)
-        {
-            switchSoundEffect.Play();
-        }
         float degree = this.gameObject.transform.localEulerAngles.y;
-        Debug.Log(degree);
         this.gameObject.transform.localEulerAngles = new Vector3(0, -degree, 0);
         interactableObject.enabled = false;
     }
 
     protected virtual void InteractableObjectUnused(object sender, InteractableObjectEventArgs e)
-    {
-    }
+    {}
 
     private void SwitchFan()
     {

@@ -7,6 +7,7 @@ using UnityEngine;
 public class ETR_AlcoholBurnerControl : MonoBehaviour {
 
     public GameObject fireEffect;
+    public UnityEngine.Events.UnityEvent burnerEvent;
     private VRTK_InteractableObject burnerControl;
     private bool isOn;
 
@@ -45,6 +46,7 @@ public class ETR_AlcoholBurnerControl : MonoBehaviour {
             fireEffect.SetActive(true);
         }
         burnerControl.enabled = false;
+        burnerEvent.Invoke();
     }
 
     protected virtual void InteractableObjectUnused(object sender, InteractableObjectEventArgs e)

@@ -8,8 +8,8 @@ public class ETR_LightSwitch : MonoBehaviour
 {
     //public HoverButton hoverButton;
     public GameObject[] lightList;
-    public AudioSource switchSoundEffect;
     private VRTK_InteractableObject interactableObject;
+    public UnityEngine.Events.UnityEvent switchEvent;
 
     public void Start()
     {
@@ -35,22 +35,15 @@ public class ETR_LightSwitch : MonoBehaviour
 
     protected virtual void InteractableObjectUsed(object sender, InteractableObjectEventArgs e)
     {
-        Debug.Log("Triggered");
+        switchEvent.Invoke();      
         SwitchLight();
-        if (switchSoundEffect != null)
-        {
-            switchSoundEffect.Play();
-        }
         float degree = this.gameObject.transform.localEulerAngles.y;
-        Debug.Log(degree);
         this.gameObject.transform.localEulerAngles = new Vector3(0, -degree , 0);
         interactableObject.enabled = false;
     }
 
     protected virtual void InteractableObjectUnused(object sender, InteractableObjectEventArgs e)
-    {
-        Debug.Log("NOT Triggered");
-    }
+    {}
 
     private void SwitchLight()
     {

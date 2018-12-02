@@ -24,6 +24,8 @@ public class ETR_SafeScreen : MonoBehaviour {
     private int passC = 0; //not checked = 0, wrong = -1, correct = 1, when -1 begin sleep check
     private bool unlock = false; //false cannot open, true can open
 
+    public UnityEngine.Events.UnityEvent safeEvent;
+
     // Use this for initialization
     void Start () {
         scrs[0] = scr0; scrs[1] = scr1; scrs[2] = scr2; scrs[3] = scr3;
@@ -99,6 +101,7 @@ public class ETR_SafeScreen : MonoBehaviour {
         passC = 1;//password is correct
         unlock = true;
         passC = -1; //after correct, the sleep check begin
+        safeEvent.Invoke();
         UnlockTheSafe();
     }
 

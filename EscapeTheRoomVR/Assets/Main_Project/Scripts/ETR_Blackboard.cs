@@ -7,6 +7,7 @@ public class ETR_Blackboard : MonoBehaviour {
 
     public Transform blackboardEraser, eraserDirection;
     public Texture2D cover;
+    public int range;
     private bool isEraserCollided;
     private Texture2D texture;
     private int w, h;
@@ -52,7 +53,9 @@ public class ETR_Blackboard : MonoBehaviour {
                     int x = (int)(hitInfo.textureCoord.x * w);
                     int y = (int)(hitInfo.textureCoord.y * h);
 
-                    int range = 96; //a square 96 * 96
+                    if (range == 0) {
+                        range = 96; // Default value
+                    }
 
                     //boarder check
                     if (x < range/2 + 1 || x > 2048 - range/2 - 1
