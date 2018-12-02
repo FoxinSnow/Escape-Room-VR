@@ -51,15 +51,31 @@ public class ETR_Blackboard : MonoBehaviour {
 
                     int x = (int)(hitInfo.textureCoord.x * w);
                     int y = (int)(hitInfo.textureCoord.y * h);
-  
-                    Color[] c = texture.GetPixels(x - 4, y - 4, 96, 96);
-                    for (int i = 0; i < c.Length; i++)
+
+                    int range = 96; //a square 96 * 96
+
+                    //boarder check
+                    if (x < range/2 + 1 || x > 2048 - range/2 - 1
+                        || y < range/2 + 1 || y > 2048 - range/2 - 1) 
+                        //on the boarder, remove one by one
                     {
-                        c[i].a = 0.0f;
+                        Color c = texture.GetPixel(x, y);
+                        c.a = 0.0f;
+                        texture.SetPixel(x, y, c);
+                        texture.Apply();
+                        GetComponent<Renderer>().material.mainTexture = texture;
                     }
-                    texture.SetPixels(x - 4, y - 4, 96, 96, c);
-                    texture.Apply();
-                    GetComponent<Renderer>().material.mainTexture = texture;
+                    else //in the middle, remove in a range
+                    {
+                        Color[] c = texture.GetPixels(x - range / 2, y - range / 2, range, range);
+                        for (int i = 0; i < c.Length; i++)
+                        {
+                            c[i].a = 0.0f;
+                        }
+                        texture.SetPixels(x - range / 2, y - range / 2, range, range, c);
+                        texture.Apply();
+                        GetComponent<Renderer>().material.mainTexture = texture;
+                    }
                 }
             }
         }
