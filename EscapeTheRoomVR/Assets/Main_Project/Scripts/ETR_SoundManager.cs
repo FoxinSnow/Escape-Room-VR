@@ -5,25 +5,31 @@ using UnityEngine;
 public class ETR_SoundManager : MonoBehaviour {
 
     public AudioSource ambienceAudioSource;
-    public AudioClip morningClip, dayClip, nightClip;
+    public AudioClip earlyMorningClip, morningClip, nightClip;
 
     public AudioSource safeAudioSource;
     public AudioClip safeButton, safeButtonConfirm, safeUnlock;
 
     public AudioSource fanAudioSource;
     public AudioClip fanStart, fanRun;
+    private bool isFanOn;
 
     public AudioSource switchAudioSource;
     public AudioSource burnerAudioSource;
 
 	// Use this for initialization
 	void Start () {
+        isFanOn = false;
 		
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		
+        if (isFanOn && fanAudioSource.clip == fanStart && !fanAudioSource.isPlaying) {
+            fanAudioSource.clip = fanRun;
+            fanAudioSource.loop = true;
+            fanAudioSource.Play();
+        }
 	}
 
     public void PlaySafeSoundEffect(int i) {
@@ -55,5 +61,27 @@ public class ETR_SoundManager : MonoBehaviour {
         else{
             burnerAudioSource.Play();
         } 
+    }
+
+    public void PlayFanSoundEffect() {
+        if (isFanOn){
+            isFanOn = false;
+        }
+        else {
+            isFanOn = true;
+        }
+
+        if (isFanOn)
+        {
+            fanAudioSource.pitch = 1;
+            fanAudioSource.Play();
+        }
+        else {
+            fanAudioSource.Stop();
+            fanAudioSource.clip = fanStart;
+            fanAudioSource.loop = false;
+            fanAudioSource.pitch = -1;
+            fanAudioSource.Play();
+        }
     }
 }
