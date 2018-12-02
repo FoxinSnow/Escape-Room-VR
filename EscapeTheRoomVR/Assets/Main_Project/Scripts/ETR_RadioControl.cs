@@ -10,48 +10,41 @@ public class ETR_RadioControl : MonoBehaviour {
     public AudioSource audioSource;
 
     private bool isOn;
-    private float currentPlayTime;
-    private bool canUseTimer;
+    //private bool canUseTimer;
 
     // Use this for initialization
     void Start () {
         isOn = true;
-        currentPlayTime = 0.0f;
-        canUseTimer = false;
+        //canUseTimer = false;
     }
 	
 	// Update is called once per frame
 	void Update () {
 
-        if (canUseTimer) {
-            currentPlayTime += Time.deltaTime * audioSource.pitch;
-            if (currentPlayTime < 0)
-            {
-                currentPlayTime = 0;
-            }
-
-            if (currentPlayTime == 0 && audioSource.pitch == -1.0f)
-            {
-                Reset();
-            }
-
-            if (currentPlayTime > audioSource.clip.length - 2.5f && audioSource.pitch != -1.0f)
-            {
-                Reset();
-            }
-
-            //Debug.Log("Current Playing?" + audioSource.isPlaying);
-            //Debug.Log("Current Play Time:" + currentPlayTime);
+        //if (canUseTimer) {
+        if (audioSource.time == 0 && audioSource.pitch == -1.0f)
+        {
+            Reset();
         }
+
+        if (audioSource.time > audioSource.clip.length - 2.5f && audioSource.pitch != -1.0f)
+        {
+            Reset();
+        }
+
+        //Debug.Log("Current Playing?" + audioSource.isPlaying);
+        //Debug.Log("Current Play Time:" + currentPlayTime);
+        Debug.Log("Current Playing?" + audioSource.time);
+        //}
     }
 
     public void Radio_PlayPause() {
 
-            if (currentPlayTime == 0.0f && audioSource.pitch == -1.0f)
+            if (audioSource.time == 0.0f && audioSource.pitch == -1.0f)
             {
                 Reset();
             }
-            else if (currentPlayTime > audioSource.clip.length - 2.5f && audioSource.pitch != -1.0f) {
+            else if (audioSource.time > audioSource.clip.length - 2.5f && audioSource.pitch != -1.0f) {
                 Reset();
             }
             else
@@ -60,13 +53,13 @@ public class ETR_RadioControl : MonoBehaviour {
                 {
                     audioSource.Pause();
                     playButton.localPosition = new Vector3(0.03267755f, playButton.localPosition.y, playButton.localPosition.z);
-                    canUseTimer = false;
+                    //canUseTimer = false;
                 }
                 else
                 {
                     audioSource.Play();
                     playButton.localPosition = new Vector3(0.028f, playButton.localPosition.y, playButton.localPosition.z);
-                    canUseTimer = true;
+                    //canUseTimer = true;
                 }
             }
     }
@@ -113,7 +106,7 @@ public class ETR_RadioControl : MonoBehaviour {
         forwardButton.localPosition = new Vector3(0.03267755f, forwardButton.localPosition.y, forwardButton.localPosition.z);
         playButton.localPosition = new Vector3(0.03267755f, playButton.localPosition.y, playButton.localPosition.z);
         backwardButton.localPosition = new Vector3(0.03267755f, backwardButton.localPosition.y, backwardButton.localPosition.z);
-        canUseTimer = false;
+        //canUseTimer = false;
     }
 
 }
