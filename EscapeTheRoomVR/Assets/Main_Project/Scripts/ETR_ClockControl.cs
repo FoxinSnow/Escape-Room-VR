@@ -9,6 +9,7 @@ public class ETR_ClockControl : MonoBehaviour
 
     public Transform hourHand, minuteHand, secondHand, sunLight;
     public Light assistLight;
+    public AudioSource chicken6, morning79, night203;
 
     public static bool userInput = false;
     public static bool mOrH = true; //true is min, false is hour
@@ -45,8 +46,48 @@ public class ETR_ClockControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //Debug.Log("parents:" + hours.parent.name);
+        //FIRST PART
+        //check time and play the audio accordingly
+        if (hour == 6 && minute == 0)
+        {
+            chicken6.Play();//ge ge da
+        }
+        else if (hour == 7 && minute > 0 && minute < 2)//morning79 in
+        {
+            morning79.volume = 0;//initialize
+            if(morning79.volume <= 1){
+                morning79.volume += 0.01f;//need 100 frame to in
+            }
+        }else if(hour == 8 && minute > 58)//morning79 out
+        {
+            if(morning79.volume >= 0){
+                morning79.volume -= 0.01f;//need 100 frame to out
+            }else if(morning79.volume.Equals(0)){
+                morning79.Stop();
+            }
 
+        }else if(hour == 20 && minute > 0 && minute < 2)//night203 in
+        {
+            night203.volume = 0;//initialize
+            if (night203.volume <= 1)
+            {
+                night203.volume += 0.01f;//need 100 frame to in
+            }
+        }
+        else if(hour == 2 && minute > 58){//night203 out
+            if (night203.volume >= 0)
+            {
+                night203.volume -= 0.01f;//need 100 frame to out
+            }
+            else if (night203.volume.Equals(0))
+            {
+                night203.Stop();
+            }
+        }
+
+
+        //SECOND PART
+        //if user changed the time
         if (userInput.Equals(false))
         {
             //if user does not do anything to the clock, it is a normal clock
@@ -61,28 +102,29 @@ public class ETR_ClockControl : MonoBehaviour
         }
         else
         {
-            if (mOrH.Equals(true)){ //minute is changed
-                //current hour angle sum
-                gameHourAngle += angle/12f;
-                //gameHourAngle = gameHourAngle % 360f;
+            //minute can not be changed
+            //if (mOrH.Equals(true)){ //minute is changed
+            //    //current hour angle sum
+            //    gameHourAngle += angle/12f;
+            //    //gameHourAngle = gameHourAngle % 360f;
 
-                //current hour angle sum
-                gameMinuteAngle += angle;
-                //gameMinuteAngle = gameMinuteAngle % 360f;
+            //    //current hour angle sum
+            //    gameMinuteAngle += angle;
+            //    //gameMinuteAngle = gameMinuteAngle % 360f;
 
-                if (hour >= 4 && hour <= 8)  
-                {
-                    // 4AM - 8AM increase from 0 to 1.5
-                    //per min 0.375/60 per min angle 0.375/1800
-                    assistLight.intensity = assistLight.intensity > 1.5f ? 1.5f : assistLight.intensity + (0.375f / 1800f * angle); ; //angle is hour changed
-                }
-                else if (hour >= 16 && hour <= 20)
-                {
-                    assistLight.intensity = assistLight.intensity < 0f ? 0f : assistLight.intensity - (0.375f / 1800f) * angle; //angle is hour changed;
-                }
+            //    if (hour >= 4 && hour <= 8)  
+            //    {
+            //        // 4AM - 8AM increase from 0 to 1.5
+            //        //per min 0.375/60 per min angle 0.375/1800
+            //        assistLight.intensity = assistLight.intensity > 1.5f ? 1.5f : assistLight.intensity + (0.375f / 1800f * angle); ; //angle is hour changed
+            //    }
+            //    else if (hour >= 16 && hour <= 20)
+            //    {
+            //        assistLight.intensity = assistLight.intensity < 0f ? 0f : assistLight.intensity - (0.375f / 1800f) * angle; //angle is hour changed;
+            //    }
 
-            }
-            else{ //hour is changed
+            //}
+            //else{ //hour is changed
                 //current hour angle sum
                 gameHourAngle += angle;
                 //gameHourAngle = gameHourAngle % 360f;
@@ -103,7 +145,7 @@ public class ETR_ClockControl : MonoBehaviour
                 }
                 //Debug.Log("Passed second:" + angle * 120f);
                 ETR_IceCube.MeltIce(angle * 120f, true);
-            }
+            //}
             userInput = false; //let the clock continue run
         }
 
