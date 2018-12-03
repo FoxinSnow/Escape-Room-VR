@@ -54,6 +54,7 @@ public class ETR_ClockControl : MonoBehaviour
         }
         else if (hour == 7 && minute > 0 && minute < 2)//morning79 in
         {
+            morning79.Play();
             morning79.volume = 0;//initialize
             if(morning79.volume <= 1){
                 morning79.volume += 0.01f;//need 100 frame to in
@@ -68,6 +69,7 @@ public class ETR_ClockControl : MonoBehaviour
 
         }else if(hour == 20 && minute > 0 && minute < 2)//night203 in
         {
+            night203.Play();
             night203.volume = 0;//initialize
             if (night203.volume <= 1)
             {
