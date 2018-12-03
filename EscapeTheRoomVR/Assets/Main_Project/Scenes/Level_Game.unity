@@ -38,11 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-<<<<<<< HEAD
   m_IndirectSpecularColor: {r: 0.004094441, g: 0.0036900002, b: 0.0018430682, a: 1}
-=======
-  m_IndirectSpecularColor: {r: 0.0040944386, g: 0.0036899976, b: 0.0018430655, a: 1}
->>>>>>> parent of 83c3a9af... meat effect
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -28681,16 +28677,11 @@ MonoBehaviour:
   secondHand: {fileID: 1126138525}
   sunLight: {fileID: 318518307}
   assistLight: {fileID: 1313767116}
-<<<<<<< HEAD
   chicken6: {fileID: 170152092}
   morning79: {fileID: 896234819}
   night203: {fileID: 246062007}
   hour: 16
   minute: 0
-=======
-  hour: 12
-  minute: 15
->>>>>>> parent of 83c3a9af... meat effect
   second: 0
 --- !u!1 &1042577512
 GameObject:
@@ -40163,7 +40154,7 @@ BoxCollider:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1527891130}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 8843da9524c3cec4eaebc0bf81cc4e1a, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -40175,7 +40166,7 @@ BoxCollider:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1527891130}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 8843da9524c3cec4eaebc0bf81cc4e1a, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -40187,7 +40178,7 @@ BoxCollider:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1527891130}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 8843da9524c3cec4eaebc0bf81cc4e1a, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
