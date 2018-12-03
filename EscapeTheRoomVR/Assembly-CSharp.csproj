@@ -79,6 +79,7 @@
     <Compile Include="Assets\Main_Project\Scripts\ETR_ClockControl.cs" />
     <Compile Include="Assets\Main_Project\Scripts\ETR_ClockHand_Hour.cs" />
     <Compile Include="Assets\Main_Project\Scripts\ETR_ContainerProtection.cs" />
+    <Compile Include="Assets\Main_Project\Scripts\ETR_DropCheck.cs" />
     <Compile Include="Assets\Main_Project\Scripts\ETR_ExclusiveCollision.cs" />
     <Compile Include="Assets\Main_Project\Scripts\ETR_ExitDoor.cs" />
     <Compile Include="Assets\Main_Project\Scripts\ETR_FanSwitch.cs" />
