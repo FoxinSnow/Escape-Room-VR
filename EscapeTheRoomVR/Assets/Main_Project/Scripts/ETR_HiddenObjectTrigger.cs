@@ -82,6 +82,7 @@ public class ETR_HiddenObjectTrigger : MonoBehaviour {
     {
         if (!hasBeenUsed) {
             GetComponent<Rigidbody>().useGravity = true;
+            GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
             hasBeenUsed = true;
         }    
     }
