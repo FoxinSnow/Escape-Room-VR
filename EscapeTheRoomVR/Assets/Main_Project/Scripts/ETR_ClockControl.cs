@@ -50,9 +50,6 @@ public class ETR_ClockControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-
-
         //if user changed the time
         if (userInput.Equals(false))
         {
@@ -64,7 +61,6 @@ public class ETR_ClockControl : MonoBehaviour
 
             gameMinuteAngle += Time.deltaTime * minutesDegrees;
             //gameHourAngle = gameMinuteAngle % 360f;
-
         }
         else
         {
@@ -113,8 +109,8 @@ public class ETR_ClockControl : MonoBehaviour
                     assistLight.intensity = assistLight.intensity < 0f ? 0f : assistLight.intensity - (0.375f / 30f) * angle;
            
                 }
-                //Debug.Log("Passed second:" + angle * 120f);
-                ETR_IceCube.MeltIce(angle * 120f, true);
+            //Debug.Log("Passed second:" + angle * 120f);
+            ETR_IceCube.MeltIce(angle * 120f, true);
             //}
             userInput = false; //let the clock continue run
         }
@@ -146,7 +142,6 @@ public class ETR_ClockControl : MonoBehaviour
         else if (hour == 7 && minute == 0)//morning79 in
         {
             morning79.Play();
-            //morning79.volume = 0;//initialize
         }
         else if (hour == 9 && minute == 0)//morning79 out
         {
@@ -155,7 +150,6 @@ public class ETR_ClockControl : MonoBehaviour
         else if (hour == 20 && minute == 0)//night203 in
         {
             night203.Play();
-            //night203.volume = 0;//initialize
         }
         else if (hour == 3 && minute == 0)//night203 out
         {

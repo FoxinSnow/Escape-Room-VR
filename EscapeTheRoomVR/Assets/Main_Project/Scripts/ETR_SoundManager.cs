@@ -6,7 +6,6 @@ using UnityEngine;
 public class ETR_SoundManager : MonoBehaviour {
 
     public AudioSource ambienceAudioSource;
-    public AudioClip earlyMorningClip, morningClip, nightClip;
 
     public AudioSource safeAudioSource;
     public AudioClip safeButton, safeButtonConfirm, safeUnlock;
