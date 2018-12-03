@@ -29,6 +29,7 @@ public class ETR_ClockControl : MonoBehaviour
     {
         gameHourAngle = hour * 30f + minute * 0.5f;
         gameMinuteAngle = minute * 6f;
+        //assist light
         if(hour >= 8 && hour <= 16){
             assistLight.intensity = 1.5f;
         }else if(hour <= 4 || hour >= 20){
@@ -41,54 +42,54 @@ public class ETR_ClockControl : MonoBehaviour
             //leave this one avoid bug
             Debug.Log("This line should not be displayed.");
         }
+        //audio
+        if (hour == 6 && minute == 0)
+        {
+            chicken6.Play();//ge ge da
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
-        //FIRST PART
-        //check time and play the audio accordingly
-        if (hour == 6 && minute == 0)
-        {
-            chicken6.Play();//ge ge da
-        }
-        else if (hour == 7 && minute > 0 && minute < 2)//morning79 in
-        {
-            morning79.Play();
-            morning79.volume = 0;//initialize
-            if(morning79.volume <= 1){
-                morning79.volume += 0.01f;//need 100 frame to in
-            }
-        }else if(hour == 8 && minute > 58)//morning79 out
-        {
-            if(morning79.volume >= 0){
-                morning79.volume -= 0.01f;//need 100 frame to out
-            }else if(morning79.volume.Equals(0)){
-                morning79.Stop();
-            }
+       
+       
+        //else if (hour == 7 && minute > 0 && minute < 2)//morning79 in
+        //{
+        //    morning79.Play();
+        //    morning79.volume = 0;//initialize
+        //    if(morning79.volume <= 1){
+        //        morning79.volume += 0.01f;//need 100 frame to in
+        //    }
+        //}else if(hour == 8 && minute > 58)//morning79 out
+        //{
+        //    if(morning79.volume >= 0){
+        //        morning79.volume -= 0.01f;//need 100 frame to out
+        //    }else if(morning79.volume.Equals(0)){
+        //        morning79.Stop();
+        //    }
 
-        }else if(hour == 20 && minute > 0 && minute < 2)//night203 in
-        {
-            night203.Play();
-            night203.volume = 0;//initialize
-            if (night203.volume <= 1)
-            {
-                night203.volume += 0.01f;//need 100 frame to in
-            }
-        }
-        else if(hour == 2 && minute > 58){//night203 out
-            if (night203.volume >= 0)
-            {
-                night203.volume -= 0.01f;//need 100 frame to out
-            }
-            else if (night203.volume.Equals(0))
-            {
-                night203.Stop();
-            }
-        }
+        //}else if(hour == 20 && minute > 0 && minute < 2)//night203 in
+        //{
+        //    night203.Play();
+        //    night203.volume = 0;//initialize
+        //    if (night203.volume <= 1)
+        //    {
+        //        night203.volume += 0.01f;//need 100 frame to in
+        //    }
+        //}
+        //else if(hour == 2 && minute > 58){//night203 out
+        //    if (night203.volume >= 0)
+        //    {
+        //        night203.volume -= 0.01f;//need 100 frame to out
+        //    }
+        //    else if (night203.volume.Equals(0))
+        //    {
+        //        night203.Stop();
+        //    }
+        //}
 
 
-        //SECOND PART
         //if user changed the time
         if (userInput.Equals(false))
         {
@@ -134,7 +135,14 @@ public class ETR_ClockControl : MonoBehaviour
                 //current hour angle sum
                 gameMinuteAngle += 12f * angle;
                 //gameMinuteAngle = gameMinuteAngle % 360f;
+                
+                //audio
+                if (hour == 6 && minute == 0)
+                {
+                    chicken6.Play();//ge ge da
+                }
 
+                //assist light
                 if (hour >= 4 && hour <= 8){
                     //per hour 0.375 per hour angle = 0.375/30
                     assistLight.intensity = assistLight.intensity > 1.5f ? 1.5f : assistLight.intensity + (0.375f / 30f * angle); ;

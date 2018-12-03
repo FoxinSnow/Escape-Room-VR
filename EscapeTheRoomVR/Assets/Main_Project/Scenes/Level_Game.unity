@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.0040944386, g: 0.0036899976, b: 0.0018430655, a: 1}
+  m_IndirectSpecularColor: {r: 0.004094441, g: 0.0036900002, b: 0.0018430682, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -28699,8 +28699,8 @@ MonoBehaviour:
   chicken6: {fileID: 170152092}
   morning79: {fileID: 896234819}
   night203: {fileID: 246062007}
-  hour: 9
-  minute: 15
+  hour: 6
+  minute: 0
   second: 0
 --- !u!1 &1042577512
 GameObject:
