@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.004094441, g: 0.0036900002, b: 0.0018430682, a: 1}
+  m_IndirectSpecularColor: {r: 0.0040944386, g: 0.0036899976, b: 0.0018430655, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -4755,10 +4755,10 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 6d1fbb8cc82463c4ca2ee172f8e3b21d, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -6595,10 +6595,10 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: b4044b0f4bbf4cf4a87c499f38da7fe7, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -6833,7 +6833,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.025, y: 0.14000003, z: 0.031748015}
+  m_Size: {x: 0.025, y: 0.07, z: 0.031748015}
   m_Center: {x: 0, y: 0.00000023841858, z: 0.0000000018626451}
 --- !u!23 &247984669
 MeshRenderer:
@@ -9031,6 +9031,22 @@ MonoBehaviour:
   forwardButton: {fileID: 499534990}
   stopButton: {fileID: 481745185}
   audioSource: {fileID: 2092806431}
+  radioEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 678239774}
+        m_MethodName: PlayRadioButtonSoundEffect
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!1 &330125049
 GameObject:
   m_ObjectHideFlags: 0
@@ -14243,7 +14259,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.025000002, y: 0.14000002, z: 0.03174802}
+  m_Size: {x: 0.025000002, y: 0.07, z: 0.03174802}
   m_Center: {x: 0, y: -0.00000047683716, z: 0.0000000018626454}
 --- !u!114 &481745192
 MonoBehaviour:
@@ -14551,7 +14567,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.025000002, y: 0.14000002, z: 0.03174802}
+  m_Size: {x: 0.025000002, y: 0.07, z: 0.03174802}
   m_Center: {x: 0.00000047683716, y: -0.0000009536743, z: 0.0000000018626454}
 --- !u!114 &499534997
 MonoBehaviour:
@@ -23885,10 +23901,10 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: c2b3db575b619b444baf6389d23ef2b0, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -29774,10 +29790,10 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: c2b3db575b619b444baf6389d23ef2b0, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
-  Loop: 1
+  Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -34517,7 +34533,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.025000002, y: 0.14000002, z: 0.03174802}
+  m_Size: {x: 0.025000002, y: 0.07, z: 0.03174802}
   m_Center: {x: 0, y: -0.00000023841858, z: 0.0000000018626454}
 --- !u!114 &1277593786
 MonoBehaviour:
@@ -38147,6 +38163,18 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 400040, guid: 97c008caa0d20d149b55a91d615f978d,
     type: 3}
   m_PrefabInternal: {fileID: 324620285}
+--- !u!65 &1451107731
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1451107729}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.025000002, y: 0.07, z: 0.03174802}
+  m_Center: {x: 0, y: -0.00000023841858, z: 0.0000000018626454}
 --- !u!114 &1451107733
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -38215,18 +38243,6 @@ MonoBehaviour:
   objectHighlighter: {fileID: 0}
   touchHighlightColor: {r: 0, g: 0, b: 0, a: 0}
   usingState: 0
---- !u!65 &1451107736
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1451107729}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.029916935, y: 0.14, z: 0.03174802}
-  m_Center: {x: 0.0024584732, y: -0.00000023752712, z: 0.0000000019527508}
 --- !u!114 &1451107738
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -52105,7 +52121,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100008, guid: bf2b219ee9c44fa40839d45da07f4440, type: 3}
       propertyPath: m_Name
-      value: ??Cassette_Insertion
+      value: Cassette
       objectReference: {fileID: 0}
     - target: {fileID: 400008, guid: bf2b219ee9c44fa40839d45da07f4440, type: 3}
       propertyPath: m_LocalRotation.x

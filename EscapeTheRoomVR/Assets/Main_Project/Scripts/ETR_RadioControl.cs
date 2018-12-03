@@ -8,20 +8,18 @@ public class ETR_RadioControl : MonoBehaviour {
 
     public Transform popButton, backwardButton, playButton, forwardButton, stopButton;
     public AudioSource audioSource;
+    public UnityEngine.Events.UnityEvent radioEvent;
 
     private bool isOn;
-    //private bool canUseTimer;
 
     // Use this for initialization
     void Start () {
         isOn = true;
-        //canUseTimer = false;
     }
 	
 	// Update is called once per frame
 	void Update () {
 
-        //if (canUseTimer) {
         if (audioSource.time == 0 && audioSource.pitch == -1.0f)
         {
             Reset();
@@ -31,11 +29,6 @@ public class ETR_RadioControl : MonoBehaviour {
         {
             Reset();
         }
-
-        //Debug.Log("Current Playing?" + audioSource.isPlaying);
-        //Debug.Log("Current Play Time:" + currentPlayTime);
-        Debug.Log("Current Playing?" + audioSource.time);
-        //}
     }
 
     public void Radio_PlayPause() {
@@ -53,13 +46,11 @@ public class ETR_RadioControl : MonoBehaviour {
                 {
                     audioSource.Pause();
                     playButton.localPosition = new Vector3(0.03267755f, playButton.localPosition.y, playButton.localPosition.z);
-                    //canUseTimer = false;
                 }
                 else
                 {
                     audioSource.Play();
                     playButton.localPosition = new Vector3(0.028f, playButton.localPosition.y, playButton.localPosition.z);
-                    //canUseTimer = true;
                 }
             }
     }
@@ -106,7 +97,6 @@ public class ETR_RadioControl : MonoBehaviour {
         forwardButton.localPosition = new Vector3(0.03267755f, forwardButton.localPosition.y, forwardButton.localPosition.z);
         playButton.localPosition = new Vector3(0.03267755f, playButton.localPosition.y, playButton.localPosition.z);
         backwardButton.localPosition = new Vector3(0.03267755f, backwardButton.localPosition.y, backwardButton.localPosition.z);
-        //canUseTimer = false;
     }
 
 }
