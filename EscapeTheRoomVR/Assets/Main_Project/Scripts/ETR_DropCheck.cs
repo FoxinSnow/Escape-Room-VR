@@ -7,10 +7,11 @@ public class ETR_DropCheck : MonoBehaviour {
     public AudioSource lockDrop;
     private Vector3 dropSpeed;
     private float speedDiff;
-    private bool drop = false;
+    private bool drop;
 
     // Use this for initialization
     void Start () {
+        drop = false;
         dropSpeed = this.GetComponent<Rigidbody>().velocity;
         speedDiff = 0;
     }
@@ -21,7 +22,7 @@ public class ETR_DropCheck : MonoBehaviour {
         {
             dropSpeed = this.GetComponent<Rigidbody>().velocity;
             speedDiff = Mathf.Abs(speedDiff - dropSpeed.y);
-            //Debug.Log(speedDiff);
+            Debug.Log(speedDiff);
         }
     }
 
@@ -29,7 +30,7 @@ public class ETR_DropCheck : MonoBehaviour {
     {
         if(this.gameObject.activeSelf.Equals(true)){
 
-            if(collision.gameObject.name.Equals("Floor_Attic") && speedDiff > 30){
+            if(collision.gameObject.name.Equals("Floor_Attic") && speedDiff > 10){
                 lockDrop.Play();
                 Debug.Log("Play lock drop sound effect.");
                 drop = true;

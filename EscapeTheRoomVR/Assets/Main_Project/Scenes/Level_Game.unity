@@ -12446,7 +12446,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66ba02c48a297403d9e417fff6bc12cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lockDrop: {fileID: 38831605}
+  lockDrop: {fileID: 170152092}
 --- !u!1 &441089378
 GameObject:
   m_ObjectHideFlags: 0
