@@ -1,8 +1,9 @@
 ﻿<Properties StartupConfiguration="{84495A8E-F32C-2A14-8E72-FB7162BDF71A}|">
   <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="Unity.Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Main_Project/Scripts/ETR_DropCheck.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Main_Project/Scripts/ETR_ClockControl.cs">
     <Files>
-      <File FileName="Assets/Main_Project/Scripts/ETR_DropCheck.cs" Line="17" Column="5" />
+      <File FileName="Assets/Main_Project/Scripts/ETR_AlarmControl.cs" Line="34" Column="22" />
+      <File FileName="Assets/Main_Project/Scripts/ETR_ClockControl.cs" Line="11" Column="30" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
