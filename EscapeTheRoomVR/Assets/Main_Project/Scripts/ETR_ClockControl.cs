@@ -93,25 +93,20 @@ public class ETR_ClockControl : MonoBehaviour
 
                 //current hour angle sum
                 gameMinuteAngle += 12f * angle;
-                //gameMinuteAngle = gameMinuteAngle % 360f;
+            //gameMinuteAngle = gameMinuteAngle % 360f;
 
-                
+            
 
-                //assist light
-                if (hour >= 4 && hour <= 8){
-                    //per hour 0.375 per hour angle = 0.375/30
-                    assistLight.intensity = assistLight.intensity > 1.5f ? 1.5f : assistLight.intensity + (0.375f / 30f * angle); ;
-     
-                }
-                else if (hour >= 16 && hour <= 20)
-                {
-                    assistLight.intensity = assistLight.intensity < 0f ? 0f : assistLight.intensity - (0.375f / 30f) * angle;
            
-                }
             //Debug.Log("Passed second:" + angle * 120f);
             ETR_IceCube.MeltIce(angle * 120f, true);
             //}
             userInput = false; //let the clock continue run
+
+            second = 0;
+
+            //audio
+            audioControl();
         }
 
         gameSecondAngle += Time.deltaTime * secondsDegrees;
@@ -131,8 +126,27 @@ public class ETR_ClockControl : MonoBehaviour
 
         sunLight.rotation = Quaternion.Euler(-90f - gameHourAngle/2, 342.8f, -10.71399f);
 
+
+        Debug.Log(hour + " " +  minute);
+
+        second = 0;
+
         //audio
         audioControl();
+
+
+        //assist light
+        if (hour >= 4 && hour <= 8)
+        {
+            //per hour 0.375 per hour angle = 0.375/30
+            assistLight.intensity = assistLight.intensity > 1.5f ? 1.5f : assistLight.intensity + (0.375f / 30f * angle); ;
+
+        }
+        else if (hour >= 16 && hour <= 20)
+        {
+            assistLight.intensity = assistLight.intensity < 0f ? 0f : assistLight.intensity - (0.375f / 30f) * angle;
+
+        }
     }
 
     private void audioControl()

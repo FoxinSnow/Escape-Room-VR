@@ -91,6 +91,8 @@ public class ETR_AlarmControl : MonoBehaviour
                
             //}
             userInput = false; //let the clock continue run
+
+            
         }
 
         gameSecondAngle += Time.deltaTime * secondsDegrees;
@@ -104,6 +106,8 @@ public class ETR_AlarmControl : MonoBehaviour
 
         int tmpm = (int)Math.Floor(gameMinuteAngle % 360f / 6f);
         minute = tmpm >= 0 ? tmpm : 60 + tmpm;
+
+        second = 0;
 
         if (hour == 9 && minute == 15 && second == 0)
         {
