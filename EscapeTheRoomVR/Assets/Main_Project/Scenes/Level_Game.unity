@@ -12489,7 +12489,7 @@ AudioSource:
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
-  Loop: 1
+  Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -25462,10 +25462,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hourHand: {fileID: 244324351}
   minuteHand: {fileID: 2042481977}
-  alarmRing: {fileID: 441089380}
-  hour: 9
-  minute: 14
-  second: 0
+  hour: 12
+  minute: 15
 --- !u!1 &937449406
 GameObject:
   m_ObjectHideFlags: 0
@@ -28682,8 +28680,8 @@ MonoBehaviour:
   chicken6: {fileID: 170152092}
   morning79: {fileID: 896234819}
   night203: {fileID: 246062007}
-  hour: 9
-  minute: 14
+  hour: 16
+  minute: 0
   second: 0
 --- !u!1 &1042577512
 GameObject:

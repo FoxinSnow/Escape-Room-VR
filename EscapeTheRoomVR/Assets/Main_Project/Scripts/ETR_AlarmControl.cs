@@ -8,14 +8,12 @@ public class ETR_AlarmControl : MonoBehaviour
 {
 
     public Transform hourHand, minuteHand;
-    public AudioSource alarmRing;
 
     public static bool userInput = false;
     public static bool mOrH = true; //true is min, false is hour
-    public int hour, minute, second; //these are set from ClockControl
-
     private static float angle = 0;
-    private bool ring = true;//true is ring, if false never ring
+    public int hour, minute; //these are set from ClockControl
+
     private const float
         hoursDegrees = 360f / (12f * 60f * 60f),
         hoursPerSecond = 1 / (60f * 60f),
@@ -27,20 +25,9 @@ public class ETR_AlarmControl : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+       
         gameHourAngle = hour * 30f + minute * 0.5f;
         gameMinuteAngle = minute * 6f;
-        if(hour == 9 && minute == 15 && second == 0){
-            goRing();
-        }
-    }
-
-    void OnCollisionEnter(Collision collision)
-    {
-        if(collision.gameObject.name.Equals("Floor_Attic")){
-            alarmRing.Stop();
-            ring = false;
-            Debug.Log("Alarm ring stops");
-        }
     }
 
     // Update is called once per frame
@@ -62,18 +49,18 @@ public class ETR_AlarmControl : MonoBehaviour
         }
         else
         {
-            //if (mOrH.Equals(true)){ //minute is changed
-            //    //current hour angle sum
-            //    gameHourAngle += angle/12f;
-            //    //gameHourAngle = gameHourAngle % 360f;
+            if (mOrH.Equals(true)){ //minute is changed
+                //current hour angle sum
+                gameHourAngle += angle/12f;
+                //gameHourAngle = gameHourAngle % 360f;
 
-            //    //current hour angle sum
-            //    gameMinuteAngle += angle;
-            //    //gameMinuteAngle = gameMinuteAngle % 360f;
+                //current hour angle sum
+                gameMinuteAngle += angle;
+                //gameMinuteAngle = gameMinuteAngle % 360f;
 
              
-            //}
-            //else{ //hour is changed
+            }
+            else{ //hour is changed
                 //current hour angle sum
                 gameHourAngle += angle;
                 //gameHourAngle = gameHourAngle % 360f;
@@ -84,7 +71,7 @@ public class ETR_AlarmControl : MonoBehaviour
 
                 //Debug.Log("Passed second:" + angle * 120f);
                
-            //}
+            }
             userInput = false; //let the clock continue run
         }
 
@@ -100,13 +87,7 @@ public class ETR_AlarmControl : MonoBehaviour
         int tmpm = (int)Math.Floor(gameMinuteAngle % 360f / 6f);
         minute = tmpm >= 0 ? tmpm : 60 + tmpm;
 
-        second = (int)Math.Floor(gameSecondAngle % 360f / 6f);
-
-        if (hour == 9 && minute == 15 && second == 0)
-        {
-            goRing();
-        }
-
+       
     }
 
     //static method
@@ -133,14 +114,6 @@ public class ETR_AlarmControl : MonoBehaviour
             userInput = true;
             angle = a;
 
-        }
-    }
-
-    private void goRing(){
-        if (ring.Equals(true))
-        {
-            Debug.Log("alarm play");
-            alarmRing.Play();
         }
     }
 }
