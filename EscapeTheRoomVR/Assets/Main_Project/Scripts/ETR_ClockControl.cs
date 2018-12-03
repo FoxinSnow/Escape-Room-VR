@@ -95,8 +95,7 @@ public class ETR_ClockControl : MonoBehaviour
                 gameMinuteAngle += 12f * angle;
                 //gameMinuteAngle = gameMinuteAngle % 360f;
 
-                //audio
-                audioControl();
+                
 
                 //assist light
                 if (hour >= 4 && hour <= 8){
@@ -131,27 +130,30 @@ public class ETR_ClockControl : MonoBehaviour
         second = (int)Math.Floor(gameSecondAngle % 360f / 6f);
 
         sunLight.rotation = Quaternion.Euler(-90f - gameHourAngle/2, 342.8f, -10.71399f);
+
+        //audio
+        audioControl();
     }
 
     private void audioControl()
     {
-        if (hour == 6 && minute == 0)
+        if (hour == 6 && minute == 0 && second == 0)
         {
             chicken6.Play();//ge ge da
         }
-        else if (hour == 7 && minute == 0)//morning79 in
+        else if (hour == 7 && minute == 0 && second == 0)//morning79 in
         {
             morning79.Play();
         }
-        else if (hour == 9 && minute == 0)//morning79 out
+        else if (hour == 9 && minute == 0 && second == 0)//morning79 out
         {
             morning79.Stop();
         }
-        else if (hour == 20 && minute == 0)//night203 in
+        else if (hour == 20 && minute == 0 && second == 0)//night203 in
         {
             night203.Play();
         }
-        else if (hour == 3 && minute == 0)//night203 out
+        else if (hour == 3 && minute == 0 && second == 0)//night203 out
         {
             night203.Stop();
         }

@@ -1,12 +1,9 @@
 ﻿<Properties StartupConfiguration="{84495A8E-F32C-2A14-8E72-FB7162BDF71A}|">
   <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="Unity.Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Main_Project/Scripts/ETR_DropCheck.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Main_Project/Scripts/ETR_ClockControl.cs">
     <Files>
-<<<<<<< HEAD
-      <File FileName="Assets/Main_Project/Scripts/ETR_DropCheck.cs" Line="22" Column="65" />
-=======
-      <File FileName="Assets/Main_Project/Scripts/ETR_DropCheck.cs" Line="17" Column="5" />
->>>>>>> parent of 2c000c3f... add alarm ring and stop
+      <File FileName="Assets/Main_Project/Scripts/ETR_AlarmControl.cs" Line="15" Column="31" />
+      <File FileName="Assets/Main_Project/Scripts/ETR_ClockControl.cs" Line="144" Column="42" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
