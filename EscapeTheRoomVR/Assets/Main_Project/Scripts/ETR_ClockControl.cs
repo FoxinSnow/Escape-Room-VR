@@ -14,6 +14,7 @@ public class ETR_ClockControl : MonoBehaviour
     public static bool userInput = false;
     public static bool mOrH = true; //true is min, false is hour
     private static float angle = 0;
+    private bool onOff = false; //help to control the volume change
 
     private const float
         hoursDegrees = 360f / (12f * 60f * 60f),
@@ -43,51 +44,13 @@ public class ETR_ClockControl : MonoBehaviour
             Debug.Log("This line should not be displayed.");
         }
         //audio
-        if (hour == 6 && minute == 0)
-        {
-            chicken6.Play();//ge ge da
-        }
+        audioControl();
     }
 
     // Update is called once per frame
     void Update()
     {
-       
-       
-        //else if (hour == 7 && minute > 0 && minute < 2)//morning79 in
-        //{
-        //    morning79.Play();
-        //    morning79.volume = 0;//initialize
-        //    if(morning79.volume <= 1){
-        //        morning79.volume += 0.01f;//need 100 frame to in
-        //    }
-        //}else if(hour == 8 && minute > 58)//morning79 out
-        //{
-        //    if(morning79.volume >= 0){
-        //        morning79.volume -= 0.01f;//need 100 frame to out
-        //    }else if(morning79.volume.Equals(0)){
-        //        morning79.Stop();
-        //    }
 
-        //}else if(hour == 20 && minute > 0 && minute < 2)//night203 in
-        //{
-        //    night203.Play();
-        //    night203.volume = 0;//initialize
-        //    if (night203.volume <= 1)
-        //    {
-        //        night203.volume += 0.01f;//need 100 frame to in
-        //    }
-        //}
-        //else if(hour == 2 && minute > 58){//night203 out
-        //    if (night203.volume >= 0)
-        //    {
-        //        night203.volume -= 0.01f;//need 100 frame to out
-        //    }
-        //    else if (night203.volume.Equals(0))
-        //    {
-        //        night203.Stop();
-        //    }
-        //}
 
 
         //if user changed the time
@@ -135,12 +98,9 @@ public class ETR_ClockControl : MonoBehaviour
                 //current hour angle sum
                 gameMinuteAngle += 12f * angle;
                 //gameMinuteAngle = gameMinuteAngle % 360f;
-                
+
                 //audio
-                if (hour == 6 && minute == 0)
-                {
-                    chicken6.Play();//ge ge da
-                }
+                audioControl();
 
                 //assist light
                 if (hour >= 4 && hour <= 8){
@@ -175,6 +135,32 @@ public class ETR_ClockControl : MonoBehaviour
         second = (int)Math.Floor(gameSecondAngle % 360f / 6f);
 
         sunLight.rotation = Quaternion.Euler(-90f - gameHourAngle/2, 342.8f, -10.71399f);
+    }
+
+    private void audioControl()
+    {
+        if (hour == 6 && minute == 0)
+        {
+            chicken6.Play();//ge ge da
+        }
+        else if (hour == 7 && minute == 0)//morning79 in
+        {
+            morning79.Play();
+            //morning79.volume = 0;//initialize
+        }
+        else if (hour == 9 && minute == 0)//morning79 out
+        {
+            morning79.Stop();
+        }
+        else if (hour == 20 && minute == 0)//night203 in
+        {
+            night203.Play();
+            //night203.volume = 0;//initialize
+        }
+        else if (hour == 3 && minute == 0)//night203 out
+        {
+            night203.Stop();
+        }
     }
 
     //static method
