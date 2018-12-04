@@ -15,6 +15,7 @@ public class ETR_UIControl : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+        /*
         if (isShowing) {
 
 
@@ -25,12 +26,10 @@ public class ETR_UIControl : MonoBehaviour {
             }
 
         }
+        */
 	}
 
     void DisplaySubtitle(string info) {
-
-
-
         isShowing = true;
     }
 
