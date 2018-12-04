@@ -18,6 +18,7 @@ TagManager:
   - Important
   - Boundary
   - TeleportHeightAdjustment
+  - CollisionAdjustment
   layers:
   - Default
   - TransparentFX
