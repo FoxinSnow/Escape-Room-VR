@@ -156,14 +156,14 @@ public class ETR_ClockControl : MonoBehaviour
     private void audioControl()
     {
         //reset between 4 - 5
-        if(hour == 4 %% !reset){
+        if(hour == 4 && !reset){
             reset = true; //do reset
             chickenOn = false;
             morningOn = false;
             nightOn = false;
         }
 
-        if(hour == 6 %% !chickenOn){
+        if(hour == 6 && !chickenOn){
             chicken6.Play();//ge ge da
             chickenOn = true;
             reset = false; //need reset
