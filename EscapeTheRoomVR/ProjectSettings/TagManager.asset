@@ -20,6 +20,7 @@ TagManager:
   - TeleportHeightAdjustment
   - CollisionAdjustment
   - Controller
+  - TeleportTrigger
   layers:
   - Default
   - TransparentFX

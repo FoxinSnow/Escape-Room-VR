@@ -10,6 +10,7 @@ public class ETR_JewelryBox : MonoBehaviour {
     public GameObject jewelryBoxToUnlock;
     public GameObject key;
     public GameObject itemsToReveal;
+    public GameObject keyReference;
     public Transform revealItemLocation;
     public AudioSource unlockSound;
 
@@ -34,7 +35,8 @@ public class ETR_JewelryBox : MonoBehaviour {
             itemsToReveal.SetActive(true);
             if (unlockSound != null) {
                 unlockSound.Play();
-            }   
+            }
+            keyReference.SetActive(true);
             Destroy(collision.gameObject);
         }
     }

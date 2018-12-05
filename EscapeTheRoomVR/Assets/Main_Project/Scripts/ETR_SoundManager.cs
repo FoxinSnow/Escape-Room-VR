@@ -15,24 +15,28 @@ public class ETR_SoundManager : MonoBehaviour {
     private bool isFanOn;
 
     public AudioSource radioButtonAudioSource;
-    public AudioSource floorPieceAudioSource;
     public AudioSource switchAudioSource;
     public AudioSource burnerAudioSource;
 
+    public AudioSource dialogueAudioSource;
+    public AudioClip[] dialogueClips;
+
 	// Use this for initialization
 	void Start () {
-        isFanOn = false;
-		
+        //isFanOn = false;
+        
 	}
 	
 	// Update is called once per frame
 	void Update () {
+        //fanAudioSource.volume = ETR_FanSwitch.GetSpeedRatio() * 0.25f;
+        /*
         if (isFanOn && fanAudioSource.clip == fanStart && !fanAudioSource.isPlaying) {
             fanAudioSource.clip = fanRun;
             fanAudioSource.loop = true;
             fanAudioSource.Play();
-        }
-	}
+        }*/
+    }
 
     public void PlaySafeSoundEffect(int i) {
         switch (i) {
@@ -70,6 +74,15 @@ public class ETR_SoundManager : MonoBehaviour {
     }
 
     public void PlayFanSoundEffect() {
+
+        if (!fanAudioSource.isPlaying)
+        {
+            fanAudioSource.Play();
+        }
+        else {
+            fanAudioSource.Stop();
+        }
+        /*
         if (isFanOn){
             isFanOn = false;
         }
@@ -88,6 +101,14 @@ public class ETR_SoundManager : MonoBehaviour {
             fanAudioSource.loop = false;
             fanAudioSource.pitch = -1;
             fanAudioSource.Play();
+        }
+        */
+    }
+
+    public void PlayDialogue(int i) {
+        if (dialogueClips.Length > 0 && i < dialogueClips.Length) {
+            dialogueAudioSource.clip = dialogueClips[i];
+            dialogueAudioSource.Play();
         }
     }
 }

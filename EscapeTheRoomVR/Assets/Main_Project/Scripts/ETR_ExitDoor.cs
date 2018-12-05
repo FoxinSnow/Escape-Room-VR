@@ -36,11 +36,20 @@ public class ETR_ExitDoor : MonoBehaviour {
     void Update()
     {
         // Smooth animation
-        /*
+        
         if (isOpen) {
-            door.localRotation = Quaternion.RotateTowards(door.localRotation, Quaternion.Euler(targetRotation), Time.deltaTime * 0.5f);
+            if (door.transform.localRotation.z > -120f)
+            {
+                door.transform.Rotate(0, 0, -45.0f * Time.deltaTime);
+            }
+            else {
+
+                isOpen = false;
+            }
+
+            Debug.Log(door.transform.localRotation.z);
         }
-        */
+        
     }
 
     protected virtual void InteractableObjectUsed(object sender, InteractableObjectEventArgs e)
@@ -50,8 +59,6 @@ public class ETR_ExitDoor : MonoBehaviour {
         {
             doorSoundEffect.Play();
         }
-        Debug.Log("Door unlocked");
-        door.localEulerAngles = new Vector3(-90f,0,-120f);
         lightSource.SetActive(true);
         doorKnobInteraction.enabled = false;
     }

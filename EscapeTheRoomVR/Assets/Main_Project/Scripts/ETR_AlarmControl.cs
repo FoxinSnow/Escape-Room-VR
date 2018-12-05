@@ -14,6 +14,8 @@ public class ETR_AlarmControl : MonoBehaviour
     private static float angle = 0;
     public int hour, minute, second; //these are set from ClockControl
     public AudioSource alarmRing;
+    public UnityEngine.Events.UnityEvent alarmTutorialEvent;
+    private bool triggered; 
 
     private bool ring = true;//true is ring, if false never ring
 
@@ -34,17 +36,23 @@ public class ETR_AlarmControl : MonoBehaviour
 
         if (hour == 9 && minute == 15 && second == 0)
         {
-            goRing();
+            GoRing();
         }
+
+        triggered = false;
     }
 
     void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.name.Equals("Floor_Attic"))
+        if (this.GetComponent<Rigidbody>().velocity.magnitude > 0.5f && collision.gameObject.tag != "Player")
         {
-            alarmRing.Stop();
-            ring = false;
-            Debug.Log("Alarm ring stops");
+            if (!triggered) {
+                alarmRing.Stop();
+                ring = false;
+                Debug.Log("Alarm ring stops");
+                alarmTutorialEvent.Invoke();
+                triggered = true;
+            }  
         }
     }
 
@@ -111,7 +119,7 @@ public class ETR_AlarmControl : MonoBehaviour
 
         if (hour == 9 && minute == 15 && second == 0)
         {
-            goRing();
+            GoRing();
         }
 
     }
@@ -143,7 +151,7 @@ public class ETR_AlarmControl : MonoBehaviour
         }
     }
 
-    private void goRing()
+    private void GoRing()
     {
         if (ring.Equals(true))
         {
