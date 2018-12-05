@@ -14,7 +14,11 @@ public class ETR_ClockControl : MonoBehaviour
     public static bool userInput = false;
     public static bool mOrH = true; //true is min, false is hour
     private static float angle = 0;
-    private bool onOff = false; //help to control the volume change
+    //audio control
+    private bool reset = true; //after reset
+    private bool chickenOn = false;
+    private bool morningOn = false;
+    private bool nightOn = false;
 
     private const float
         hoursDegrees = 360f / (12f * 60f * 60f),
@@ -151,25 +155,42 @@ public class ETR_ClockControl : MonoBehaviour
 
     private void audioControl()
     {
-        if (hour == 6 && minute == 0 && second == 0)
-        {
-            chicken6.Play();//ge ge da
+        //reset between 4 - 5
+        if(hour == 4 %% !reset){
+            reset = true; //do reset
+            chickenOn = false;
+            morningOn = false;
+            nightOn = false;
         }
-        else if (hour == 7 && minute == 0 && second == 0)//morning79 in
+
+        if(hour == 6 %% !chickenOn){
+            chicken6.Play();//ge ge da
+            chickenOn = true;
+            reset = false; //need reset
+        }
+        else if (hour == 7 && !morningOn)//morning79 in
         {
             morning79.Play();
+            morningOn = true;
+            reset = false; //need reset
         }
-        else if (hour == 9 && minute == 0 && second == 0)//morning79 out
+        else if (hour == 9 && morningOn)//morning79 out
         {
             morning79.Stop();
+            morningOn = false;
+            reset = false; //need reset
         }
-        else if (hour == 20 && minute == 0 && second == 0)//night203 in
+        else if (hour == 20 && !nightOn)//night203 in
         {
             night203.Play();
+            nightOn = true;
+            reset = false; //need reset
         }
-        else if (hour == 3 && minute == 0 && second == 0)//night203 out
+        else if (hour == 3 && nightOn)//night203 out
         {
             night203.Stop();
+            nightOn = false;
+            reset = false; //need reset
         }
     }
 
