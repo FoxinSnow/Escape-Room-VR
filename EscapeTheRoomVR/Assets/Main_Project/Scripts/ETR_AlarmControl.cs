@@ -14,6 +14,7 @@ public class ETR_AlarmControl : MonoBehaviour
     private static float angle = 0;
     public int hour, minute, second; //these are set from ClockControl
     public AudioSource alarmRing;
+    public AudioClip alarmDrop;
     public UnityEngine.Events.UnityEvent alarmTutorialEvent;
     private bool triggered; 
 
@@ -48,6 +49,9 @@ public class ETR_AlarmControl : MonoBehaviour
         {
             if (!triggered) {
                 alarmRing.Stop();
+                alarmRing.loop = false;
+                alarmRing.clip = alarmDrop;
+                alarmRing.Play();
                 ring = false;
                 Debug.Log("Alarm ring stops");
                 alarmTutorialEvent.Invoke();

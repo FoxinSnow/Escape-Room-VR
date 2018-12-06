@@ -8,6 +8,7 @@ public class ETR_LockedDoor : MonoBehaviour {
 
     public GameObject knob;
     public GameObject key;
+    public UnityEngine.Events.UnityEvent keyHoleEvent;
     private VRTK_InteractableObject knobInteraction;
     private VRTK_InteractObjectHighlighter knobHighlight;
 
@@ -28,9 +29,10 @@ public class ETR_LockedDoor : MonoBehaviour {
     {
         if (other.gameObject == key.gameObject)
         {
+            keyHoleEvent.Invoke();
             knobHighlight.touchHighlight = Color.green;
             knobInteraction.isUsable = true;
-            other.gameObject.SetActive(false);
+            other.gameObject.SetActive(false); 
             Destroy(this);
         }
     }

@@ -21,6 +21,9 @@ public class ETR_SoundManager : MonoBehaviour {
     public AudioSource dialogueAudioSource;
     public AudioClip[] dialogueClips;
 
+
+    public AudioSource exitDoorAudioSource;
+    public AudioClip lockedDoor, keyInsert, openDoor;
 	// Use this for initialization
 	void Start () {
         //isFanOn = false;
@@ -110,5 +113,25 @@ public class ETR_SoundManager : MonoBehaviour {
             dialogueAudioSource.clip = dialogueClips[i];
             dialogueAudioSource.Play();
         }
+    }
+
+    public void PlayExitDoorSoundEffect(int i) {
+        switch (i)
+        {
+            case 0:
+                exitDoorAudioSource.clip = lockedDoor;
+                break;
+            case 1:
+                exitDoorAudioSource.clip = keyInsert;
+                break;
+            case 2:
+                exitDoorAudioSource.clip = openDoor;
+                break;
+            default:
+                exitDoorAudioSource.clip = safeButton;
+                break;
+        }
+        exitDoorAudioSource.Play();
+
     }
 }

@@ -7,8 +7,8 @@ using UnityEngine;
 public class ETR_ExitDoor : MonoBehaviour {
 
     public Transform door;
-    public AudioSource doorSoundEffect;
-    public GameObject lightSource;
+    public GameObject lightSource, headsetCollision, cameraFader;
+    public UnityEngine.Events.UnityEvent doorEvent;
     private VRTK_InteractableObject doorKnobInteraction;
 
     private bool isOpen;
@@ -40,7 +40,7 @@ public class ETR_ExitDoor : MonoBehaviour {
         if (isOpen) {
             if (door.transform.localRotation.z > -120f)
             {
-                door.transform.Rotate(0, 0, -45.0f * Time.deltaTime);
+                door.transform.Rotate(0, 0, -15.0f * Time.deltaTime);
             }
             else {
 
@@ -54,12 +54,12 @@ public class ETR_ExitDoor : MonoBehaviour {
 
     protected virtual void InteractableObjectUsed(object sender, InteractableObjectEventArgs e)
     {
+        doorEvent.Invoke();
+        headsetCollision.GetComponent<VRTK_HeadsetCollisionFade>().blinkTransitionSpeed = 3.0f;
+        headsetCollision.GetComponent<VRTK_HeadsetCollisionFade>().fadeColor = Color.white;
         isOpen = true;
-        if (doorSoundEffect != null)
-        {
-            doorSoundEffect.Play();
-        }
         lightSource.SetActive(true);
+        cameraFader.SetActive(true);
         doorKnobInteraction.enabled = false;
     }
 
