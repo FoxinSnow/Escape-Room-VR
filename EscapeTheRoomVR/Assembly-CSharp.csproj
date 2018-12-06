@@ -102,8 +102,8 @@
     <Compile Include="Assets\Main_Project\Scripts\ETR_Tutorial_Alarm.cs" />
     <Compile Include="Assets\Main_Project\Scripts\ETR_Tutorial_Fridge.cs" />
     <Compile Include="Assets\Main_Project\Scripts\ETR_Tutorial_Tap.cs" />
-    <Compile Include="Assets\Main_Project\Scripts\ETR_Tutorial_Teleport.cs" />
     <Compile Include="Assets\Main_Project\Scripts\ETR_TutorialControl.cs" />
+    <Compile Include="Assets\Main_Project\Scripts\ETR_TutorialTrigger.cs" />
     <Compile Include="Assets\Main_Project\Scripts\ETR_UIControl.cs" />
     <Compile Include="Assets\Main_Project\Scripts\-FanRun.cs" />
     <Compile Include="Assets\Main_Project\Scripts\-LockDigitOne.cs" />

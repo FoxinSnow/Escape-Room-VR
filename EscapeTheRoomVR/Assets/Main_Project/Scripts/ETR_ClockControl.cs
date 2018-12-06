@@ -131,7 +131,7 @@ public class ETR_ClockControl : MonoBehaviour
         sunLight.rotation = Quaternion.Euler(-90f - gameHourAngle/2, 342.8f, -10.71399f);
 
 
-        Debug.Log(hour + " " +  minute);
+        //Debug.Log(hour + " " +  minute);
 
         second = 0;
 

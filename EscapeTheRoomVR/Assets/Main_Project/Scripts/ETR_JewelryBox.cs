@@ -26,7 +26,7 @@ public class ETR_JewelryBox : MonoBehaviour {
 
     private void OnCollisionEnter(Collision collision)
     {
-        Debug.Log(collision.gameObject.name);
+        //Debug.Log(collision.gameObject.name);
         if (collision.gameObject == key.gameObject) {
             jewelryBoxToUnlock.GetComponent<VRTK_ArtificialRotator>().enabled = true;
             jewelryBoxToUnlock.GetComponent<VRTK_InteractObjectHighlighter>().enabled = true;
