@@ -69,7 +69,6 @@
     <Compile Include="Assets\EffectExamples\Shared\Scripts\ParticleExamples.cs" />
     <Compile Include="Assets\EffectExamples\Shared\Scripts\ParticleMenu.cs" />
     <Compile Include="Assets\EffectExamples\TutorialInfo\Scripts\Readme.cs" />
-    <Compile Include="Assets\ETR_KeyDrop.cs" />
     <Compile Include="Assets\Main_Project\Scripts\-ClockRun.cs" />
     <Compile Include="Assets\Main_Project\Scripts\-CoverOperation.cs" />
     <Compile Include="Assets\Main_Project\Scripts\ETR_AlarmControl.cs" />
@@ -90,6 +89,7 @@
     <Compile Include="Assets\Main_Project\Scripts\ETR_HighlightHaloAnimator.cs" />
     <Compile Include="Assets\Main_Project\Scripts\ETR_IceCube.cs" />
     <Compile Include="Assets\Main_Project\Scripts\ETR_JewelryBox.cs" />
+    <Compile Include="Assets\Main_Project\Scripts\ETR_KeyDrop.cs" />
     <Compile Include="Assets\Main_Project\Scripts\ETR_LightSwitch.cs" />
     <Compile Include="Assets\Main_Project\Scripts\ETR_LockedDoor.cs" />
     <Compile Include="Assets\Main_Project\Scripts\ETR_MissingObject.cs" />
@@ -102,6 +102,7 @@
     <Compile Include="Assets\Main_Project\Scripts\ETR_Tutorial_Alarm.cs" />
     <Compile Include="Assets\Main_Project\Scripts\ETR_Tutorial_Fridge.cs" />
     <Compile Include="Assets\Main_Project\Scripts\ETR_Tutorial_Tap.cs" />
+    <Compile Include="Assets\Main_Project\Scripts\ETR_Tutorial_Teleport.cs" />
     <Compile Include="Assets\Main_Project\Scripts\ETR_TutorialControl.cs" />
     <Compile Include="Assets\Main_Project\Scripts\ETR_UIControl.cs" />
     <Compile Include="Assets\Main_Project\Scripts\-FanRun.cs" />
