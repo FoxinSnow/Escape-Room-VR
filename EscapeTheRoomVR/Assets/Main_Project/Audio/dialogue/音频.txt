@@ -1,31 +1,38 @@
-这个是参考，具体触发逻辑按你的来吧， 有些逻辑难加的可以删掉
+开场（未加）：
 1.hmm it is nine oclock now(刚起床 黑屏结束时播放)
 
 2.the clock is annoying, i need to turn it off(接上一句)
 
+
+
+
+
+
+Tutorials（已加）：
 3.not working?(和闹钟interact后)
 
 4.i am thirsty, gotta grab myself some water(砸掉闹钟后)
 
 5.no water？let me take a look in the frdge(首次水龙头接触后触发)
 
-
-
 7.what？ who the fuck lock my fridge?  something is wrong, i need to take a look downstair(传送到冰箱后)
 
 
+DialogueTrigger（已加）：
 9.shit, the door is locked, i need to find the key(首次碰到门触发)
-
-
 
 10.i didnt draw that on the blackboard(首次靠近workbench触发)
 
 11.this window is stuck...i forget to fix it（每次接触窗户时）
 
-12.the backward button is missing(每次碰到收音机时)
+12.the backward button is missing(首次碰到收音机时)
 
-13.i need a password to open the safe(开箱前每次碰到safe时)
+13.i need a password to open the safe(首次碰到safe时)
 
+20. nothing special here(靠近柜子时触发)
+
+
+事件触发（未加）：
 14.ah！this is tha pattern on the lock(开箱后看到字条触发一次)
 
 15.hmm， there is something on the board that i cannot erase(首次用黑板擦擦黑板时)
@@ -38,11 +45,6 @@
 
 19. i heard somthing under my feet(在木板声音后播放)
 
-20. nothing special here(每次靠近柜子时触发)
-
 21.hmm? i hear sth droping on the floor(接钥匙掉下来后)
 
 22.ah it is here(打开冰箱锁后触发一次)
-
-
-13.
