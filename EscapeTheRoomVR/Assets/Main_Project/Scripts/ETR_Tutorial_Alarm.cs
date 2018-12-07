@@ -6,6 +6,7 @@ using UnityEngine;
 // Coded by Yuqi Wang
 public class ETR_Tutorial_Alarm : MonoBehaviour {
 
+    public GameObject tutorialControl;
     public GameObject alarmObject;
     public GameObject highlightHalo;
     public UnityEngine.Events.UnityEvent alarmTutorialEvent;
@@ -14,9 +15,20 @@ public class ETR_Tutorial_Alarm : MonoBehaviour {
 
     private void Start()
     {
-        alarmObject.GetComponent<VRTK_InteractableObject>().enabled = false;
-        alarmObject.GetComponent<VRTK_InteractObjectHighlighter>().enabled = false;
-        triggered = false;
+        if (tutorialControl.activeSelf)
+        {
+            alarmObject.GetComponent<VRTK_InteractableObject>().enabled = false;
+            alarmObject.GetComponent<VRTK_InteractObjectHighlighter>().enabled = false;
+            triggered = false;
+        }
+        else {
+            triggered = true;
+            this.GetComponent<BoxCollider>().enabled = false;
+            this.GetComponent<VRTK_InteractableObject>().enabled = false;
+            this.GetComponent<VRTK_InteractObjectHighlighter>().enabled = false;
+        }
+        
+
     }
 
     protected virtual void OnEnable()
@@ -43,7 +55,7 @@ public class ETR_Tutorial_Alarm : MonoBehaviour {
             alarmObject.GetComponent<VRTK_InteractObjectHighlighter>().enabled = true;
             interactableObject.enabled = false;
             highlightHalo.SetActive(false);
-            alarmTutorialEvent.Invoke();
+            alarmTutorialEvent.Invoke(); 
             triggered = true;
             this.GetComponent<BoxCollider>().enabled = false;
             this.GetComponent<VRTK_InteractableObject>().enabled = false;

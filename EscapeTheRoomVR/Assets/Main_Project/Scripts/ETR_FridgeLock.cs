@@ -11,6 +11,7 @@ public class ETR_FridgeLock : MonoBehaviour
     public GameObject fridgeDoorToUnlock;
     public GameObject lockedLock;
     public GameObject unlockedLock;
+    public GameObject fridgeDialogueTrigger;
 
     public AudioSource unlockSoundEffect;
     public AudioClip failedUnlockingClip;
@@ -27,6 +28,7 @@ public class ETR_FridgeLock : MonoBehaviour
     void Start()
     {
         numberUnlocked = 0;
+        fridgeDialogueTrigger.SetActive(false);
     }
 
     protected virtual void OnEnable()
@@ -78,6 +80,7 @@ public class ETR_FridgeLock : MonoBehaviour
         {
             fridgeDoorToUnlock.GetComponent<VRTK_PhysicsRotator>().enabled = true;
             fridgeDoorToUnlock.GetComponent<VRTK_InteractObjectHighlighter>().enabled = true;
+            fridgeDialogueTrigger.SetActive(true);
             unlockSoundEffect.clip = unlockingClip;
             unlockSoundEffect.Play();
             lockDropSoundEffect.Play();

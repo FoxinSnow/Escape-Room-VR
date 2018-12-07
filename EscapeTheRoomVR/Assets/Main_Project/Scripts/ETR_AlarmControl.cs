@@ -6,6 +6,7 @@ using UnityEngine;
 // Coded by Fei Huang(Algorithm), Yuqi Wang(VR Interaction)
 public class ETR_AlarmControl : MonoBehaviour
 {
+    public GameObject tutorialControl;
 
     public Transform hourHand, minuteHand;
 
@@ -53,8 +54,10 @@ public class ETR_AlarmControl : MonoBehaviour
                 alarmRing.clip = alarmDrop;
                 alarmRing.Play();
                 ring = false;
-                Debug.Log("Alarm ring stops");
-                alarmTutorialEvent.Invoke();
+                //Debug.Log("Alarm ring stops");
+                if (tutorialControl.activeSelf) {
+                    alarmTutorialEvent.Invoke();
+                } 
                 triggered = true;
             }  
         }

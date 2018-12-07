@@ -9,6 +9,7 @@ public class ETR_IceCube : MonoBehaviour
 {
 
     public GameObject key;
+    public GameObject exitDoorDialogueTrigger;
     private static bool isAffectedByTime;
     private static bool isInHeatingArea;
     private static bool isAffectedByHeat;
@@ -117,6 +118,7 @@ public class ETR_IceCube : MonoBehaviour
             key.gameObject.transform.position = this.gameObject.transform.position;   
             key.gameObject.transform.rotation = this.gameObject.transform.Find("key").gameObject.transform.rotation;
             key.SetActive(true);
+            exitDoorDialogueTrigger.SetActive(false);
             Destroy(this.gameObject);
         }
         else if (timeToMelt > 600)

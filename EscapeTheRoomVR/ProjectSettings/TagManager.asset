@@ -21,6 +21,7 @@ TagManager:
   - CollisionAdjustment
   - Controller
   - TeleportTrigger
+  - DialogueTrigger
   layers:
   - Default
   - TransparentFX

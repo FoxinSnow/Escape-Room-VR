@@ -7,6 +7,7 @@ using UnityEngine;
 // Coded by Yuqi Wang
 public class ETR_Tutorial_Tap : MonoBehaviour {
 
+    public GameObject tutorialControl;
     public UnityEngine.Events.UnityEvent tapEvent;
     private VRTK_ArtificialRotator tapRotator;
     private bool triggered;
@@ -19,9 +20,12 @@ public class ETR_Tutorial_Tap : MonoBehaviour {
 
     private void Update()
     {
-        if (tapRotator.GetValue() > 15.0f && !triggered) {
+        if (tutorialControl.activeSelf) {
+            if (tapRotator.GetValue() > 15.0f && !triggered)
+            {
                 tapEvent.Invoke();
                 triggered = true;
+            }
         }
     }
 

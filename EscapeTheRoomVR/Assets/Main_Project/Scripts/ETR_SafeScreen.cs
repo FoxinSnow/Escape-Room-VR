@@ -9,6 +9,7 @@ public class ETR_SafeScreen : MonoBehaviour {
 
     public GameObject safeDoorToUnlock;
     public GameObject safeProtectedArea;
+    public GameObject safeDialogueTrigger;
     public Transform scr0, scr1, scr2, scr3, scr4, scr5, scr6;
     //C = 10, E = 11, O = 12, R = 13, T = 14, x = 15, * = 16, # = 17;
     public Texture tex0, tex1, tex2, tex3, tex4, tex5, tex6, tex7,
@@ -43,7 +44,9 @@ public class ETR_SafeScreen : MonoBehaviour {
         password[4] = 3;
         password[5] = 4;
         password[6] = 5;
-	}
+
+        safeDialogueTrigger.SetActive(false);
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -303,6 +306,7 @@ public class ETR_SafeScreen : MonoBehaviour {
         {
             safeDoorToUnlock.GetComponent<VRTK_PhysicsRotator>().enabled = true;
             safeDoorToUnlock.GetComponent<VRTK_InteractObjectHighlighter>().enabled = true;
+            safeDialogueTrigger.SetActive(true);
             Destroy(safeProtectedArea.gameObject);
         }
     }

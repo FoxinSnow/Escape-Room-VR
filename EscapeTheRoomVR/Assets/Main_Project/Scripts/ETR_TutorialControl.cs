@@ -6,7 +6,6 @@ using UnityEngine;
 // Coded by Yuqi Wang
 public class ETR_TutorialControl : MonoBehaviour {
 
-    private bool test;
     public GameObject tutorialTeleportPoint1, tutorialTeleportPoint2, tutorialTeleportPoint3;
     public GameObject tutorialTeleport, tutorialTrigger, tutorialGrip, tutorialGrip2;
     public GameObject haloHighlight1, haloHighlight2, haloHighlight3;
