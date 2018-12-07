@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+// Coded by Fei Huang
 public class ETR_DropCheck : MonoBehaviour {
 
     public AudioSource lockDrop;

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using VRTK;
 using UnityEngine;
+using UnityEditor;
 
 // Coded by Yuqi Wang
 public class ETR_ExitDoor : MonoBehaviour {
@@ -13,11 +14,13 @@ public class ETR_ExitDoor : MonoBehaviour {
 
     private bool isOpen;
     private Vector3 targetRotation;
+    private float timeToQuit;
     // Use this for initialization
     void Start () {
         isOpen = false;
         targetRotation = new Vector3(0, 0, -120.0f);
         lightSource.SetActive(false);
+        timeToQuit = 0;
     }
 
     protected virtual void OnEnable()
@@ -41,13 +44,20 @@ public class ETR_ExitDoor : MonoBehaviour {
             if (door.transform.localRotation.z > -120f)
             {
                 door.transform.Rotate(0, 0, -15.0f * Time.deltaTime);
+                timeToQuit += Time.deltaTime;
             }
             else {
 
                 isOpen = false;
             }
 
-            Debug.Log(door.transform.localRotation.z);
+            //Debug.Log(door.transform.localRotation.z);
+            Debug.Log(timeToQuit);
+        }
+
+        if (timeToQuit > 5.0f) {
+            EditorApplication.isPlaying = false;
+            //Application.Quit();
         }
         
     }

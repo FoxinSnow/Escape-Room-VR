@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+// Coded by Yuqi Wang
 public class ETR_TutorialTrigger : MonoBehaviour {
 
     public UnityEngine.Events.UnityEvent teleportTriggerEvent;

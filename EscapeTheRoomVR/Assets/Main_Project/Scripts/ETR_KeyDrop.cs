@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-// Coded by Yuqi
+// Coded by Yuqi Wang
 public class ETR_KeyDrop : MonoBehaviour {
 
     public AudioSource keyDropSound;
