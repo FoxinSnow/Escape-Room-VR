@@ -19,7 +19,6 @@ public class ETR_TutorialControl : MonoBehaviour {
     public GameObject headsetCollision;
     public GameObject cameraFader;
 
-
     public UnityEngine.Events.UnityEvent tutorialEvent;
 
     private float timeToFadeIn = 3.0f;
@@ -68,7 +67,10 @@ public class ETR_TutorialControl : MonoBehaviour {
         }
         else
         {
-            tutorialEvent.Invoke();
+            if (!isDialoguePlayed) {
+                tutorialEvent.Invoke();
+                isDialoguePlayed = true;
+            }       
             headsetCollision.GetComponent<VRTK_HeadsetCollisionFade>().blinkTransitionSpeed = 3.0f;
             cameraFader.SetActive(false);
         }

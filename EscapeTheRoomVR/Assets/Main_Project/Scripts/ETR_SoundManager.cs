@@ -42,6 +42,9 @@ public class ETR_SoundManager : MonoBehaviour {
     }
 
     public void PlaySafeSoundEffect(int i) {
+        if (safeAudioSource.isPlaying) {
+            safeAudioSource.Stop();
+        }
         switch (i) {
             case 0:
                 safeAudioSource.clip = safeButton;      
@@ -55,7 +58,7 @@ public class ETR_SoundManager : MonoBehaviour {
             default:
                 safeAudioSource.clip = safeButton;
                 break;
-        }
+        }       
         safeAudioSource.Play();
     }
 

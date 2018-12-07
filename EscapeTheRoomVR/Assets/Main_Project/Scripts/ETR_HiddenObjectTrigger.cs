@@ -7,13 +7,17 @@ using UnityEngine;
 public class ETR_HiddenObjectTrigger : MonoBehaviour {
 
     public AudioSource hintSound;
+    public UnityEngine.Events.UnityEvent floorPieceEvent;
     private bool canPlayHintSound;
     private float hintSoundPlayDelay;
     private bool hasBeenUsed;
     private VRTK_InteractableObject interactableObject;
 
+    private bool isDialoguePlayed;
+
 	// Use this for initialization
 	void Start () {
+        isDialoguePlayed = false;
         canPlayHintSound = true;
         hintSoundPlayDelay = 0;
         hasBeenUsed = false;
@@ -40,6 +44,11 @@ public class ETR_HiddenObjectTrigger : MonoBehaviour {
                 if (!hintSound.isPlaying && hintSoundPlayDelay == 0) {
                     hintSound.Play();
                     hintSoundPlayDelay = 5;
+
+                    if (!isDialoguePlayed) {
+                        floorPieceEvent.Invoke();
+                        isDialoguePlayed = true;
+                    }
                 }     
             }
         }
