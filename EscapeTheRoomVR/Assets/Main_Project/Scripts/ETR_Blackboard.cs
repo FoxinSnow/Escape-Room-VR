@@ -9,6 +9,7 @@ public class ETR_Blackboard : MonoBehaviour {
     public Texture2D cover;
     public int range;
     private bool isEraserCollided;
+    private bool isEraserGrabbed;
     private Texture2D texture;
     private int w, h;
 
@@ -17,6 +18,7 @@ public class ETR_Blackboard : MonoBehaviour {
     {
         // Initialisation
         isEraserCollided = false;
+        isEraserGrabbed = false;
         w = cover.width;
         h = cover.height;
         texture = new Texture2D(w, h);
@@ -37,7 +39,7 @@ public class ETR_Blackboard : MonoBehaviour {
     void Update()
     {
 
-        if (isEraserCollided)
+        if (isEraserCollided && isEraserGrabbed)
         {
 
             Ray ray = new Ray(blackboardEraser.position, eraserDirection.position);
@@ -89,6 +91,11 @@ public class ETR_Blackboard : MonoBehaviour {
     public void IsEraserCollided(bool isCollided)
     {
         isEraserCollided = isCollided;
+    }
+
+    public void IsEraserGrabbed(bool isGrabbed)
+    {
+        isEraserGrabbed = isGrabbed;
     }
 
 }
