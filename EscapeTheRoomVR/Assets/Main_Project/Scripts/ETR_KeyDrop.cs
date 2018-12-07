@@ -6,6 +6,7 @@ using UnityEngine;
 public class ETR_KeyDrop : MonoBehaviour {
 
     public AudioSource keyDropSound;
+    public UnityEngine.Events.UnityEvent keyEvent;
     private bool played;
 	// Use this for initialization
 	void Start () {
@@ -24,6 +25,7 @@ public class ETR_KeyDrop : MonoBehaviour {
             {
                 keyDropSound.Play();
                 played = true;
+                keyEvent.Invoke();
             }
         }
     }

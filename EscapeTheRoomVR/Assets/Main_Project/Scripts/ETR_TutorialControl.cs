@@ -19,11 +19,16 @@ public class ETR_TutorialControl : MonoBehaviour {
     public GameObject headsetCollision;
     public GameObject cameraFader;
 
-    private float timeToFadeIn = 5.0f;
+
+    public UnityEngine.Events.UnityEvent tutorialEvent;
+
+    private float timeToFadeIn = 3.0f;
     private bool faded;
+    private bool isDialoguePlayed;
 
     // Use this for initialization
     void Start () {
+        isDialoguePlayed = false;
         faded = false;
         cameraFader.SetActive(true);
         tutorialTeleportPoint1.SetActive(true);
@@ -62,8 +67,9 @@ public class ETR_TutorialControl : MonoBehaviour {
             timeToFadeIn -= Time.deltaTime * 0.75f;
         }
         else
-        {            
-            headsetCollision.GetComponent<VRTK_HeadsetCollisionFade>().blinkTransitionSpeed = 5.0f;
+        {
+            tutorialEvent.Invoke();
+            headsetCollision.GetComponent<VRTK_HeadsetCollisionFade>().blinkTransitionSpeed = 3.0f;
             cameraFader.SetActive(false);
         }
 	}
