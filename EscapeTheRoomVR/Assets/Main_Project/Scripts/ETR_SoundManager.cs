@@ -6,9 +6,7 @@ using UnityEngine;
 public class ETR_SoundManager : MonoBehaviour {
 
     public AudioSource ambienceAudioSource;
-
     public AudioSource safeAudioSource;
-    public AudioClip safeButton, safeButtonConfirm, safeUnlock;
 
     public AudioSource fanAudioSource;
     public AudioClip fanStart, fanRun;
@@ -17,17 +15,12 @@ public class ETR_SoundManager : MonoBehaviour {
     public AudioSource radioButtonAudioSource;
     public AudioSource switchAudioSource;
     public AudioSource burnerAudioSource;
-
     public AudioSource dialogueAudioSource;
-    public AudioClip[] dialogueClips;
-
-
     public AudioSource exitDoorAudioSource;
-    public AudioClip lockedDoor, keyInsert, openDoor;
 	// Use this for initialization
 	void Start () {
         //isFanOn = false;
-        
+      
 	}
 	
 	// Update is called once per frame
@@ -41,26 +34,16 @@ public class ETR_SoundManager : MonoBehaviour {
         }*/
     }
 
-    public void PlaySafeSoundEffect(int i) {
-        if (safeAudioSource.isPlaying) {
+    public void PlaySafeSoundEffect(AudioClip audioClip)
+    {
+        if (safeAudioSource.isPlaying)
+        {
             safeAudioSource.Stop();
         }
-        switch (i) {
-            case 0:
-                safeAudioSource.clip = safeButton;      
-                break;
-            case 1:
-                safeAudioSource.clip = safeButtonConfirm;
-                break;
-            case 2:
-                safeAudioSource.clip = safeUnlock;
-                break;
-            default:
-                safeAudioSource.clip = safeButton;
-                break;
-        }       
+        safeAudioSource.clip = audioClip;   
         safeAudioSource.Play();
     }
+
 
     public void PlaySwitchSoundEffect() {
         switchAudioSource.Play();
@@ -111,30 +94,24 @@ public class ETR_SoundManager : MonoBehaviour {
         */
     }
 
-    public void PlayDialogue(int i) {
-        if (dialogueClips.Length > 0 && i < dialogueClips.Length) {
-            dialogueAudioSource.clip = dialogueClips[i];
-            dialogueAudioSource.Play();
-        }
-    }
-
-    public void PlayExitDoorSoundEffect(int i) {
-        switch (i)
+    public void PlayDialogue(AudioClip audioClip)
+    {
+        if (dialogueAudioSource.isPlaying)
         {
-            case 0:
-                exitDoorAudioSource.clip = lockedDoor;
-                break;
-            case 1:
-                exitDoorAudioSource.clip = keyInsert;
-                break;
-            case 2:
-                exitDoorAudioSource.clip = openDoor;
-                break;
-            default:
-                exitDoorAudioSource.clip = safeButton;
-                break;
+            dialogueAudioSource.Stop();
         }
-        exitDoorAudioSource.Play();
-
+        dialogueAudioSource.clip = audioClip;
+        dialogueAudioSource.Play();
     }
+
+    public void PlayExitDoorSoundEffect(AudioClip audioClip)
+    {
+        if (exitDoorAudioSource.isPlaying)
+        {
+            exitDoorAudioSource.Stop();
+        }
+        exitDoorAudioSource.clip = audioClip;
+        exitDoorAudioSource.Play();
+    }
+
 }

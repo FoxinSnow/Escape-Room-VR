@@ -164,7 +164,7 @@ public class ETR_ClockControl : MonoBehaviour
         }
 
         if(hour == 6 && !chickenOn){
-            chicken6.Play();//ge ge da
+            chicken6.Play();
             chickenOn = true;
             reset = false; //need reset
         }

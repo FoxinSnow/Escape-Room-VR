@@ -46,7 +46,7 @@ public class ETR_AlarmControl : MonoBehaviour
 
     void OnCollisionEnter(Collision collision)
     {
-        if (this.GetComponent<Rigidbody>().velocity.magnitude > 0.5f && collision.gameObject.tag != "Player")
+        if (this.GetComponent<Rigidbody>().velocity.magnitude > 0.75f && collision.gameObject.tag != "Player" && collision.gameObject.tag != "Controller")
         {
             if (!triggered) {
                 alarmRing.Stop();

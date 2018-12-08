@@ -20,11 +20,18 @@ public class ETR_Tutorial_Tap : MonoBehaviour {
 
     private void Update()
     {
-        if (tutorialControl.activeSelf) {
+        if (tutorialControl == null || tutorialControl.activeSelf)
+        {
             if (tapRotator.GetValue() > 15.0f && !triggered)
             {
                 tapEvent.Invoke();
                 triggered = true;
+            }
+        }
+        else {
+            if (tapRotator.GetValue() > 15.0f && !triggered)
+            {
+                
             }
         }
     }
