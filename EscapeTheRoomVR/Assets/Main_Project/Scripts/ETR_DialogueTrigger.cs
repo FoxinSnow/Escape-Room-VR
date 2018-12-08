@@ -26,4 +26,13 @@ public class ETR_DialogueTrigger : MonoBehaviour {
             Destroy(this.gameObject);
         }
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag.Equals(colliderTag))
+        {
+            dialogueTriggerEvent.Invoke();
+            Destroy(this.gameObject);
+        }
+    }
 }

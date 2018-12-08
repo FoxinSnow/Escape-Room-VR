@@ -61,6 +61,28 @@ public class ETR_HiddenObjectTrigger : MonoBehaviour {
             canPlayHintSound = true;
         }
 
+
+        if (other.gameObject.tag == "Player")
+        {
+
+            // Play a sound as the hint
+            if (canPlayHintSound && hintSound != null)
+            {
+                if (!hintSound.isPlaying && hintSoundPlayDelay == 0)
+                {
+                    hintSound.Play();
+                    hintSoundPlayDelay = 5;
+
+                    if (!isDialoguePlayed)
+                    {
+                        floorPieceEvent.Invoke();
+                        isDialoguePlayed = true;
+                    }
+                }
+            }
+        }
+
+
     }
 
     private void OnTriggerExit(Collider other)

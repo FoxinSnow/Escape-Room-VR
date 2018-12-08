@@ -37,4 +37,16 @@ public class ETR_TutorialTrigger : MonoBehaviour {
     }
 
 
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "Player")
+        {
+            if (!triggered)
+            {
+                teleportTriggerEvent.Invoke();
+                triggered = true;
+            }
+        }
+    }
+
 }
