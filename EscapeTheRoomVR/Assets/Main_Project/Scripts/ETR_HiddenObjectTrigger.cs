@@ -37,7 +37,7 @@ public class ETR_HiddenObjectTrigger : MonoBehaviour {
     {
         
         if (collision.gameObject.tag == "Player"){
-            floorPieceHintHalo.SetActive(true);
+            //floorPieceHintHalo.SetActive(true);
             // Play a sound as the hint
             if (canPlayHintSound && hintSound != null)
             {
@@ -61,7 +61,9 @@ public class ETR_HiddenObjectTrigger : MonoBehaviour {
 
         if (other.gameObject.tag == "Player")
         {
-            floorPieceHintHalo.SetActive(true);
+            if (!hasBeenUsed) {
+                floorPieceHintHalo.SetActive(true);
+            } 
             // Play a sound as the hint
             if (canPlayHintSound && hintSound != null)
             {
