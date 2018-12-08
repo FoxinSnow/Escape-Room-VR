@@ -7,17 +7,16 @@ using UnityEngine;
 public class ETR_HiddenObjectTrigger : MonoBehaviour {
 
     public AudioSource hintSound;
+    public GameObject floorPieceHintHalo;
     public UnityEngine.Events.UnityEvent floorPieceEvent;
     private bool canPlayHintSound;
     private float hintSoundPlayDelay;
     private bool hasBeenUsed;
     private VRTK_InteractableObject interactableObject;
 
-    private bool isDialoguePlayed;
-
 	// Use this for initialization
 	void Start () {
-        isDialoguePlayed = false;
+        floorPieceHintHalo.SetActive(false);
         canPlayHintSound = true;
         hintSoundPlayDelay = 0;
         hasBeenUsed = false;
@@ -36,19 +35,16 @@ public class ETR_HiddenObjectTrigger : MonoBehaviour {
 
     private void OnCollisionEnter(Collision collision)
     {
+        
         if (collision.gameObject.tag == "Player"){
-
+            floorPieceHintHalo.SetActive(true);
             // Play a sound as the hint
             if (canPlayHintSound && hintSound != null)
             {
                 if (!hintSound.isPlaying && hintSoundPlayDelay == 0) {
                     hintSound.Play();
                     hintSoundPlayDelay = 5;
-
-                    if (!isDialoguePlayed) {
-                        floorPieceEvent.Invoke();
-                        isDialoguePlayed = true;
-                    }
+                    floorPieceEvent.Invoke();
                 }     
             }
         }
@@ -56,6 +52,7 @@ public class ETR_HiddenObjectTrigger : MonoBehaviour {
 
     private void OnTriggerEnter(Collider other)
     {
+        
         if (other.gameObject.name == "FloorPieceArea") {
             Debug.Log("Can play hint sound");
             canPlayHintSound = true;
@@ -64,7 +61,7 @@ public class ETR_HiddenObjectTrigger : MonoBehaviour {
 
         if (other.gameObject.tag == "Player")
         {
-
+            floorPieceHintHalo.SetActive(true);
             // Play a sound as the hint
             if (canPlayHintSound && hintSound != null)
             {
@@ -72,12 +69,8 @@ public class ETR_HiddenObjectTrigger : MonoBehaviour {
                 {
                     hintSound.Play();
                     hintSoundPlayDelay = 5;
+                    floorPieceEvent.Invoke();
 
-                    if (!isDialoguePlayed)
-                    {
-                        floorPieceEvent.Invoke();
-                        isDialoguePlayed = true;
-                    }
                 }
             }
         }
@@ -114,6 +107,7 @@ public class ETR_HiddenObjectTrigger : MonoBehaviour {
         if (!hasBeenUsed) {
             GetComponent<Rigidbody>().useGravity = true;
             GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
+            floorPieceHintHalo.SetActive(false);
             hasBeenUsed = true;
         }    
     }
