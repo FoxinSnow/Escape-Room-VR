@@ -168,29 +168,37 @@ public class ETR_ClockControl : MonoBehaviour
             chickenOn = true;
             reset = false; //need reset
         }
-        else if (hour == 7 && !morningOn)//morning79 in
+
+        if (hour == 7 && !morningOn)//morning79 in
         {
             morning79.Play();
             morningOn = true;
-            reset = false; //need reset
+            Debug.Log("play morning");
+            //reset = false; //need reset
         }
-        else if (hour == 9 && morningOn)//morning79 out
+
+        if (hour == 9 && morningOn)//morning79 out
         {
             morning79.Stop();
             morningOn = false;
-            reset = false; //need reset
+            Debug.Log("stop morning");
+            //reset = false; //need reset
         }
-        else if (hour == 20 && !nightOn)//night203 in
+
+        if (hour == 20 && !nightOn)//night203 in
         {
             night203.Play();
             nightOn = true;
-            reset = false; //need reset
+            Debug.Log("play night");
+            //reset = false; //need reset
         }
-        else if (hour == 3 && nightOn)//night203 out
+
+        if (hour == 3 && nightOn)//night203 out
         {
             night203.Stop();
             nightOn = false;
-            reset = false; //need reset
+            Debug.Log("stop night");
+            //reset = false; //need reset
         }
     }
 
