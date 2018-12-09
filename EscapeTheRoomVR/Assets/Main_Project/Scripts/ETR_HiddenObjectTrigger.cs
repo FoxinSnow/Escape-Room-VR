@@ -43,7 +43,7 @@ public class ETR_HiddenObjectTrigger : MonoBehaviour {
             {
                 if (!hintSound.isPlaying && hintSoundPlayDelay == 0) {
                     hintSound.Play();
-                    hintSoundPlayDelay = 5;
+                    hintSoundPlayDelay = 10;
                     floorPieceEvent.Invoke();
                 }     
             }

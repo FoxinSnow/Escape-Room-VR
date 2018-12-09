@@ -5,13 +5,16 @@ using UnityEngine;
 // Coded by Yuqi Wang
 public class ETR_HighlightHaloAnimator : MonoBehaviour {
 
+
+    public float minimumScale;
+    public float maximumScale;
+
     private float currentScale;
     private float targetScale;
     private bool scaleToBig;
 	// Use this for initialization
 	void Start () {
         currentScale = this.gameObject.transform.localScale.x;
-        targetScale = 1.5f;
         scaleToBig = true;
 	}
 	
@@ -22,7 +25,8 @@ public class ETR_HighlightHaloAnimator : MonoBehaviour {
         {
             this.gameObject.transform.localScale += new Vector3(0.5f * Time.deltaTime, 0.5f * Time.deltaTime, 0);
             currentScale = this.gameObject.transform.localScale.x;
-            if (currentScale > targetScale)
+
+            if (currentScale > maximumScale)
             {
                 scaleToBig = false;
             }
@@ -30,7 +34,7 @@ public class ETR_HighlightHaloAnimator : MonoBehaviour {
         else {
             this.gameObject.transform.localScale -= new Vector3(0.5f * Time.deltaTime, 0.5f * Time.deltaTime, 0);
             currentScale = this.gameObject.transform.localScale.x;
-            if (currentScale < 1.0)
+            if (currentScale < minimumScale)
             {
                 scaleToBig = true;
             }
