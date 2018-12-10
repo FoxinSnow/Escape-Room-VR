@@ -108,6 +108,8 @@ public class ETR_TutorialControl : MonoBehaviour {
             teleportHeightAdjustmentArea[i].gameObject.tag = "TeleportHeightAdjustment";
         }
         dialogueTriggerGroup.SetActive(true);
+        this.gameObject.SetActive(false);
+        DefaultHeadsetFade();
         Destroy(this.gameObject);
     }
 
@@ -139,5 +141,10 @@ public class ETR_TutorialControl : MonoBehaviour {
         tutorialInstructionTrigger.SetActive(false);
         tutorialGrip.SetActive(false);
         tutorialInstructionGrip.SetActive(false);
+    }
+
+
+    public void DefaultHeadsetFade() {
+        headsetCollision.GetComponent<VRTK_HeadsetCollisionFade>().blinkTransitionSpeed = 0.1f;
     }
 }
