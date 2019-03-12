@@ -2,9 +2,9 @@
 UCL Virtual Environments Coursework - Group Programming with Unity3D
 
 This work is done with:<br>
-'Yuqi Wang',<br>
-'Liangbei Lin',<br>
-'Zeyue Yin'.
+`Yuqi Wang`,<br>
+`Liangbei Lin`,<br>
+`Zeyue Yin`.
 
 Thanks for the contribution of my groupmates.
 
