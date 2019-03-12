@@ -10,8 +10,9 @@ Thanks for the contribution of my groupmates.
 
 Here are some views in the game.
 
-![Alt text](https://github.com/FoxinSnow/Escape-Room-VR-Game/blob/master/Screenshot/blackboard.png)
+<div align=center><img width="300" height="200" src="https://github.com/FoxinSnow/Escape-Room-VR-Game/blob/master/Screenshot/blackboard.png"/></div>
 
-![Alt text](https://github.com/FoxinSnow/Escape-Room-VR-Game/blob/master/Screenshot/overview.png)
+<img width="300" height="200" src="https://github.com/FoxinSnow/Escape-Room-VR-Game/blob/master/Screenshot/overview.png"/>
 
-![Alt text](https://github.com/FoxinSnow/Escape-Room-VR-Game/blob/master/Screenshot/cloest.png)
+<img width="300" height="200" src="https://github.com/FoxinSnow/Escape-Room-VR-Game/blob/master/Screenshot/cloest.png"/>
+
